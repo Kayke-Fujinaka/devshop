@@ -1,6 +1,6 @@
 import MainRoutes from './routes/routes';
 import React from 'react';
-
+import GlobalStyle from './styles/global'
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App(){
@@ -9,6 +9,7 @@ function App(){
     <Router>
       <MainRoutes />
     </Router>
+    <GlobalStyle />
     </>
   )
 }
