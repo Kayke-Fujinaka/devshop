@@ -23,9 +23,9 @@ O site tem no total X páginas, sendo elas:
 ## :dart: Etapas ##
 
 :heavy_check_mark: Criação da rotas;\
-:heavy_check_mark: Colocar segunda coisa que fez;\
-:heavy_check_mark: Colocar terceira coisa que fez;\
-:heavy_check_mark: Colocar quarta coisa que fez;\
+:heavy_check_mark: Aplicação dos estilos globais;\
+:heavy_check_mark: Componente Header;\
+:heavy_check_mark: Componente Footer;\
 :heavy_check_mark: Colocar quinta coisa que fez;
 
 ## :rocket: Tecnologias ##
@@ -36,6 +36,8 @@ No projeto foram utilizadas as seguintes tecnologias:
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
 - [React](https://pt-br.reactjs.org/)
+- [React icons](https://react-icons.github.io/react-icons/)
+- [Styled Components](https://styled-components.com/docs)
 ## :closed_book: Requisitos ##
 
 Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
@@ -64,7 +66,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
         <sub>
-          <b>Kayke Alves Fujinaka</b>
+          <b>Kayke Fujinaka</b>
         </sub>
       </a>
     </td>
@@ -72,7 +74,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="#">
         <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFv8Nrh37K9gg/profile-displayphoto-shrink_200_200/0/1647100224699?e=1654732800&v=beta&t=MGX0G64IGlAgrtvpm_oc9SZokRGECo9dttgx6laF48g" width="160px;" alt="Foto do João Guilherme Lima"/><br>
         <sub>
-          <b>João Guilherme Lima</b>
+          <b>João Guilherme</b>
         </sub>
       </a>
     </td>
@@ -81,6 +83,15 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         <img src="https://avatars.githubusercontent.com/u/60978293?v=4" width="160px;" alt="Foto do Rafael Yokoyama"/><br>
         <sub>
           <b>Rafael Yokoyama</b>
+        </sub>
+      </a>
+    </td>
+    </td>
+        <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/90225074?v=4" width="160px;" alt="Foto do Matheus Santos"/><br>
+        <sub>
+          <b>Matheus Santos</b>
         </sub>
       </a>
     </td>

@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   margin:0;
   padding:0;
   box-sizing:border-box;
-  transition:background ease 0.2s; 
+  transition:background ease 0.2s;
 }
 
 @-ms-viewport {
