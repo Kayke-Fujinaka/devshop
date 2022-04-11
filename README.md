@@ -22,7 +22,7 @@ O site tem no total X páginas, sendo elas:
 - **Error 404:** xxxxxxxxxxxxxx.
 ## :dart: Etapas ##
 
-:heavy_check_mark: Colocar primeira coisa que fez;\
+:heavy_check_mark: Criação da rotas;\
 :heavy_check_mark: Colocar segunda coisa que fez;\
 :heavy_check_mark: Colocar terceira coisa que fez;\
 :heavy_check_mark: Colocar quarta coisa que fez;\
@@ -44,9 +44,9 @@ Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) 
 
 ```bash
 # Clone this project
-$ git clone https://github.com/Kayke-Fujinaka/HealthyFood
+$ git clone https://github.com/Kayke-Fujinaka/E-commerce
 # Access
-$ cd teste-gcb
+$ cd e-commerce
 # Install dependencies
 $ yarn or npm 
 # Run the project
@@ -70,9 +70,17 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFv8Nrh37K9gg/profile-displayphoto-shrink_200_200/0/1647100224699?e=1654732800&v=beta&t=MGX0G64IGlAgrtvpm_oc9SZokRGECo9dttgx6laF48g" width="160px;" alt="Foto do João Guilherme Souza Lima"/><br>
+        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFv8Nrh37K9gg/profile-displayphoto-shrink_200_200/0/1647100224699?e=1654732800&v=beta&t=MGX0G64IGlAgrtvpm_oc9SZokRGECo9dttgx6laF48g" width="160px;" alt="Foto do João Guilherme Lima"/><br>
         <sub>
-          <b>João Guilherme Souza Lima</b>
+          <b>João Guilherme Lima</b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/60978293?v=4" width="160px;" alt="Foto do Rafael Yokoyama"/><br>
+        <sub>
+          <b>Rafael Yokoyama</b>
         </sub>
       </a>
     </td>
