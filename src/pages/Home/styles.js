@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import theme from "../../styles/theme"
 
-export const SeeProductsCards =  styled.div`
+export const SeeProductsCards = styled.div`
     max-width: 90vw;
-    font-family: ${theme.fonts.secondary};
 
     display: flex;
     justify-content: center;
@@ -13,7 +12,7 @@ export const SeeProductsCards =  styled.div`
 
 `
 
-export const ProductCard =  styled.div`
+export const ProductCard = styled.div`
     width: 320px;
     height: 300px;
     flex: none;
@@ -38,7 +37,7 @@ export const ProductCard =  styled.div`
     }
 `
 
-export const ContentProductCard =  styled.div`
+export const ContentProductCard = styled.div`
     position: absolute;
     color: #fff;
     display: flex;
@@ -64,6 +63,67 @@ export const ContentProductCard =  styled.div`
     }
 `
 
-export const AllProducts = styled.div`
+export const TitleProducts = styled.div`
+    margin: 2.5rem auto 0 auto;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: ${theme.gray2};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        
+    }
+
+    p {
+        margin-top: 10px;
+    }
+`
+
+export const SomeProducts = styled.div`
+
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: ${theme.fonts.weight.boldest};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 40px;
+        background: #FF7D1B;
+        margin: 0 auto;
+}
+`
+
+export const InstagramFooter = styled.div`
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: ${theme.gray2};
+
+    svg {
+        font-size: 4rem;
+    }
+`
+
+export const InstagramText = styled.div`
+    margin-left: 0.5rem;
+    h1 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: ${theme.fonts.weight.bold};
+    }
+    span {
+        font-size: 1.4rem;
+        font-weight: ${theme.fonts.weight.boldest};
+    }
 `

@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 import Forgot from '../pages/Forgot'
+import Products from '../pages/Products'
 
 export default function MainRoutes() {
     return(
@@ -13,6 +14,7 @@ export default function MainRoutes() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/reset" component={Forgot} />
+            <Route exact path="/products" component={Products} />
         </Switch>
         </>
     )

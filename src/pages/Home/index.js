@@ -13,6 +13,8 @@ import backMen from '../../assets/backMen.jpg'
 import eletronics from '../../assets/eletronics.jpg'
 import joiasBack from '../../assets/joiasBack.jfif'
 
+import { FaInstagram } from 'react-icons/fa'
+
 export default function Home() {
     const { allProducts } = useContext(ApiContext)
     const [products, setProducts] = useState([])
@@ -20,6 +22,7 @@ export default function Home() {
     return (
         <>
             <Header />
+
             <S.SeeProductsCards>
                 <S.ProductCard>
                     <img src={backMen} alt="Imagem roupa masculina" />
@@ -46,7 +49,7 @@ export default function Home() {
                     </S.ContentProductCard>
                 </S.ProductCard>
                 <S.ProductCard>
-                    <img src={backMen} alt="Imagem joias" />
+                    <img src={joiasBack} alt="Imagem joias" />
                     <S.ContentProductCard>
                         <h1>Joalheria</h1>
                         <p>Outono/Inverno 2022</p>
@@ -55,13 +58,26 @@ export default function Home() {
                 </S.ProductCard>
             </S.SeeProductsCards>
 
-            <S.AllProducts>
-                <ul>
-                    {allProducts.map( (item) => (
-                        <li key={item.id}>{item.title}</li>
-                    ))}
-                </ul>
-            </S.AllProducts>
+            <S.TitleProducts>
+                <h1>Conheça nossos principais produtos</h1>
+                <p>Em breve... Novo estoque!</p>
+            </S.TitleProducts>
+
+            <S.SomeProducts>
+                {allProducts.map( (item) => (
+                    <li key={item.id}>KAYKE LINDO</li>
+                ))}
+                <Link to="/products">Ver todos produtos</Link>
+            </S.SomeProducts>
+
+            <S.InstagramFooter>
+                <FaInstagram />
+                <S.InstagramText>
+                    <h1>Siga-nos no instagram</h1>
+                    <span>@DEVSHOPPERFEITO</span>
+                </S.InstagramText>
+            </S.InstagramFooter>
+
             <Footer />
         </>
     )

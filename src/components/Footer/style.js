@@ -9,32 +9,6 @@ export const Container = styled.div`
     font-family: ${theme.fonts.primary}
 `
 
-export const InstagramFooter = styled.div`
-    width: 90%;
-    justify-content: center;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    color: ${theme.gray2};
-
-    svg {
-        font-size: 4rem;
-    }
-`
-
-export const InstagramText = styled.div`
-    margin-left: 0.5rem;
-    h1 {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        font-weight: ${theme.fonts.weight.bold};
-    }
-    span {
-        font-size: 1.4rem;
-        font-weight: ${theme.fonts.weight.boldest};
-    }
-`
-
 export const ServicesFooter = styled.div`
     width: 90%;
     margin: 2rem auto;
