@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Nome do E-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="LINK DO GIF" alt="Um gif apresentando o projeto">
 
-## Available Scripts
+>  Descrição do projeto!
 
-In the project directory, you can run:
+Confira a aplicação: https:// <br>
+O vídeo apresentando o projeto: https://
+## :page_facing_up: Explicação
 
-### `npm start`
+COLOCAR EXPLICAÇÃO
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Páginas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O site tem no total X páginas, sendo elas:
 
-### `npm test`
+- **Login:** xxxxxxxxxxxxxx.
+- **Register:** xxxxxxxxxxxxxx.
+- **Forgot Password:** xxxxxxxxxxxxxx.
+- **Home:** xxxxxxxxxxxxxx.
+- **Profile Informations:** xxxxxxxxxxxxxx.
+- **Error 404:** xxxxxxxxxxxxxx.
+## :dart: Etapas ##
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:heavy_check_mark: Criação da rotas;\
+:heavy_check_mark: Aplicação dos estilos globais;\
+:heavy_check_mark: Componente Header;\
+:heavy_check_mark: Componente Footer;\
+:heavy_check_mark: Colocar quinta coisa que fez;
 
-### `npm run build`
+## :rocket: Tecnologias ##
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No projeto foram utilizadas as seguintes tecnologias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
+- [React](https://pt-br.reactjs.org/)
+- [React icons](https://react-icons.github.io/react-icons/)
+- [Styled Components](https://styled-components.com/docs)
+## :closed_book: Requisitos ##
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
-### `npm run eject`
+## :checkered_flag: Começando ##
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Clone this project
+$ git clone https://github.com/Kayke-Fujinaka/E-commerce
+# Access
+$ cd e-commerce
+# Install dependencies
+$ yarn or npm 
+# Run the project
+$ yarn start or npm start 
+# The server will initialize in the <http://localhost:3000>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 Colaboradores
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <sub>
+          <b>Kayke Fujinaka</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFv8Nrh37K9gg/profile-displayphoto-shrink_200_200/0/1647100224699?e=1654732800&v=beta&t=MGX0G64IGlAgrtvpm_oc9SZokRGECo9dttgx6laF48g" width="160px;" alt="Foto do João Guilherme Lima"/><br>
+        <sub>
+          <b>João Guilherme</b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/60978293?v=4" width="160px;" alt="Foto do Rafael Yokoyama"/><br>
+        <sub>
+          <b>Rafael Yokoyama</b>
+        </sub>
+      </a>
+    </td>
+    </td>
+        <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/90225074?v=4" width="160px;" alt="Foto do Matheus Santos"/><br>
+        <sub>
+          <b>Matheus Santos</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-## Learn More
+## 📝 Licença
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+&#xa0;
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#top">Volte para o topo</a>
