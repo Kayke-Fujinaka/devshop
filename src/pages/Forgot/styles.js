@@ -21,6 +21,11 @@ export const Breadcrumb = styled.div`
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+    @media (max-width: 510px){
+        width: 100%;
+        margin: 1rem 10px;
+        font-size: 12px;
+    }
 `
 
 export const Information = styled.div`
@@ -31,6 +36,12 @@ export const Information = styled.div`
     p {
         font-weight: ${theme.fonts.weight.medium};
     }
+    @media (max-width: 510px){
+        text-align: center;
+        width: 100%;
+        margin: 0 10px 1.5rem;
+        font-size: 11px;
+    }
 `
 
 export const ContainerForm = styled.div`
@@ -39,11 +50,18 @@ export const ContainerForm = styled.div`
     justify-content: center;
     .divLabelInput {
         margin-top: 15px;
+        @media (max-width: 510px){
+            margin-top: 0;
+        }
     }
     label {
         font-family: ${theme.fonts.primary};
         font-size: 16px;
         font-weight: ${theme.fonts.weight.light};
+        @media (max-width: 510px){
+            font-size: 14px;
+            margin: 0 5px;
+        }
     }
     input {
         display: block;
@@ -54,6 +72,11 @@ export const ContainerForm = styled.div`
         font-family: ${theme.fonts.secondary};
         border: 1px solid ${theme.gray4};
         outline: none;
+        @media (max-width: 510px){
+            height: 35px;
+            width: 300px;
+            font-size: 11px;
+        }
     }
     p {
         text-align: center;
@@ -66,6 +89,9 @@ export const ContainerForm = styled.div`
             &:hover {
                 text-decoration: underline;
             }
+        }
+        @media (max-width: 510px){
+            font-size: 11px;
         }
     }
 `
@@ -86,6 +112,11 @@ export const DivButton = styled.div`
         }
         &:active {
             filter: brightness(0.9);
+        }
+        @media (max-width: 510px){
+            height: 35px;
+            width: 300px;
+            font-size: 15px;
         }
     }
 `
