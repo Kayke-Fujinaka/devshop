@@ -7,6 +7,13 @@ export const MainContainer = styled.div`
     font-family: ${theme.fonts.secondary};
     border: 1px solid #B5B5B5;
     padding: 20px 60px;
+    position: fixed;
+    background: #fff;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    width: 100vw;
+    box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.37);
 `
 
 export const ContainerLeft = styled.div`
@@ -67,7 +74,7 @@ export const Li = styled.li `
 export const ContainerRight = styled.div`
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 5px;
     > svg {
         font-size: 20px;
         cursor: pointer;
@@ -76,4 +83,20 @@ export const ContainerRight = styled.div`
         font-size: 16px;
         cursor: pointer;
     }
+`
+
+export const DivAccount = styled.div`
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+
+    a {
+        color: #000;
+    }
+`
+
+export const bar = styled.span`
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
 `

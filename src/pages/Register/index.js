@@ -7,7 +7,6 @@ import Footer from '../../components/Footer'
 export default function Register() {
     return (
         <>
-            <Header />
 
             <S.ContainerMain>
 
@@ -60,7 +59,6 @@ export default function Register() {
 
             </S.ContainerMain>
 
-            <Footer />
         </>
     )
 }

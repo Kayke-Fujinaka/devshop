@@ -2,24 +2,31 @@ import React from 'react';
 import * as S from "./styles"
 import { FiShoppingCart } from 'react-icons/fi'
 
+import {Link} from 'react-router-dom'
+
 export default function Header() {
   return (
     <>
       <S.MainContainer>
         <S.ContainerLeft>
-          <h1>devshop</h1>
+          <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
-            <li><a href='#'>Men</a></li>
-            <li><a href='#'>Women</a></li>
-            <li><a href='#'>Jewelery</a></li>
-            <li><a href='#'>Eletronics</a></li>
-            <li><a href='#'>Contact</a></li>
+            <li><Link to="/men">Men</Link></li>
+            <li><Link to="/women">Women</Link></li>
+            <li><Link to="/jewelery">Jewelery</Link></li>
+            <li><Link to="/eletronics">Eletronics</Link></li>
+            <li><Link to="/">Contact</Link></li>
           </S.Nav>
         </S.ContainerLeft>
 
         <S.ContainerRight>
+          <S.DivAccount>
+            <p><Link to="/register">Register</Link></p>
+            <span>/</span>
+            <p><Link to="/login">Login</Link></p>
+          </S.DivAccount>
           <FiShoppingCart />
-          <p>Olá, visitante</p>
+          <bar>0</bar>
         </S.ContainerRight>
       </S.MainContainer>
     </>

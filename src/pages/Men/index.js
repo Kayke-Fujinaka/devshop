@@ -1,27 +1,22 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import * as S from "./styles";
-import { Link } from 'react-router-dom'
-import api from "../../services/api";
 
 import { ApiContext } from '../../contexts/apiContext'
 
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-
-export default function Products() {
-    const { allProducts } = useContext(ApiContext)
+export default function Men() {
+    const { menProducts } = useContext(ApiContext)
 
     return (
         <>
-
             <S.Breadcrumb>
                 <a href='/'>Home</a>
                 <span>/</span>
-                <p>Products</p>
+                <p>Men</p>
             </S.Breadcrumb>
-            <S.AllProducts>
+
+        <S.SomeProducts>
                 <ul>
-                    {allProducts.map((item) => (
+                    {menProducts.map((item) => (
                         <li key={item.id}>
                             <img src={item.image} alt={`Imagem ${item.title}`} />
                             <div>
@@ -32,12 +27,7 @@ export default function Products() {
                         </li>
                     ))}
                 </ul>
-            </S.AllProducts>
-
+                    </S.SomeProducts>
         </>
     )
 }
-
-
-
-
