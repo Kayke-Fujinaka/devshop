@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   padding:0;
   box-sizing:border-box;
   transition:background ease 0.2s;
+  font-family: ${theme.fonts.secondary};
 }
 
 @-ms-viewport {

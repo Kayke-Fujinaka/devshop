@@ -6,13 +6,6 @@ export default function Footer() {
   return (
     <>
       <S.Container>
-        <S.InstagramFooter>
-          <FaInstagram />
-          <S.InstagramText>
-            <h1>Siga-nos no instagram</h1>
-            <span>@DEVSHOPPERFEITO</span>
-          </S.InstagramText>
-        </S.InstagramFooter>
 
         <S.ServicesFooter>
           <S.Service>
