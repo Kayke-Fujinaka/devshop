@@ -41,6 +41,7 @@ export const SomeProducts = styled.div`
             width: 225px;
             height: 400px;
             position: relative;
+            cursor: pointer;
 
             img {
                 width: 100%;
@@ -54,6 +55,17 @@ export const SomeProducts = styled.div`
                 justify-content: center;
                 align-items: center;
                 margin-top: 10px;
+                
+                .title {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
                 
                 p {
                     text-align: center;

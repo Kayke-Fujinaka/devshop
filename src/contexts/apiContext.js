@@ -7,6 +7,9 @@ export const ApiProvider = ({ children }) => {
 
     const [allProducts, setAllProducts] = useState([])
     const [menProducts, setMenProducts] = useState([])
+    const [jeweleryProducts, setJeweleryProducts] = useState([])
+    const [electronicsProducts, setElectronicsProducts] = useState([])
+    const [womenProducts, setWomenProducts] = useState([])
 
     useEffect(() => {
         api
@@ -34,11 +37,53 @@ export const ApiProvider = ({ children }) => {
         })
     }, []) 
 
+    useEffect(() => {
+        api
+        .get(`/products/category/women's%20clothing`)
+        .then( (response) => {
+            setWomenProducts([... response.data])
+            console.log(allProducts)
+        })
+        .catch((err) => {
+            console.log(err)
+            alert('false')
+        })
+    }, []) 
+
+    useEffect(() => {
+        api
+        .get(`/products/category/jewelery`)
+        .then( (response) => {
+            setJeweleryProducts([... response.data])
+            console.log(allProducts)
+        })
+        .catch((err) => {
+            console.log(err)
+            alert('false')
+        })
+    }, [])
+    
+    useEffect(() => {
+        api
+        .get(`/products/category/electronics`)
+        .then( (response) => {
+            setElectronicsProducts([... response.data])
+            console.log(allProducts)
+        })
+        .catch((err) => {
+            console.log(err)
+            alert('false')
+        })
+    }, [])
+
     return (
         <ApiContext.Provider
             value={{
                 allProducts,
                 menProducts,
+                jeweleryProducts,
+                electronicsProducts,
+                womenProducts,
             }} >
             {children}
         </ApiContext.Provider>

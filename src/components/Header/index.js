@@ -26,7 +26,7 @@ export default function Header() {
             <p><Link to="/login">Login</Link></p>
           </S.DivAccount>
           <FiShoppingCart />
-          <bar>0</bar>
+          <S.Bar>0</S.Bar>
         </S.ContainerRight>
       </S.MainContainer>
     </>

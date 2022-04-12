@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+    import styled from 'styled-components'
 import theme from "../../styles/theme"
 
 export const MainContainer = styled.div`
@@ -74,7 +74,7 @@ export const Li = styled.li `
 export const ContainerRight = styled.div`
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
     > svg {
         font-size: 20px;
         cursor: pointer;
@@ -91,12 +91,23 @@ export const DivAccount = styled.div`
     margin-right: 25px;
 
     a {
-        color: #000;
+        font-size: 15px;
+        color: ${theme.black};
+        &:hover {
+            color: ${theme.black};
+            text-decoration: underline;
+        }
     }
 `
 
-export const bar = styled.span`
-    display: flex;
-    gap: 10px;
-    margin-right: 25px;
+export const Bar = styled.span`
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5px;
+    width: 16px;
+    background-color: ${theme.black};
+    font-size: 11px;
+    color: ${theme.white};
+    border-radius: 50%;
 `

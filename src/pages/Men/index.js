@@ -14,20 +14,20 @@ export default function Men() {
                 <p>Men</p>
             </S.Breadcrumb>
 
-        <S.SomeProducts>
+            <S.SomeProducts>
                 <ul>
                     {menProducts.map((item) => (
                         <li key={item.id}>
                             <img src={item.image} alt={`Imagem ${item.title}`} />
                             <div>
-                                <p>{item.title}</p>
+                                <p className='title'>{item.title}</p>
                                 <span>R${item.price}</span>
                                 <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
                             </div>
                         </li>
                     ))}
                 </ul>
-                    </S.SomeProducts>
+            </S.SomeProducts>
         </>
     )
 }
