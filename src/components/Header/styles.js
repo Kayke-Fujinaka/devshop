@@ -16,7 +16,6 @@ export const ContainerLeft = styled.div`
     h1 {
         font-size: 26px;
         cursor: pointer;
-        color: #FF7D1B;
     }
 `
 

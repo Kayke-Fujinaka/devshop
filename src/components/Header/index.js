@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <S.MainContainer>
         <S.ContainerLeft>
-          <h1>devshop</h1>
+          <h1>DevShop</h1>
           <S.Nav>
             <li><a href='#'>Men</a></li>
             <li><a href='#'>Women</a></li>
