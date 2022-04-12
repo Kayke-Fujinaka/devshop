@@ -4,7 +4,7 @@ import * as S from "./styles";
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
-export default function Login(){
+export default function Forgot(){
     return(
         <>
         <Header />
@@ -16,8 +16,12 @@ export default function Login(){
                 <span>/</span>
                 <a href='#'>My account</a>
                 <span>/</span>
-                <p>Login</p>
+                <p>Forgot Password</p>
             </S.Breadcrumb>
+
+            <S.Information>
+                <p>We will send you an email so you can change your password.</p>
+            </S.Information>
 
             <S.ContainerForm>
                 <div>
@@ -27,19 +31,10 @@ export default function Login(){
                             <input type="email" placeholder='youremail@email.com'/>
                         </label>
                     </div>
-                    <div className='divLabelInput'>
-                        <label>
-                            Password
-                            <input type="password" />
-                        </label>
-                    </div>
-                    <S.ForgotPassword>
-                        <a href='/reset'>Forgot password?</a>
-                    </S.ForgotPassword>
                     <S.DivButton>
-                        <button>Sing in</button>
+                        <button>Send email</button>
                     </S.DivButton>
-                    <p>Don't have an account? <a href='/register'>Register</a></p>
+                    <p>Back to <a href='/login'>Login</a></p>
                 </div>
             </S.ContainerForm>
 

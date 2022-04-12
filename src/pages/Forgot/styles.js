@@ -8,7 +8,7 @@ export const ContainerMain = styled.div`
 export const Breadcrumb = styled.div`
     display: flex;
     width: 80%;
-    margin: 1.5rem auto;
+    margin: 1.5rem auto 0.8rem;
     gap: 5px;
     font-size: 15px;
     a {
@@ -20,6 +20,16 @@ export const Breadcrumb = styled.div`
     }
     p {
         font-weight: ${theme.fonts.weight.bolder};
+    }
+`
+
+export const Information = styled.div`
+    display: flex;
+    width: 80%;
+    margin: 0 auto 1.5rem; 
+    font-size: 13px;
+    p {
+        font-weight: ${theme.fonts.weight.medium};
     }
 `
 
@@ -60,23 +70,10 @@ export const ContainerForm = styled.div`
     }
 `
 
-export const ForgotPassword = styled.div`
-    margin: 5px 0 25px;
-    a {
-        font-size: 12px;
-        font-weight: ${theme.fonts.weight.bolder};
-        color: ${theme.black};
-        &:hover{
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    }
-
-`
-
 export const DivButton = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 
     button {
         height: 35px;
