@@ -7,7 +7,6 @@ import Footer from '../../components/Footer'
 export default function Forgot(){
     return(
         <>
-        <Header />
 
         <S.ContainerMain>
 
@@ -40,7 +39,6 @@ export default function Forgot(){
 
         </S.ContainerMain>
 
-        <Footer />
         </>
     )
 }

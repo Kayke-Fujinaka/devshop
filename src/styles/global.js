@@ -61,5 +61,10 @@ ul {
         width: 0.2rem;
       }
     }
+
+.container {
+  margin-top: 110px;
+}
 `;
+
 export default GlobalStyle;

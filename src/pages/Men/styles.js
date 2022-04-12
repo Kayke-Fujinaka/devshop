@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import theme from "../../styles/theme"
+import styled from 'styled-components'
+import theme from '../../styles/theme'
 
 export const Breadcrumb = styled.div`
     display: flex;
@@ -17,9 +17,14 @@ export const Breadcrumb = styled.div`
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+    @media (max-width: 510px){
+        width: 100%;
+        margin: 1.5rem 10px;
+        font-size: 12px;
+    }
 `
 
-export const AllProducts = styled.div`
+export const SomeProducts = styled.div`
     display: flex;
     width: 80vw;
     margin: 3rem auto 0 auto;
@@ -34,12 +39,12 @@ export const AllProducts = styled.div`
 
         li {
             width: 225px;
-            height: 350px;
+            height: 400px;
             position: relative;
 
             img {
                 width: 100%;
-                height: 65%;
+                height: 60%;
             }
 
             div {

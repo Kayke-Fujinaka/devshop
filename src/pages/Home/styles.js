@@ -87,8 +87,56 @@ export const TitleProducts = styled.div`
 `
 
 export const SomeProducts = styled.div`
+    display: flex;
+    width: 80vw;
+    margin: 3rem auto 0 auto;
+    height: 100%;
 
-    a {
+    ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem;
+
+        li {
+            width: 225px;
+            height: 400px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 60%;
+            }
+
+            div {
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                
+                p {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+
+                span {
+                    margin-top: 10px;
+                    font-weight: ${theme.fonts.weight.boldest};
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+`
+
+export const ButtonSeeAllProducts = styled.div`
+    display: flex;
+     a {
         color: #fff;
         text-transform: uppercase;
         font-weight: ${theme.fonts.weight.boldest};
@@ -98,7 +146,7 @@ export const SomeProducts = styled.div`
         width: 350px;
         height: 40px;
         background: #FF7D1B;
-        margin: 0 auto;
+        margin: 1rem auto 10rem auto;
 }
 `
 
