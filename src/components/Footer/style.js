@@ -3,9 +3,6 @@ import theme from '../../styles/theme'
 
 export const Container = styled.div`
     width: 100vw;
-
-    position: absolute;
-    bottom: 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
