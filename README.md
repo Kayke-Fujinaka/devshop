@@ -26,7 +26,10 @@ O site tem no total X páginas, sendo elas:
 :heavy_check_mark: Aplicação dos estilos globais;\
 :heavy_check_mark: Componente Header;\
 :heavy_check_mark: Componente Footer;\
-:heavy_check_mark: Colocar quinta coisa que fez;
+:heavy_check_mark: Página de login e registro criada;\
+:x: ?;\
+:x: ?\
+:x: ?;
 
 ## :rocket: Tecnologias ##
 
