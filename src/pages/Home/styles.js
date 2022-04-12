@@ -22,7 +22,7 @@ export const ProductCard =  styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: ${theme.black};
     cursor: pointer;
 
     img {
@@ -54,7 +54,7 @@ export const ContentProductCard =  styled.div`
     }
 
     a {
-        color: #fff;
+        color: ${theme.white};
         font-weight: ${theme.fonts.weight.boldest};
         text-transform: uppercase;
         background: #FF7D1B;

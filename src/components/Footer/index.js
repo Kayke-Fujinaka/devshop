@@ -18,7 +18,7 @@ export default function Footer() {
                     <S.Service>
                         <FaTruck />
                         <S.TextService>
-                            <h1>Serviço de Entrgea</h1>
+                            <h1>Serviço de Entrega</h1>
                             <p>Entregamos em todo país.</p>
                         </S.TextService>
                     </S.Service>

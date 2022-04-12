@@ -23,6 +23,7 @@ export const ContainerLeft = styled.div`
 export const Nav = styled.ul`
     display: flex;
     gap: 20px; 
+    outline: none;
     a {
         position: relative;
         font-size: 15px;
