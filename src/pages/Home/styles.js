@@ -30,11 +30,12 @@ export const ProductCard = styled.div`
         opacity: 0.7;
         object-fit: cover;
         transition: 0.5s;
-    }
-
-    &:hover img {
+            &:hover {
         opacity: 0.5;
     }
+    }
+
+
 `
 
 export const ContentProductCard = styled.div`
@@ -60,6 +61,9 @@ export const ContentProductCard = styled.div`
         padding: 7px 10px;
         margin-top: 10px;
         border-radius: 1px;
+        &:hover {
+                filter: brightness(1.1);
+        }
     }
 `
 
@@ -78,12 +82,14 @@ export const TitleProducts = styled.div`
         align-items: center;
         justify-content: center;
         gap: 10px;
-        
+        @media (max-width: 550px){
+        text-align: center;
+    }
     }
 
     p {
         margin-top: 10px;
-    }
+    } 
 `
 
 export const SomeProducts = styled.div`
@@ -136,11 +142,6 @@ export const SomeProducts = styled.div`
                     font-size: 1.3rem;
                 }
             }
-
-            &:hover {
-                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                padding: 10px;
-            }
         }
     }
 `
@@ -158,6 +159,9 @@ export const ButtonSeeAllProducts = styled.div`
         height: 40px;
         background: #FF7D1B;
         margin: 1rem auto 10rem auto;
+        &:hover {
+                filter: brightness(1.1);
+        }
 }
 `
 

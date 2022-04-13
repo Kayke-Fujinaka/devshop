@@ -62,7 +62,11 @@ export const MainFooter = styled.div`
 
 export const MFBox = styled.div`
     width: 350px;
-    
+
+    ul a {
+        color: ${theme.black};
+    }
+
     .iconInstaFooter {
         width: 30px;
         height: 30px;

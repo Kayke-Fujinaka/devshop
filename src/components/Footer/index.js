@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './style';
-import { FaInstagram, FaCreditCard, FaTruck, FaWhatsapp, FaPhoneAlt, FaPaperPlane, FaConnectdevelop } from 'react-icons/fa'
+import { FaInstagram, FaCreditCard, FaTruck, FaWhatsapp, FaPaperPlane, FaConnectdevelop } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -38,13 +38,13 @@ export default function Footer() {
             <S.TitleMainFooter>Navegação</S.TitleMainFooter>
             <ul>
               <li><a href="https://www.linkedin.com/in/jguilhermesl/">Linkedin do João Guilherme</a></li>
-              <li><a href="https://www.linkedin.com/in/kayke-fujinaka/"></a>Linkedin do Kayke</li>
+              <li><a href="https://www.linkedin.com/in/kayke-fujinaka/">Linkedin do Kayke</a></li>
             </ul>
           </S.MFBox>
           <S.MFBox>
             <S.TitleMainFooter>Contato</S.TitleMainFooter>
-            <div className="textCel"><FaCreditCard /> (99) 99145 331</div>
-            <div className="text@"><FaPaperPlane /> devshop@gmail.com</div>
+            <div className="text@"><FaPaperPlane /> joaoguilherme_pe@hotmail.com</div>
+            <div className="text@"><FaPaperPlane /> kaykealvesfujinakap@gmail.com</div>
           </S.MFBox>
           <S.MFBox>
             <S.TitleMainFooter>Redes sociais</S.TitleMainFooter>

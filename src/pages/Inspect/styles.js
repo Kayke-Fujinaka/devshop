@@ -30,6 +30,12 @@ export const InspectItem = styled.div`
     height: 50vh;
     margin: 80px auto;
     gap: 6rem;
+    @media (max-width: 1024px){
+        flex-wrap: wrap;
+        width: 100vw;
+        margin-bottom: 350px;
+        gap: 2rem;
+    }
 `
 
 export const BoxLeft = styled.div`
@@ -40,6 +46,15 @@ export const BoxLeft = styled.div`
         width: 100%;
         height: 100%;
     }
+    @media (max-width: 1024px){
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+    }
+    @media (max-width: 510px){
+        width: 80%;
+        height: 80%;
+    }
 `
 
 export const BoxRight = styled.div`
@@ -47,12 +62,24 @@ export const BoxRight = styled.div`
     .titleCompany {
         color: #FF7D1B;
     }
+    h1 {
+        @media (max-width: 510px){
+        font-size: 24px;
+    }
+    }
     p {
         margin: 25px 0;
         text-align: justify;
+        @media (max-width: 510px){
+        font-size: 18px;
+    }
     }
     span {
         font-weight: ${theme.fonts.weight.bolder};
+    }
+    @media (max-width: 1024px){
+        width: 70%;
+        margin: 0 auto;
     }
 `
 
@@ -79,6 +106,9 @@ export const Purchase = styled.div`
         button {
             font-size: 30px;
             color: #FF7D1B;
+            &:hover {
+                filter: brightness(1.2);
+            }
         }
     }
 
@@ -88,5 +118,8 @@ export const Purchase = styled.div`
         padding: 10px 30px;
         border-radius: 10px;
         box-shadow: 0px 3px 21px -2px rgba(255,125,27,0.56);
+        &:hover {
+                filter: brightness(1.1);
+        }
     }
 `
