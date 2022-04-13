@@ -37,9 +37,8 @@ export default function Footer() {
           <S.MFBox>
             <S.TitleMainFooter>Navegação</S.TitleMainFooter>
             <ul>
-              <li>Loja 1: Dev Club (Dono Rodolfo, 123)</li>
-              <li>Loja 2: Dev Junior (Dono Guilherme, 123)</li>
-              <li>Loja 3: Dev Junior (Dono Kayke, 993)</li>
+              <li><a href="https://www.linkedin.com/in/jguilhermesl/">Linkedin do João Guilherme</a></li>
+              <li><a href="https://www.linkedin.com/in/kayke-fujinaka/"></a>Linkedin do Kayke</li>
             </ul>
           </S.MFBox>
           <S.MFBox>
