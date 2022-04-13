@@ -103,6 +103,12 @@ export const SomeProducts = styled.div`
             width: 225px;
             height: 400px;
             position: relative;
+            transition: 0.5s;
+            cursor: pointer;
+
+            a {
+                color: #000;
+            }
 
             img {
                 width: 100%;
@@ -129,6 +135,11 @@ export const SomeProducts = styled.div`
                     font-weight: ${theme.fonts.weight.boldest};
                     font-size: 1.3rem;
                 }
+            }
+
+            &:hover {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                padding: 10px;
             }
         }
     }
