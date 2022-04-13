@@ -10,6 +10,7 @@ import Men from '../pages/Men'
 import Jewelery from '../pages/Jewelery'
 import Eletronics from '../pages/Eletronics'
 import Inspect from '../pages/Inspect'
+import Policy from '../pages/Policy'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -30,6 +31,7 @@ export default function MainRoutes() {
                     <Route exact path="/jewelery" component={Jewelery} />
                     <Route exact path="/eletronics" component={Eletronics} />
                     <Route exact path="/products/:id" component={Inspect} />
+                    <Route exact path="/policy" component={Policy} />
                 </Switch>
             </div>
             <Footer />
