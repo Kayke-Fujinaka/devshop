@@ -9,6 +9,7 @@ import Women from '../pages/Women'
 import Men from '../pages/Men'
 import Jewelery from '../pages/Jewelery'
 import Eletronics from '../pages/Eletronics'
+import Inspect from '../pages/Inspect'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -28,6 +29,7 @@ export default function MainRoutes() {
                     <Route exact path="/men" component={Men} />
                     <Route exact path="/jewelery" component={Jewelery} />
                     <Route exact path="/eletronics" component={Eletronics} />
+                    <Route exact path="/products/:id" component={Inspect} />
                 </Switch>
             </div>
             <Footer />
