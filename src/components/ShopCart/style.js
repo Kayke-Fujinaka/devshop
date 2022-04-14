@@ -132,3 +132,6 @@ export const Total = styled.div`
     margin-left: 10px;
     color: ${theme.gray}
 `
+
+export const DontHasProduct = styled.div`
+`
