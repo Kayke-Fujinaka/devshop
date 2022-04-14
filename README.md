@@ -98,15 +98,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-    </td>
-        <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/90225074?v=4" width="160px;" alt="Foto do Matheus Santos"/><br>
-        <sub>
-          <b>Matheus Santos</b>
-        </sub>
-      </a>
-    </td>
   </tr>
 </table>
 

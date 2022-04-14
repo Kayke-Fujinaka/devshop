@@ -30,7 +30,7 @@ export const ProductCard = styled.div`
         opacity: 0.7;
         object-fit: cover;
         transition: 0.5s;
-            &:hover {
+        &:hover {
         opacity: 0.5;
     }
     }
@@ -119,6 +119,10 @@ export const SomeProducts = styled.div`
             img {
                 width: 100%;
                 height: 60%;
+                &:hover {
+                    opacity: 1;
+                    filter: brightness(1);
+                }
             }
 
             div {

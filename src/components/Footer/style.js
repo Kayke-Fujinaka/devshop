@@ -6,7 +6,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: ${theme.fonts.primary}
+    font-family: ${theme.fonts.primary};
 `
 
 export const ServicesFooter = styled.div`
@@ -16,13 +16,21 @@ export const ServicesFooter = styled.div`
     justify-content: space-evenly;
     flex-wrap: wrap;
     color: ${theme.gray3};
+    @media (max-width: 1280px){
+        gap: 10px;
+    }
 `
 
 export const Service = styled.div`
     width: 350px;
     display: flex;
     align-items: center;
-
+    @media (max-width: 1280px){
+        width: 341px;
+    }
+    @media (max-width: 510px){
+        width: 300px;
+    }
     svg {
         font-size: 2rem;
         margin-right: 10px;
@@ -30,15 +38,23 @@ export const Service = styled.div`
 
     &:nth-child(1) {
         border-right: 2px solid ${theme.black};
+        @media (max-width: 768px){
+            border-right: 2px solid transparent;
+        }
     }
     &:nth-child(2) {
         border-right: 2px solid ${theme.black};
+        @media (max-width: 768px){
+            border-right: 2px solid transparent;
+        }
     }
 `
 
 export const TextService = styled.div`
     font-size: 0.6rem;
-    
+    @media (max-width: 768px){
+            font-size: 0.5rem;
+    }
     h1 {
         text-transform: uppercase;
     }
@@ -57,12 +73,23 @@ export const MainFooter = styled.div`
     gap: 6rem;
     width: 100vw;
     margin-top: 2rem;
+    @media (max-width: 1280px){
+        gap: 1rem;
+    }
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
 `
 
 
 export const MFBox = styled.div`
     width: 350px;
-
+    
+    @media (max-width: 1280px){
+        width: 300px;
+        margin: 0 20px;
+    }
+   
     ul a {
         color: ${theme.black};
     }
@@ -75,7 +102,7 @@ export const MFBox = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
         svg {
             color: ${theme.white}
         }
@@ -86,7 +113,7 @@ export const MFBox = styled.div`
         width: 220px;
         height: 30px;
         margin-top: 10px;
-
+        
         input {
             width: 190px;
             height: 100%;
@@ -125,7 +152,9 @@ export const BottomFooter = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 10px auto 10px auto;
-
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
     .createdBy {
         display: flex;
         font-size: 1rem;
@@ -139,6 +168,9 @@ export const BottomFooter = styled.div`
         font-size: 0.8rem;
         font-weight: ${theme.fonts.weight.medium};
         text-transform: uppercase;
+        @media (max-width: 768px){
+        text-align: center;
+    }
     }
 `
 

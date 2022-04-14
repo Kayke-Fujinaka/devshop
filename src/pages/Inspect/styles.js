@@ -33,8 +33,11 @@ export const InspectItem = styled.div`
     @media (max-width: 1024px){
         flex-wrap: wrap;
         width: 100vw;
-        margin-bottom: 350px;
+        margin-bottom: 300px;
         gap: 2rem;
+    }
+    @media (max-width: 1024px){
+        margin-bottom: 500px;
     }
 `
 
