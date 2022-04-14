@@ -30,6 +30,10 @@ export const SomeProducts = styled.div`
     margin: 3rem auto 0 auto;
     height: 100%;
 
+    a {
+        color: #000;
+    }
+
     ul {
         display: flex;
         width: 100%;

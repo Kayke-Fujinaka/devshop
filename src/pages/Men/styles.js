@@ -37,6 +37,10 @@ export const SomeProducts = styled.div`
         justify-content: center;
         gap: 5rem;
 
+        a {
+            color: #000;
+        }
+
         li {
             width: 225px;
             height: 400px;

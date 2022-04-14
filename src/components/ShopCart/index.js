@@ -17,7 +17,9 @@ export default function ShopCart({ sidebar }) {
     useCallback(() => {
         const listaProducts = localStorage.getItem('products')
         setProductsOnCart(JSON.parse(listaProducts) || [])
+
     }, [productsOnCart])
+
 
     function deleteProduct(productId) {
         // Vai chegar o Id do produto e se esse Id tiver no array products do local storage, ele será filtrado e excluido
@@ -64,15 +66,15 @@ export default function ShopCart({ sidebar }) {
                             ))}
                         </S.ListProducts>
 
-                        {hasProductOnCart && (
+                        {productsOnCart.length > 0 ? (
                             <S.Total>
                                 <h2>Total (sem frete):</h2>
                                 <p>0</p>
-                            </S.Total>)}
-
-                        {hasProductOnCart === false && (
-                            <p>Não há produtos no carrinho.</p>
-                        )}
+                            </S.Total>) : (
+                            <S.DontHasProduct>
+                                <p>Não há produtos no carrinho.</p>
+                            </S.DontHasProduct>
+                        ) }
 
                     </S.ShopCart>
                 </S.Modal>)}

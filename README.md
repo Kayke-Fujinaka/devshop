@@ -18,7 +18,12 @@ O site tem no total X páginas, sendo elas:
 - **Register:** xxxxxxxxxxxxxx.
 - **Forgot Password:** xxxxxxxxxxxxxx.
 - **Home:** xxxxxxxxxxxxxx.
-- **Profile Informations:** xxxxxxxxxxxxxx.
+- **Men:**
+- **Women:**
+- **Jewelery:**
+- **Eletronics:**
+- **Our policy:**
+- **Inspect:** xxxxxxxxxxxxxx.
 - **Error 404:** xxxxxxxxxxxxxx.
 ## :dart: Etapas ##
 
@@ -26,10 +31,12 @@ O site tem no total X páginas, sendo elas:
 :heavy_check_mark: Aplicação dos estilos globais;\
 :heavy_check_mark: Componente Header;\
 :heavy_check_mark: Componente Footer;\
-:heavy_check_mark: Página de login e registro criada;\
-:x: ?;\
-:x: ?\
-:x: ?;
+:heavy_check_mark: Página de login e registro criadas;\
+:heavy_check_mark: Páginas Men, Women, Jewelery e Eletronics criadas;\
+:heavy_check_mark: Página Our policy concluída;\
+:x: Terminar o carrinho ;\
+:x: Fazer o 'active' da nav no Header;\
+:x: Deixar o Header responsivo, com menu Hamburguer;\
 
 ## :rocket: Tecnologias ##
 
@@ -40,6 +47,8 @@ No projeto foram utilizadas as seguintes tecnologias:
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
 - [React](https://pt-br.reactjs.org/)
 - [React icons](https://react-icons.github.io/react-icons/)
+- [React router dom]()
+- [Axios]()
 - [Styled Components](https://styled-components.com/docs)
 ## :closed_book: Requisitos ##
 

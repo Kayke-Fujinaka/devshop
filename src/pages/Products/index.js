@@ -22,14 +22,16 @@ export default function Products() {
             <S.AllProducts>
                 <ul>
                     {allProducts.map((item) => (
-                        <li key={item.id}>
-                            <img src={item.image} alt={`Imagem ${item.title}`} />
-                            <div>
-                                <p>{item.title}</p>
-                                <span>R${item.price}</span>
-                                <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
-                            </div>
-                        </li>
+                        <Link to={`/products/${item.id}`}>
+                            <li key={item.id}>
+                                <img src={item.image} alt={`Imagem ${item.title}`} />
+                                <div>
+                                    <p>{item.title}</p>
+                                    <span>R${item.price}</span>
+                                    <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
+                                </div>
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             </S.AllProducts>

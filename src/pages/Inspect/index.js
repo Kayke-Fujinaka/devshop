@@ -14,15 +14,15 @@ export default function Inspect(props) {
     const { allProducts } = useContext(ApiContext);
 
     const id = props.match.params.id
-    const index = parseInt(id) - 1
+    const index = parseInt(id) 
 
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(false)
 
-    {/* useEffect( () => {
+     useEffect( () => {
         async function loadProduct() {
             setLoading(true)
-            const response = await api.get(`products/${idToNumber}`)
+            const response = await api.get(`products/${index}`)
 
             if(response.data === null) {
                 history.replace('/')
@@ -34,7 +34,7 @@ export default function Inspect(props) {
         }
 
         loadProduct();
-    }, []) */}
+    }, [])
 
     function addItemOnCart() {
 
@@ -83,13 +83,13 @@ export default function Inspect(props) {
             {loading === false && (
                 <S.InspectItem>
                     <S.BoxLeft>
-                        <img src={allProducts[index].image} />
+                        <img src={product.image} />
                     </S.BoxLeft>
                     <S.BoxRight>
                         <S.TitleCompany>Dev Company</S.TitleCompany>
-                        <h1>{allProducts[index].title}</h1>
-                        <p>{allProducts[index].description}</p>
-                        <span>R${allProducts[index].price}</span>
+                        <h1>{product.title}</h1>
+                        <p>{product.description}</p>
+                        <span>R${product.price}</span>
                         <S.Purchase>
                             <div className="quantity">
                                 <button type="button">-</button>
