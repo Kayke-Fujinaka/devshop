@@ -11,6 +11,8 @@ import Jewelery from '../pages/Jewelery'
 import Eletronics from '../pages/Eletronics'
 import Inspect from '../pages/Inspect'
 import Policy from '../pages/Policy'
+import Search from '../pages/Search'
+import NotFound from '../pages/NotFound'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -32,6 +34,8 @@ export default function MainRoutes() {
                     <Route exact path="/eletronics" component={Eletronics} />
                     <Route exact path="/products/:id" component={Inspect} />
                     <Route exact path="/policy" component={Policy} />
+                    <Route exact path="/search/:busca" component={Search} />
+                    <Route path="*" component={NotFound} />
                 </Switch>
             </div>
             <Footer />

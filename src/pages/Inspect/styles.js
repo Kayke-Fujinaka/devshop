@@ -27,17 +27,12 @@ export const Breadcrumb = styled.div`
 export const InspectItem = styled.div`
     display: flex;
     width: 70vw;
-    height: 50vh;
     margin: 80px auto;
     gap: 6rem;
     @media (max-width: 1024px){
         flex-wrap: wrap;
         width: 100vw;
-        margin-bottom: 300px;
         gap: 2rem;
-    }
-    @media (max-width: 1024px){
-        margin-bottom: 500px;
     }
 `
 
@@ -47,8 +42,9 @@ export const BoxLeft = styled.div`
 
     img {
         width: 100%;
-        height: 100%;
+        height: 50vh;
     }
+
     @media (max-width: 1024px){
         display: flex;
         width: 70%;
@@ -66,7 +62,8 @@ export const BoxRight = styled.div`
         color: #FF7D1B;
     }
     h1 {
-        @media (max-width: 510px){
+        margin-top: 10px;
+        @media (max-width: 600px){
         font-size: 24px;
     }
     }
@@ -104,7 +101,8 @@ export const Purchase = styled.div`
         border-radius: 8px;
         padding: 0 5px;
         input {
-            width: 5%;
+            width: 20%;
+            margin-left: 6px;
         }
         button {
             font-size: 30px;

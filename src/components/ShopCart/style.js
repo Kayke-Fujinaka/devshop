@@ -18,10 +18,18 @@ export const ShopCart = styled.div`
     position: fixed;
     top: 0rem;
     right: 0rem;
-    width: 40vw;
+    width: 500px;
     height: 100%;
     z-index: 100;
     background: #fff;
+
+    @media only screen and (max-width: 550px) {
+            width: 400px;
+        }
+
+    @media only screen and (max-width: 450px) {
+            width: 300px;
+        }
 `
 
 export const TitleShopCart = styled.div`
@@ -30,7 +38,6 @@ export const TitleShopCart = styled.div`
     align-items: center;
     margin-top: 10px;
     height: 60px;
-    border-bottom: 1px solid rgb(0,0,0, 0.35);
 
 
     h1 {
@@ -39,6 +46,10 @@ export const TitleShopCart = styled.div`
         color: ${theme.gray};
         font-size: 0.85rem;
         margin-left: 10px;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 0.67rem;
+        }
     }
 
     svg {
@@ -55,19 +66,30 @@ export const TitleShopCart = styled.div`
 export const TitleProducts = styled.div`
         height: 50px;
         display: flex;
-        width:  90%;
+        width:  100%;
+        margin: 0 auto;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid rgb(0,0,0, 0.35);
+        border-top: 1px solid rgb(0,0,0, 0.35);
         
         h1 {
             margin-left: 10px;
             font-size: 1.1rem;
             font-weight: 400;
         }
+
+        h1:nth-child(1) {
+            margin-left: 2rem;
+        }
+        h1:nth-child(2) {
+            margin-right: 2rem;
+        }
 `
 export const ListProducts = styled.div`
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 
     li {
         display: flex;
@@ -75,10 +97,18 @@ export const ListProducts = styled.div`
         border-top: 1px solid rgb(0,0,0, 0.15);
         padding-top: 10px;
 
+        &:nth-child(1) { 
+            border-top: 0;
+        }
+
         .boxInfoCart {
             display: flex;
             flex-direction: column;
-            width: 60%;
+            width: 270px;
+
+            @media only screen and (max-width: 550px) {
+                font-size: 0.8rem;
+            }
 
             .quantity {
             display: flex;
@@ -86,6 +116,7 @@ export const ListProducts = styled.div`
             max-width: 100px;
             border: 1px solid ${theme.gray2};
             margin: 10px 0 0 20px;
+            height: 30px;
 
             input {
                 display: flex;
@@ -95,12 +126,16 @@ export const ListProducts = styled.div`
                 width: 34%;
                 outline: none;
                 border: 1px solid ${theme.gray2};
+                font-weight: ${theme.fonts.weight.boldest};
             }
             button {
                 font-size: 30px;
                 color: ${theme.gray};
                 width: 33%;
                 border: 1px solid ${theme.gray2};
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }}
     }
             
@@ -108,12 +143,19 @@ export const ListProducts = styled.div`
 
         h1 {
             font-size: 1rem;
-            margin-left: 10px;
+            margin-left: 20px;
+            margin-right: 5px;
+            font-weight: ${theme.fonts.weight.medium};
+
+            @media only screen and (max-width: 550px) {
+                font-size: 0.8rem;
+        }
+
         }
 
         img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             margin-left: 10px;
         }
 
@@ -125,13 +167,71 @@ export const ListProducts = styled.div`
             &:hover {
                 color: ${theme.gray}
             }
+
         }
+
+        span {
+                margin-left: 35px;
+                font-weight: ${theme.fonts.weight.boldest}
+            }
+`
+
+export const OurShops = styled.div`
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5rem;
+    width: 100%;
+    border-top: 1px solid rgb(0,0,0, 0.35);
+    padding: 10px 10px;
+    background: #fff;
+    z-index: 10;
+
+    span {
+        color: #FF7D1B;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-left: 10px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 `
 
 export const Total = styled.div`
-    margin-left: 10px;
-    color: ${theme.gray}
+    color: #FF7D1B;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    border-top: 1px solid rgb(0,0,0, 0.35);
+    padding: 10px 0;
+    background: #fff;
+    z-index: 10;
+
+    h2 {
+        margin-left: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+
+        p{
+            margin-top: 4px;
+        }
+    }
 `
 
 export const DontHasProduct = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    height: 50px;
+    color: #FF7D1B;
 `

@@ -1,9 +1,10 @@
-    import styled from 'styled-components'
+import styled from 'styled-components'
 import theme from "../../styles/theme"
 
 export const MainContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: ${theme.fonts.secondary};
     border: 1px solid #B5B5B5;
     padding: 20px 60px;
@@ -14,6 +15,10 @@ export const MainContainer = styled.div`
     z-index: 10;
     width: 100vw;
     box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.37);
+
+    @media only screen and (max-width: 450px) {
+        padding: 20px 20px;
+    }
 `
 
 export const ContainerLeft = styled.div`
@@ -31,6 +36,11 @@ export const Nav = styled.ul`
     display: flex;
     gap: 20px; 
     outline: none;
+
+    @media screen and (max-width: 1180px) {
+        display: none;
+    }
+
     a {
         position: relative;
         font-size: 15px;
@@ -55,7 +65,7 @@ export const Nav = styled.ul`
     }
 `
 
-export const Li = styled.li `
+export const Li = styled.li`
     font-size: 15px;
         border-bottom: 1px solid transparent;
         color: ${theme.gray2};
@@ -69,6 +79,47 @@ export const Li = styled.li `
             background-color: red;
 
         }
+`
+
+export const ContainerSearch = styled.div`
+.inputEmailFooter {
+        width: 220px;
+        height: 30px;
+        
+        input {
+            width: 190px;
+            height: 100%;
+            border: 1px solid ${theme.black};
+            border-right: 0;
+            padding-left: 10px;
+            font-size: 0.8rem;
+        } 
+
+        .iconInputEmailFooter {
+                background: #FF7D1B;
+                border: 1px solid ${theme.black};
+                color: ${theme.white};
+                width: 30px;
+                height: 100%;
+                float: right;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            svg {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 1180px){
+        display: none;
+    }
+
+    }
+
+    @media only screen and (max-width: 720px) {
+        display: none;
+    }
 `
 
 export const ContainerRight = styled.div`
@@ -90,6 +141,10 @@ export const DivAccount = styled.div`
     gap: 10px;
     margin-right: 25px;
 
+    @media screen and (max-width: 1880px) {
+        display: none;
+    }
+
     a {
         font-size: 15px;
         color: ${theme.black};
@@ -110,4 +165,98 @@ export const Bar = styled.span`
     font-size: 11px;
     color: ${theme.white};
     border-radius: 50%;
+`
+
+export const MenuHamburguer = styled.div`
+    display: none;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+
+    @media screen and (max-width: 1180px){
+        display: flex;
+    }
+
+    .navHamburguer {
+        opacity: 0;
+        margin-left: 1000px;
+        transition:  1s;
+    }
+
+    .navTrue {
+            transition:  1s;
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+    nav {
+        position: absolute;
+        left: 0rem;
+        top: 72px;
+        width: 100vw;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        list-style: none;
+
+        li {
+            padding: 0 10px;
+            font-size: 1.3rem;
+            color: #000;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid rgb(0,0,0, 0.15);
+
+            &:hover {
+                background: rgb(0,0,0, 0.05)
+            }
+
+            a {
+                color: #000;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+        }
+
+        .inputEmailFooter {
+        width: 220px;
+        height: 30px;
+        display: flex;
+        margin: 1rem auto 1rem auto;
+
+        
+        input {
+            width: 190px;
+            height: 100%;
+            border: 1px solid ${theme.black};
+            border-right: 0;
+            padding-left: 10px;
+            font-size: 0.8rem;
+        } 
+
+        .iconInputEmailFooter {
+                background: #FF7D1B;
+                border: 1px solid ${theme.black};
+                color: ${theme.white};
+                width: 30px;
+                height: 100%;
+                float: right;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            svg {
+                font-size: 1rem;
+            }
+        }
+
+    }
+    }
 `
