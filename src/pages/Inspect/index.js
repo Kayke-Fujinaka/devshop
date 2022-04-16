@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 
 import { Link, useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import api from '../../services/api'
 
 import { ApiContext } from '../../contexts/apiContext'
@@ -61,25 +62,36 @@ export default function Inspect(props) {
         const hasProduct = savedProducts.some((savedProduct) => savedProduct.id === product.id)
 
         if (hasProduct) {
-            alert('Esse produto já está no carrinho.')
+            toast.info('Esse produto já está no carrinho!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             return
             //Execução do código finaliza aqui.
         }
 
         savedProducts.push(product)
         localStorage.setItem('products', JSON.stringify(savedProducts));
-        toast.success(`${product.title} adicionado em 'Carrinho'!`, {
-            position: "top-right",
-            autoClose: 3000,
+        toast.success('Produto adicionado ao carrinho!', {
+            position: "top-left",
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-        });
+            });
     }
 
     function removeQuantity() {
+        if(product.quantity === 0) {
+            return
+        }
         product.quantity -= 1
         setQuantity(quantity - 1)
     }

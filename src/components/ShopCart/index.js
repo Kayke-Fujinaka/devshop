@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import * as S from './style';
 import { FaTimes, FaTrash, FaStore, FaAngleDown } from 'react-icons/fa'
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 
 export default function ShopCart({ sidebar }) {
@@ -33,20 +34,35 @@ export default function ShopCart({ sidebar }) {
 
         setProductsOnCart(filtroProducts)
         localStorage.setItem('products', JSON.stringify(filtroProducts))
+        toast.success('Produto removido do carrinho com sucesso.', {
+            position: "top-left",
+            autoClose: 900,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     }
 
-    function removeQuantity() {
-        if(quantity === 1) {
-            setQuantity(1)
-            alert('No mínimo 1 produto')
+    function removeQuantity(qtd, index) {
+        if(productsOnCart[index].quantity === 1) {
+            toast.info('No mínimo 1 produto!', {
+                position: "top-left",
+                autoClose: 900,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             return
         }
-
-        setQuantity(quantity - 1)
+        productsOnCart[index].quantity = qtd - 1
     }
 
-    function addQuantity() {
-    
+    function addQuantity(qtd, index) {
+        productsOnCart[index].quantity = qtd + 1
     }
 
     useEffect( () => {
@@ -79,15 +95,15 @@ export default function ShopCart({ sidebar }) {
                         </S.TitleProducts>
 
                         <S.ListProducts>
-                            {productsOnCart.map(item => (
+                            {productsOnCart.map( (item, index) => (
                                 <li key={item.id}>
                                     <img src={item.image} alt={item.title} />
                                     <div className="boxInfoCart">
                                         <h1>{item.title}</h1>
                                         <div className="quantity">
-                                            <button type="button" onClick={removeQuantity}>-</button>
-                                            <input type="text" value={item.quantity} />
-                                            <button type="button" onClick={addQuantity}>+</button>
+                                            <button type="button" onClick={() => removeQuantity(item.quantity, index)}>-</button>
+                                            <input type="text" value={item.quantity} disabled />
+                                            <button type="button" onClick={() => addQuantity(item.quantity, index)}>+</button>
                                         </div>
                                     </div>
                                     <span>R${(item.price).toFixed(2)}</span>
