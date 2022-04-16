@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from "../../styles/theme"
 
 export const SeeProductsCards = styled.div`
-    max-width: 90vw;
+    max-width: 95vw;
 
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@ export const SeeProductsCards = styled.div`
 `
 
 export const ProductCard = styled.div`
-    width: 320px;
+    width: 300px;
     height: 300px;
     flex: none;
     position: relative;
@@ -94,7 +94,7 @@ export const TitleProducts = styled.div`
 
 export const SomeProducts = styled.div`
     display: flex;
-    width: 80vw;
+    width: 82vw;
     margin: 3rem auto 0 auto;
     height: 100%;
 

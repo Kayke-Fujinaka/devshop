@@ -1,13 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import * as S from "./styles"
 import { FiShoppingCart } from 'react-icons/fi'
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import ShopCart from '../ShopCart';
 
+import { qtdItems } from '../ShopCart';
+
 export default function Header() {
-  const [showSidebar, setShowSidebar] = useState(false)
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [productsOnCart, setProductsOnCart] = useState([])
+  const [qtdItems, setQtdItems] = useState(0)
+
+  useEffect(() => {
+    const listaProducts = localStorage.getItem('products')
+    setProductsOnCart(JSON.parse(listaProducts) || [])
+    console.log(productsOnCart)
+  }, [[], productsOnCart])
+
+  useCallback(() => {
+    const listaProducts = localStorage.getItem('products')
+    setProductsOnCart(JSON.parse(listaProducts) || [])
+
+  }, [productsOnCart, qtdItems])
+
+  useEffect(() => {
+    let qtd = 0;
+
+    productsOnCart.forEach((item, index) => {
+      qtd += item.quantity
+    })
+    setQtdItems(qtd)
+  }, [[], productsOnCart, qtdItems])
 
   return (
     <>
@@ -29,8 +54,8 @@ export default function Header() {
             <span>/</span>
             <p><Link to="/login">Login</Link></p>
           </S.DivAccount>
-          <FiShoppingCart onClick={() => setShowSidebar(!showSidebar)}/>
-          <S.Bar>0</S.Bar>
+          <FiShoppingCart onClick={() => setShowSidebar(!showSidebar)} />
+          <S.Bar>{qtdItems}</S.Bar>
         </S.ContainerRight>
       </S.MainContainer>
       {showSidebar && <ShopCart sidebar={showSidebar} />}

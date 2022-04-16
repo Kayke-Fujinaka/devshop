@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import * as S from "./styles";
+import LinearProgress from '@mui/material/LinearProgress';
+import Box from '@mui/material/Box';
 
 import { Link, useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -18,18 +20,30 @@ export default function Inspect(props) {
 
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(false)
+    const [quantity, setQuantity] = useState(1)
 
-     useEffect( () => {
+    useEffect(() => {
         async function loadProduct() {
             setLoading(true)
             const response = await api.get(`products/${index}`)
 
-            if(response.data === null) {
+            if (response.data === null) {
                 history.replace('/')
                 return
             }
 
-            setProduct(response.data)
+            let p = {
+                category: response.data.category,
+                description: response.data.description,
+                id: response.data.id,
+                image: response.data.image,
+                price: response.data.price,
+                rating: response.data.rating,
+                title: response.data.title,
+                quantity: 1
+            }
+
+            setProduct(p)
             setLoading(false)
         }
 
@@ -38,24 +52,23 @@ export default function Inspect(props) {
 
     function addItemOnCart() {
 
-        console.log('Oi')
-        console.log(allProducts[index])
+        console.log(product)
 
         const myList = localStorage.getItem('products');
 
         let savedProducts = JSON.parse(myList) || [];
         // Se tiver algum produto salvo com esse mesmo id precisa ignorar
-        const hasProduct = savedProducts.some((savedProduct) => savedProduct.id === allProducts[index].id)
+        const hasProduct = savedProducts.some((savedProduct) => savedProduct.id === product.id)
 
         if (hasProduct) {
             alert('Esse produto já está no carrinho.')
             return
             //Execução do código finaliza aqui.
-        } 
+        }
 
-        savedProducts.push(allProducts[index])
+        savedProducts.push(product)
         localStorage.setItem('products', JSON.stringify(savedProducts));
-        toast.success(`${allProducts[index].title} adicionado em 'Carrinho'!`, {
+        toast.success(`${product.title} adicionado em 'Carrinho'!`, {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -64,6 +77,16 @@ export default function Inspect(props) {
             draggable: true,
             progress: undefined,
         });
+    }
+
+    function removeQuantity() {
+        product.quantity -= 1
+        setQuantity(quantity - 1)
+    }
+
+    function addQuantity() {
+        product.quantity += 1
+        setQuantity(quantity + 1)
     }
 
     return (
@@ -77,7 +100,9 @@ export default function Inspect(props) {
             </S.Breadcrumb>
 
             {loading && (
-                <h1>Carregando...</h1>
+                <Box sx={{ width: '100%' }} >
+                    <LinearProgress />
+                </Box>
             )}
 
             {loading === false && (
@@ -92,9 +117,9 @@ export default function Inspect(props) {
                         <span>R${product.price}</span>
                         <S.Purchase>
                             <div className="quantity">
-                                <button type="button">-</button>
-                                <input type="text" value="1" />
-                                <button type="button">+</button>
+                                <button type="button" onClick={removeQuantity}>-</button>
+                                <input type="text" value={quantity} />
+                                <button type="button" onClick={addQuantity} >+</button>
                             </div>
                             <button className="buttonPurchase" onClick={addItemOnCart}><FiShoppingCart /> Add to cart</button>
                         </S.Purchase>
