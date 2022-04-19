@@ -76,6 +76,11 @@ export default function Header() {
                     <FiSearch />
                   </Link>
                 </div>
+                <S.DivAccount>
+                  <p><Link to="/register">Register</Link></p>
+                  <span>/</span>
+                  <p><Link to="/login">Login</Link></p>
+                </S.DivAccount>
                 <li><Link to="/men">Men <FiChevronRight /></Link></li>
                 <li><Link to="/women">Women <FiChevronRight /></Link></li>
                 <li><Link to="/jewelery">Jewelery <FiChevronRight /></Link></li>
