@@ -44,7 +44,7 @@ export const Information = styled.div`
     }
 `
 
-export const ContainerForm = styled.div`
+export const ContainerForm = styled.form`
     display: flex;
     width: 100%;
     justify-content: center;
@@ -78,6 +78,11 @@ export const ContainerForm = styled.div`
             font-size: 11px;
         }
     }
+    span {
+        color: red;
+        font-size: 13px;
+        position: absolute;
+    }
     p {
         text-align: center;
         margin: 15px 0 100px;
@@ -99,7 +104,7 @@ export const ContainerForm = styled.div`
 export const DivButton = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 25px;
 
     button {
         height: 35px;

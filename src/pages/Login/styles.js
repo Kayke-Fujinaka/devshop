@@ -62,6 +62,11 @@ export const ContainerForm = styled.div`
             font-size: 11px;
         }
     }
+    span {
+        color: red;
+        font-size: 13px;
+        position: absolute;
+    }
     p {
         text-align: center;
         margin: 15px 0 100px;
@@ -82,6 +87,8 @@ export const ContainerForm = styled.div`
 
 export const ForgotPassword = styled.div`
     margin: 5px 0 25px;
+    text-align: end;
+
     a {
         font-size: 12px;
         font-weight: ${theme.fonts.weight.bolder};

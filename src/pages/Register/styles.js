@@ -33,7 +33,7 @@ export const ContainerForm = styled.div`
     width: 100%;
     justify-content: center;
     .divLabelInput {
-        margin-top: 15px;
+        margin-top: 25px;
         @media (max-width: 510px){
             margin-top: 0;
         }
@@ -51,7 +51,7 @@ export const ContainerForm = styled.div`
         display: block;
         height: 35px;
         width: 500px;
-        margin: 5px auto 0;
+        margin: 2px auto 0;
         padding: 5px 15px;
         font-family: ${theme.fonts.secondary};
         border: 1px solid ${theme.gray4};
@@ -61,6 +61,11 @@ export const ContainerForm = styled.div`
             width: 300px;
             font-size: 11px;
         }
+    }
+    span {
+        color: red;
+        font-size: 13px;
+        position: absolute;
     }
     p {
         text-align: center;
