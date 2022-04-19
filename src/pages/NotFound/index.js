@@ -24,25 +24,8 @@ export default function Search() {
                 <h1>Talvez você se interesse pelos seguintes produtos.</h1>
             </S.TitleProducts>
 
-            <S.SomeProducts>
-                <ul>
-                    {productsHome.map((item) => (
-                        <li key={item.id}>
-                            <Link to={`/products/${item.id}`}>
-                                <img src={item.image} alt={`Imagem ${item.title}`} />
-                                <div>
-                                    <p>{item.title}</p>
-                                    <span>R${item.price}</span>
-                                    <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
-                                </div>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </S.SomeProducts>
-
             <S.ButtonSeeAllProducts>
-                <Link to="/products">Ver todos produtos</Link>
+                <Link to="/">ACESSE A HOME</Link>
             </S.ButtonSeeAllProducts>
         </>
     )
