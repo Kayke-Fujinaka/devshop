@@ -56,29 +56,27 @@ export const Nav = styled.ul`
             right: 0;
             height: 2px;
             width: 100%;
-            color: #FF7D1B;
-            background-color: #FF7D1B;
+            color: #ffa724;
+            background-color: #ffa724;
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.6s;
         }
-    }
-`
-
-export const Li = styled.li`
-    font-size: 15px;
-        border-bottom: 1px solid transparent;
-        color: ${theme.gray2};
-        &::after{
-            content: "";
-            position: relative;
-            top: 50px;
-            left: 0;
-            height: 3px;
-            width: 100%;
-            background-color: red;
-
+        
+        li {
+            .active {
+                content: "";
+                position: absolute;
+                top: 25px;
+                right: 0;
+                height: 2px;
+                width: 100%;
+                color: #ffa724;
+                background-color: #ffa724;
+            }
         }
+    
+    }
 `
 
 export const ContainerSearch = styled.div`

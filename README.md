@@ -17,6 +17,7 @@ O site tem no total X páginas, sendo elas:
 - **Login:** xxxxxxxxxxxxxx.
 - **Register:** xxxxxxxxxxxxxx.
 - **Forgot Password:** xxxxxxxxxxxxxx.
+- **Profile:**
 - **Home:** xxxxxxxxxxxxxx.
 - **Men:**
 - **Women:**
@@ -36,20 +37,26 @@ O site tem no total X páginas, sendo elas:
 :heavy_check_mark: Página Our policy concluída;\
 :x: Terminar o carrinho ;\
 :x: Fazer o 'active' da nav no Header;\
-:x: Deixar o Header responsivo, com menu Hamburguer;\
+:x: Página Profile;\
+:x: Privatização de rotas;|
+:heavy_check_mark: Deixar o Header responsivo, com menu Hamburguer;\
+:heavy_check_mark: Componetização do Card dos produtos;\
 
 ## :rocket: Tecnologias ##
 
 No projeto foram utilizadas as seguintes tecnologias:
 
-- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
 - [React](https://pt-br.reactjs.org/)
 - [React icons](https://react-icons.github.io/react-icons/)
 - [React router dom]()
 - [Axios]()
+- [Firebase]()
+- [React hook form]()
 - [Styled Components](https://styled-components.com/docs)
+
 ## :closed_book: Requisitos ##
 
 Antes de iniciar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.

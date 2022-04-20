@@ -42,49 +42,5 @@ export const SomeProducts = styled.div`
         a {
             color: #000;
         }
-
-        li {
-            width: 225px;
-            height: 400px;
-            position: relative;
-            cursor: pointer;
-
-            img {
-                width: 100%;
-                height: 60%;
-            }
-
-            div {
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 10px;
-                
-                .title {
-                    text-align: center;
-                    font-size: 0.9rem;
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    &:hover{
-                        opacity: 0.8;
-                    }
-                }
-                
-                p {
-                    text-align: center;
-                    font-size: 0.9rem;
-                    text-transform: uppercase;
-                    font-weight: 500;
-                }
-
-                span {
-                    margin-top: 10px;
-                    font-weight: ${theme.fonts.weight.boldest};
-                    font-size: 1.3rem;
-                }
-            }
-        }
     }
 `

@@ -16,6 +16,7 @@ import NotFound from '../pages/NotFound'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import WhatsApp from '../components/WhatsApp'
 
 export default function MainRoutes() {
     return (
@@ -39,6 +40,7 @@ export default function MainRoutes() {
                 </Switch>
             </div>
             <Footer />
+            <WhatsApp />
         </>
     )
 }

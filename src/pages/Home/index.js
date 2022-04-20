@@ -9,6 +9,8 @@ import backMen from '../../assets/backMen.jpg'
 import eletronics from '../../assets/eletronics.jpg'
 import joiasBack from '../../assets/joiasBack.jfif'
 
+import CardProduct from '../../components/CardProduct'
+
 import { FaInstagram } from 'react-icons/fa'
 
 export default function Home() {
@@ -62,16 +64,9 @@ export default function Home() {
             <S.SomeProducts>
                 <ul>
                     {productsHome.map((item) => (
-                        <li key={item.id}>
-                            <Link to={`/products/${item.id}`}>
-                                <img src={item.image} alt={`Imagem ${item.title}`} />
-                                <div>
-                                    <p>{item.title}</p>
-                                    <span>R${item.price}</span>
-                                    <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
-                                </div>
-                            </Link>
-                        </li>
+                        <>
+                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating}  />
+                        </>
                     ))}
                 </ul>
             </S.SomeProducts>

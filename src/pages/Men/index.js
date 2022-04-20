@@ -3,6 +3,8 @@ import * as S from "./styles";
 
 import { ApiContext } from '../../contexts/apiContext'
 
+import CardProduct from '../../components/CardProduct'
+
 import { Link } from 'react-router-dom'
 
 export default function Men() {
@@ -19,16 +21,9 @@ export default function Men() {
             <S.SomeProducts>
                 <ul>
                     {menProducts.map((item) => (
-                        <Link to={`/products/${item.id}`}>
-                            <li key={item.id}>
-                                <img src={item.image} alt={`Imagem ${item.title}`} />
-                                <div>
-                                    <p className='title'>{item.title}</p>
-                                    <span>R${item.price}</span>
-                                    <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
-                                </div>
-                            </li>
-                        </Link>
+                        <>
+                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                        </>
                     ))}
                 </ul>
             </S.SomeProducts>
