@@ -77,6 +77,51 @@ export const Nav = styled.ul`
         }
     
     }
+
+    nav {
+        position: absolute;
+        top: 4rem;
+        width: 200px;
+        height: 10rem;
+        background: #fff;
+        font-size: 1.2rem;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+    }
+
+    .navProductsOff {
+        nav {
+            background: transparent;
+            z-index: -1;
+            
+            li {
+                display: none;
+            }
+        }
+    }
+
+    .navProducts {
+        nav {
+            border: 1px solid rgb(0,0,0, 0.25);
+
+            a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                svg {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    
 `
 
 export const ContainerSearch = styled.div`

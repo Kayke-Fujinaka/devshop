@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import * as S from "./styles";
-import LinearProgress from '@mui/material/LinearProgress';
-import Box from '@mui/material/Box';
 
 import { Link, useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -11,6 +9,8 @@ import api from '../../services/api'
 import { ApiContext } from '../../contexts/apiContext'
 
 import { FiShoppingCart } from 'react-icons/fi'
+
+import Loading from '../../components/Loading'
 
 export default function Inspect(props) {
     const history = useHistory();
@@ -112,9 +112,7 @@ export default function Inspect(props) {
             </S.Breadcrumb>
 
             {loading && (
-                <Box sx={{ width: '100%' }} >
-                    <LinearProgress />
-                </Box>
+                <Loading />
             )}
 
             {loading === false && (

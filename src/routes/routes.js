@@ -13,6 +13,7 @@ import Inspect from '../pages/Inspect'
 import Policy from '../pages/Policy'
 import Search from '../pages/Search'
 import NotFound from '../pages/NotFound'
+import Payment from '../pages/Payment'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -36,6 +37,7 @@ export default function MainRoutes() {
                     <Route exact path="/products/:id" component={Inspect} />
                     <Route exact path="/policy" component={Policy} />
                     <Route exact path="/search/:busca" component={Search} />
+                    <Route exact path="/payment" component={Payment} />
                     <Route path="*" component={NotFound} />
                 </Switch>
             </div>

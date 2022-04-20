@@ -10,11 +10,12 @@ import eletronics from '../../assets/eletronics.jpg'
 import joiasBack from '../../assets/joiasBack.jfif'
 
 import CardProduct from '../../components/CardProduct'
+import Loading from '../../components/Loading'
 
 import { FaInstagram } from 'react-icons/fa'
 
 export default function Home() {
-    const { allProducts } = useContext(ApiContext)
+    const { allProducts, loading } = useContext(ApiContext)
     const [products, setProducts] = useState([])
 
     let productsHome = allProducts.slice(0, 8)
@@ -61,19 +62,26 @@ export default function Home() {
                 <p>Em breve... Novo estoque!</p>
             </S.TitleProducts>
 
-            <S.SomeProducts>
-                <ul>
-                    {productsHome.map((item) => (
-                        <>
-                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating}  />
-                        </>
-                    ))}
-                </ul>
-            </S.SomeProducts>
+            {loading ? (
+                <Loading />
+            ) : (
 
+                <S.SomeProducts>
+                    <ul>
+                        {productsHome.map((item) => (
+                            <>
+                                <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                            </>
+                        ))}
+                    </ul>
+                </S.SomeProducts>)}
+
+            {loading === false && (
             <S.ButtonSeeAllProducts>
                 <Link to="/products">Ver todos produtos</Link>
-            </S.ButtonSeeAllProducts>
+            </S.ButtonSeeAllProducts>)}
+
+
 
 
             <S.InstagramFooter>

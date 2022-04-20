@@ -4,6 +4,7 @@ import api from '../../services/api'
 import { FaLaptopHouse } from 'react-icons/fa';
 
 import CardProduct from '../../components/CardProduct'
+import Loading from '../../components/Loading'
 
 export default function Search({ match }) {
     const campoBusca = match.params.busca
@@ -58,7 +59,7 @@ export default function Search({ match }) {
                 </S.Breadcrumb>
 
                 {loading && (
-                    <h1>Carregando.........</h1>
+                    <Loading />
                 )}
 
                 <S.Results>

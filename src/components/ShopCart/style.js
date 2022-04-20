@@ -10,12 +10,12 @@ export const Modal = styled.div`
     background: rgba(0,0,0,0.5);
     z-index: 99;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
 `
 
 export const ShopCart = styled.div`
-    position: fixed;
+    position: relative;
     top: 0rem;
     right: 0rem;
     width: 500px;
@@ -38,6 +38,7 @@ export const TitleShopCart = styled.div`
     align-items: center;
     margin-top: 10px;
     height: 60px;
+    
 
 
     h1 {
@@ -89,13 +90,15 @@ export const TitleProducts = styled.div`
 export const ListProducts = styled.div`
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    height: 365px;
+    overflow-y: scroll;
 
     li {
         display: flex;
         margin: 10px 0;
         border-top: 1px solid rgb(0,0,0, 0.15);
         padding-top: 10px;
+        position: relative;
 
         &:nth-child(1) { 
             border-top: 0;
@@ -176,12 +179,17 @@ export const ListProducts = styled.div`
             }
 `
 
+export const BottomCart = styled.div`
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+`
+
 export const OurShops = styled.div`
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 5rem;
     width: 100%;
     border-top: 1px solid rgb(0,0,0, 0.35);
     padding: 10px 10px;
@@ -197,6 +205,46 @@ export const OurShops = styled.div`
         text-decoration: underline;
         cursor: pointer;
     }
+
+    .containerInputsOff {
+
+        .inputOptions {
+            height: 0px;
+            width: 0px;
+            transition:  height 0.4s;
+            opacity: 0;
+        }
+    }
+
+    .containerInputs {
+        height: 100%;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        .inputOptions {
+            padding-left: 10px;
+            height: 40px;
+            border: 1px solid rgb(0,0,0, 0.15);
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-weight: 400;
+            transition: height 0.4s;
+
+            input {
+                margin-right: 5px;
+            }
+
+            p {
+                font-weight: 700;
+                margin-left: auto;
+                margin-right: 10px;
+            }
+        }
+    }
 `
 
 export const Total = styled.div`
@@ -204,8 +252,6 @@ export const Total = styled.div`
     font-weight: 800;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0rem;
     width: 100%;
     border-top: 1px solid rgb(0,0,0, 0.35);
     padding: 10px 0;
@@ -216,7 +262,7 @@ export const Total = styled.div`
         margin-left: 10px;
     }
 
-    div {
+    .total {
         display: flex;
         flex-direction: column;
         text-align: right;
@@ -224,6 +270,31 @@ export const Total = styled.div`
         p{
             margin-top: 4px;
         }
+    }
+`
+
+export const FinishBuy = styled.div`
+    display: flex;
+    margin: 0 0;
+    justify-content: space-between;
+    align-items: center;
+
+    .linkToProducts {
+        text-decoration: underline;
+        color: #FF7D1B;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+
+    .linkToPayment {
+        width: 200px;
+        height: 35px;
+        background: #FF7D1B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-transform: uppercase;
     }
 `
 

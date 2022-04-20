@@ -9,16 +9,21 @@ export const ApiProvider = ({ children }) => {
     const [menProducts, setMenProducts] = useState([])
     const [jeweleryProducts, setJeweleryProducts] = useState([])
     const [electronicsProducts, setElectronicsProducts] = useState([])
-    const [womenProducts, setWomenProducts] = useState([])
+    const [womenProducts, setWomenProducts] = useState([]);
+
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true)
         api
         .get('/products')
         .then( (response) => {
             setAllProducts([... response.data])
+            setLoading(false)
         })
         .catch((err) => {
             alert('false')
+            setLoading(false)
         })
     }, [])
 
@@ -70,6 +75,7 @@ export const ApiProvider = ({ children }) => {
     }, [])
 
     return (
+
         <ApiContext.Provider
             value={{
                 allProducts,
@@ -77,6 +83,7 @@ export const ApiProvider = ({ children }) => {
                 jeweleryProducts,
                 electronicsProducts,
                 womenProducts,
+                loading
             }} >
             {children}
         </ApiContext.Provider>

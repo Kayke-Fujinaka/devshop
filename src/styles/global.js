@@ -40,7 +40,7 @@ button {
      -webkit-box-shadow: none;
    }
  
- button , a {
+ button  {
    transition: all ease 0.4s;
    &:hover{
      ${theme.configs.hover}

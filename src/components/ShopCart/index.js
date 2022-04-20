@@ -4,14 +4,16 @@ import { FaTimes, FaTrash, FaStore, FaAngleDown } from 'react-icons/fa'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
+import { Link } from 'react-router-dom'
+
 
 export default function ShopCart({ sidebar }) {
     const [showCart, setShowCart] = useState(sidebar)
 
     const [productsOnCart, setProductsOnCart] = useState([])
     const [total, setTotal] = useState(0)
-    const [quantity, setQuantity] = useState(1);
     const [qtdItems, setQtdItems] = useState(0)
+    const [optionsCart, setOptionsCart] = useState(false)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
@@ -42,11 +44,11 @@ export default function ShopCart({ sidebar }) {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            });
+        });
     }
 
     function removeQuantity(qtd, index) {
-        if(productsOnCart[index].quantity === 1) {
+        if (productsOnCart[index].quantity === 1) {
             toast.info('No mínimo 1 produto!', {
                 position: "top-left",
                 autoClose: 900,
@@ -55,7 +57,7 @@ export default function ShopCart({ sidebar }) {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                });
+            });
             return
         }
         productsOnCart[index].quantity = qtd - 1
@@ -65,11 +67,11 @@ export default function ShopCart({ sidebar }) {
         productsOnCart[index].quantity = qtd + 1
     }
 
-    useEffect( () => {
+    useEffect(() => {
         let totalPrice = 0;
         let qtd = 0;
 
-        productsOnCart.forEach( (item, index) => {
+        productsOnCart.forEach((item, index) => {
             totalPrice += item.price * item.quantity
             qtd += item.quantity
         })
@@ -95,7 +97,7 @@ export default function ShopCart({ sidebar }) {
                         </S.TitleProducts>
 
                         <S.ListProducts>
-                            {productsOnCart.map( (item, index) => (
+                            {productsOnCart.map((item, index) => (
                                 <li key={item.id}>
                                     <img src={item.image} alt={item.title} />
                                     <div className="boxInfoCart">
@@ -113,23 +115,31 @@ export default function ShopCart({ sidebar }) {
                         </S.ListProducts>
 
                         {productsOnCart.length > 0 ? (
-                            <>
+                            <S.BottomCart>
                                 <S.OurShops>
                                     <p><FaStore /> Nossas lojas</p>
-                                    <nav>
-                                        <span>VER OPÇÕES <FaAngleDown /></span>
-                                    </nav>
+                                    <article>
+                                        <span onClick={() => setOptionsCart(!optionsCart)}>VER OPÇÕES <FaAngleDown /></span>
+                                        <div className={optionsCart ? 'containerInputs' : 'containerInputsOff'}>
+                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - Recife <p>R$12,90</p> </div>
+                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - São Paulo <p>R$22,90</p></div>
+                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - Minas Gerais <p>R$32,90</p></div>
+                                        </div>
+                                    </article>
 
                                 </S.OurShops>
                                 <S.Total>
                                     <h2>Total (sem frete):</h2>
-                                    <div>
+                                    <div className="total">
                                         <h2>R$ {total}</h2>
                                         <p>Ou até 10x de R$ {(total / 10).toFixed(2)}</p>
-
                                     </div>
                                 </S.Total>
-                            </>) : (
+                                <S.FinishBuy>
+                                    <Link to="/products" className="linkToProducts"><a>Ver mais produtos</a></Link>
+                                    <Link to="/payment" className="linkToPayment">Finalizar compra</Link>
+                                </S.FinishBuy>
+                            </S.BottomCart>) : (
                             <S.DontHasProduct>
                                 <p>Não há produtos no carrinho.</p>
                             </S.DontHasProduct>

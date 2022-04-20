@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 
-export const ContainerMain = styled.div`
-    font-family: ${theme.fonts.secondary}
-`
-
 export const Breadcrumb = styled.div`
     display: flex;
     width: 80%;
@@ -28,14 +24,13 @@ export const Breadcrumb = styled.div`
     }
 `
 
-export const Results = styled.div`
-    display: flex;
-    list-style: none;
-    width: 85vw;
-    margin: 0 auto;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
+export const ContainerMain = styled.div`
+    width: 80%;
+    margin: 1.5rem auto;
+    p {
+        margin-top: 20px;
+    }
+    .p-margin {
+        margin-left: 20px;
+    }
 `
