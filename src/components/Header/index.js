@@ -34,17 +34,33 @@ export default function Header() {
         <S.ContainerLeft>
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
-            <li><NavLink to="/men" activeClassName="active">Men</NavLink></li>
-            <li onClick={() => setNavProducts(!navProducts)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
-              Products
+            <li><NavLink to="/men" activeStyle={
+              {
+              paddingBottom: "6px",
+              borderBottom: "2px solid #ffa724",
+              }
+              }>Men</NavLink></li>
+            <li onMouseOver={() => setNavProducts(!navProducts)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
+            <NavLink to="/products" activeStyle={
+              {
+              paddingBottom: "6px",
+              borderBottom: "2px solid #ffa724",
+              }
+              }>Products
               <nav>
-                <li><NavLink to="/men" activeClassName="active">Men <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/women" activeClassName="active">Women <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/jewelery" activeClassName="active">Jewelery <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/jewelery" activeClassName="active">Eletronics <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/men">Men <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/women">Women <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/jewelery">Jewelery <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/jewelery">Eletronics <FiChevronRight /></NavLink></li>
               </nav>
+              </NavLink>
             </li>
-            <li><NavLink to="/policy" activeClassName="active">Our policy</NavLink></li>
+            <li><NavLink to="/policy" activeStyle={
+              {
+              paddingBottom: "6px",
+              borderBottom: "2px solid #ffa724",
+              }
+              }>Our Policy</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>
 

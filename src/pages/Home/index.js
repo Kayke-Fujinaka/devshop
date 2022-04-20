@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import Carousel from "react-multi-carousel";
 import * as S from "./styles";
 import { Link } from 'react-router-dom'
 
@@ -77,11 +78,9 @@ export default function Home() {
                 </S.SomeProducts>)}
 
             {loading === false && (
-            <S.ButtonSeeAllProducts>
-                <Link to="/products">Ver todos produtos</Link>
-            </S.ButtonSeeAllProducts>)}
-
-
+                <S.ButtonSeeAllProducts>
+                    <Link to="/products">Ver todos produtos</Link>
+                </S.ButtonSeeAllProducts>)}
 
 
             <S.InstagramFooter>

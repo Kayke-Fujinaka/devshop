@@ -62,20 +62,6 @@ export const Nav = styled.ul`
             transform-origin: right;
             transition: transform 0.6s;
         }
-        
-        li {
-            .active {
-                content: "";
-                position: absolute;
-                top: 25px;
-                right: 0;
-                height: 2px;
-                width: 100%;
-                color: #ffa724;
-                background-color: #ffa724;
-            }
-        }
-    
     }
 
     nav {

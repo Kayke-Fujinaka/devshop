@@ -37,14 +37,14 @@ export default function Footer() {
           <S.MFBox>
             <S.TitleMainFooter>Navegação</S.TitleMainFooter>
             <ul>
-              <li><a href="https://www.linkedin.com/in/jguilhermesl/">Linkedin do João Guilherme</a></li>
-              <li><a href="https://www.linkedin.com/in/kayke-fujinaka/">Linkedin do Kayke</a></li>
+              <li><a target="blank" href="https://www.linkedin.com/in/jguilhermesl/">Linkedin do João Guilherme</a></li>
+              <li><a target="blank" href="https://www.linkedin.com/in/kayke-fujinaka/">Linkedin do Kayke</a></li>
             </ul>
           </S.MFBox>
           <S.MFBox>
             <S.TitleMainFooter>Contato</S.TitleMainFooter>
             <div className="text@"><FaPaperPlane /> joaoguilherme_pe@hotmail.com</div>
-            <div className="text@"><FaPaperPlane /> kaykealvesfujinakap@gmail.com</div>
+            <div className="text@"><FaPaperPlane /> kaykealvesfujinaka@gmail.com</div>
           </S.MFBox>
           <S.MFBox>
             <S.TitleMainFooter>Redes sociais</S.TitleMainFooter>

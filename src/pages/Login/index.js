@@ -60,7 +60,7 @@ export default function Login() {
                                     placeholder='youremail@email.com'
                                     {...register("name", { required: true })}
                                 />
-                                {errors.name && <span>{errors.name?.message}</span>}
+                                {errors.email && <span>{errors.email?.message}</span>}
                             </label>
                         </div>
                         <div className='divLabelInput'>
@@ -70,7 +70,7 @@ export default function Login() {
                                     type="password"
                                     {...register("email", { required: true })}
                                 />
-                                {errors.email && <span>{errors.email?.message}</span>}
+                                {errors.password && <span>{errors.password?.message}</span>}
                             </label>
                         </div>
                         <S.ForgotPassword>
