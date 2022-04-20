@@ -10,8 +10,8 @@ export default function ShopCart({ sidebar }) {
 
     const [productsOnCart, setProductsOnCart] = useState([])
     const [total, setTotal] = useState(0)
-    const [quantity, setQuantity] = useState(1);
     const [qtdItems, setQtdItems] = useState(0)
+    const [optionsCart, setOptionsCart] = useState(false)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
@@ -116,9 +116,14 @@ export default function ShopCart({ sidebar }) {
                             <>
                                 <S.OurShops>
                                     <p><FaStore /> Nossas lojas</p>
-                                    <nav>
-                                        <span>VER OPÇÕES <FaAngleDown /></span>
-                                    </nav>
+                                    <article>
+                                        <span onClick={() => setOptionsCart(!optionsCart)}>VER OPÇÕES <FaAngleDown /></span>
+                                        <div className={optionsCart ? 'containerInputs' : 'containerInputsOff'}>
+                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - Recife <p>R$12,90</p> </div>
+                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - São Paulo <p>R$22,90</p></div>
+                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - Minas Gerais <p>R$32,90</p></div>
+                                        </div>
+                                    </article>
 
                                 </S.OurShops>
                                 <S.Total>

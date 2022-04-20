@@ -68,7 +68,7 @@ export const ContentProductCard = styled.div`
 `
 
 export const TitleProducts = styled.div`
-    margin: 2.5rem auto 0 auto;
+    margin: 2.5rem auto 1rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,9 +87,6 @@ export const TitleProducts = styled.div`
     }
     }
 
-    p {
-        margin-top: 10px;
-    } 
 `
 
 export const SomeProducts = styled.div`
@@ -129,7 +126,7 @@ export const ButtonSeeAllProducts = styled.div`
 export const InstagramFooter = styled.div`
     width: 90%;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     display: flex;
     align-items: center;
     color: ${theme.gray2};

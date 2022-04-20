@@ -29,4 +29,13 @@ export const Breadcrumb = styled.div`
 `
 
 export const Results = styled.div`
+    display: flex;
+    list-style: none;
+    width: 85vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
 `

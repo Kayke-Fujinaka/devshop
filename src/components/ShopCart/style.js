@@ -197,6 +197,46 @@ export const OurShops = styled.div`
         text-decoration: underline;
         cursor: pointer;
     }
+
+    .containerInputsOff {
+
+        .inputOptions {
+            height: 0px;
+            width: 0px;
+            transition:  height 0.4s;
+            opacity: 0;
+        }
+    }
+
+    .containerInputs {
+        height: 100%;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        .inputOptions {
+            padding-left: 10px;
+            height: 40px;
+            border: 1px solid rgb(0,0,0, 0.15);
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-weight: 400;
+            transition: height 0.4s;
+
+            input {
+                margin-right: 5px;
+            }
+
+            p {
+                font-weight: 700;
+                margin-left: auto;
+                margin-right: 10px;
+            }
+        }
+    }
 `
 
 export const Total = styled.div`

@@ -3,44 +3,72 @@ import theme from "../../styles/theme"
 
 export const CardProduct = styled.div`
 li {
-            width: 225px;
-            height: 400px;
+            width: 200px;
+            height: 340px;
             position: relative;
             transition: 0.5s;
-            cursor: pointer;
 
             a {
                 color: #000;
             }
 
             img {
-                width: 100%;
-                height: 60%;
-                &:hover {
-                    opacity: 1;
-                    filter: brightness(1);
-                }
+                width: 95%;
+                height: 50%;
+                margin: 0 auto;
             }
 
-            div {
+            .contentInfo {
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: left;
                 margin-top: 10px;
                 
-                p {
-                    text-align: center;
-                    font-size: 0.9rem;
-                    text-transform: uppercase;
+                h2 {
+                    font-size: 1rem;
                     font-weight: 500;
+                    line-height: 20px;
+                    height: 40px;
+                    overflow: hidden;
+                }
+
+                strong {
+                    font-size: 1.2rem;
+                    margin: 5px 0;
                 }
 
                 span {
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                }
+
+                .rateAndButton {
                     margin-top: 10px;
-                    font-weight: ${theme.fonts.weight.boldest};
-                    font-size: 1.3rem;
+                    display: flex;
+                    flex-direction: row!important;
+                    justify-content: left!important;
+                    align-items: center!important;
+                    gap: 5px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: auto;
+                        width: 90px;
+                        height: 30px;
+                        background: #FF7D1B;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        gap: 5px;
+                        color: #fff;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
                 }
             }
         }
