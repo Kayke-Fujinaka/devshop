@@ -135,9 +135,9 @@ export const ContainerRight = styled.div`
 `
 
 export const DivAccount = styled.div`
-    display: flex;
+    display: none;
     gap: 10px;
-    margin-right: 25px;
+    margin-right: 15px;
 
     @media screen and (max-width: 1880px) {
         display: none;
