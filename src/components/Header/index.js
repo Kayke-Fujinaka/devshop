@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useCallback, useHistory } from 'react';
 import * as S from "./styles"
-import { FiShoppingCart, FiSearch, FiMenu, FiChevronRight, FiX } from 'react-icons/fi'
+import { FiShoppingCart, FiSearch, FiMenu, FiChevronRight } from 'react-icons/fi'
 
-import { Link } from 'react-router-dom'
-
+import { Link, NavLink } from 'react-router-dom'
 import ShopCart from '../ShopCart';
-
-import { qtdItems } from '../ShopCart';
 
 export default function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -15,11 +12,9 @@ export default function Header() {
   const [showNav, setShowNav] = useState(false);
   const [searchProducts, setSearchProducts] = useState('')
 
-
   useEffect(() => {
     const listaProducts = localStorage.getItem('products')
     setProductsOnCart(JSON.parse(listaProducts) || [])
-    console.log(productsOnCart)
   }, [[], productsOnCart])
 
   useEffect(() => {
@@ -38,11 +33,11 @@ export default function Header() {
         <S.ContainerLeft>
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
-            <li><Link to="/men">Men</Link></li>
-            <li><Link to="/women">Women</Link></li>
-            <li><Link to="/jewelery">Jewelery</Link></li>
-            <li><Link to="/eletronics">Eletronics</Link></li>
-            <li><Link to="/policy">Our policy</Link></li>
+            <li><NavLink to="/men" activeClassName="active">Men</NavLink></li>
+            <li><NavLink to="/women" activeClassName="active">Women</NavLink></li>
+            <li><NavLink to="/jewelery" activeClassName="active">Jewelery</NavLink></li>
+            <li><NavLink to="/eletronics" activeClassName="active">Eletronics</NavLink></li>
+            <li><NavLink to="/policy" activeClassName="active">Our policy</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>
 

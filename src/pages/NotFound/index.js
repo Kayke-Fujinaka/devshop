@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { ApiContext } from '../../contexts/apiContext'
 
-export default function Search() {
+export default function NotFound() {
     const { allProducts } = useContext(ApiContext)
     const [products, setProducts] = useState([])
 

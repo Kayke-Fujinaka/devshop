@@ -16,10 +16,8 @@ export const ApiProvider = ({ children }) => {
         .get('/products')
         .then( (response) => {
             setAllProducts([... response.data])
-            console.log(allProducts)
         })
         .catch((err) => {
-            console.log(err)
             alert('false')
         })
     }, [])
@@ -29,10 +27,8 @@ export const ApiProvider = ({ children }) => {
         .get(`/products/category/${encodeURIComponent("men's clothing")}`)
         .then( (response) => {
             setMenProducts([... response.data])
-            console.log(allProducts)
         })
         .catch((err) => {
-            console.log(err)
             alert('false')
         })
     }, []) 
@@ -42,7 +38,6 @@ export const ApiProvider = ({ children }) => {
         .get(`/products/category/women's%20clothing`)
         .then( (response) => {
             setWomenProducts([... response.data])
-            console.log(allProducts)
         })
         .catch((err) => {
             console.log(err)
@@ -55,7 +50,6 @@ export const ApiProvider = ({ children }) => {
         .get(`/products/category/jewelery`)
         .then( (response) => {
             setJeweleryProducts([... response.data])
-            console.log(allProducts)
         })
         .catch((err) => {
             console.log(err)
@@ -68,7 +62,6 @@ export const ApiProvider = ({ children }) => {
         .get(`/products/category/electronics`)
         .then( (response) => {
             setElectronicsProducts([... response.data])
-            console.log(allProducts)
         })
         .catch((err) => {
             console.log(err)

@@ -5,6 +5,8 @@ import api from "../../services/api";
 
 import { ApiContext } from '../../contexts/apiContext'
 
+import CardProduct from '../../components/CardProduct'
+
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
@@ -22,16 +24,9 @@ export default function Products() {
             <S.AllProducts>
                 <ul>
                     {allProducts.map((item) => (
-                        <Link to={`/products/${item.id}`}>
-                            <li key={item.id}>
-                                <img src={item.image} alt={`Imagem ${item.title}`} />
-                                <div>
-                                    <p>{item.title}</p>
-                                    <span>R${item.price}</span>
-                                    <p><strong>10</strong>x de <strong>R${(item.price / 10).toFixed(2)}</strong></p>
-                                </div>
-                            </li>
-                        </Link>
+                        <>
+                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                        </>
                     ))}
                 </ul>
             </S.AllProducts>
