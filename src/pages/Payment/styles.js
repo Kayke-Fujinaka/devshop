@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import theme from "../../styles/theme"
+import styled from 'styled-components'
+import theme from '../../styles/theme'
 
 export const Breadcrumb = styled.div`
     display: flex;
@@ -17,23 +17,20 @@ export const Breadcrumb = styled.div`
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+    @media (max-width: 510px){
+        width: 100%;
+        margin: 1.5rem 10px;
+        font-size: 12px;
+    }
 `
 
-export const AllProducts = styled.div`
-    display: flex;
-    width: 80vw;
-    margin: 3rem auto 0 auto;
-    height: 100%;
-
-    ul {
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5rem;
-
-        a {
-            color: #000;
-        }
+export const ContainerMain = styled.div`
+    width: 80%;
+    margin: 1.5rem auto;
+    p {
+        margin-top: 20px;
+    }
+    .p-margin {
+        margin-left: 20px;
     }
 `

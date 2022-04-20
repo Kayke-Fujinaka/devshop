@@ -11,6 +11,7 @@ export default function Header() {
   const [qtdItems, setQtdItems] = useState(0);
   const [showNav, setShowNav] = useState(false);
   const [searchProducts, setSearchProducts] = useState('')
+  const [navProducts, setNavProducts] = useState(false)
 
   useEffect(() => {
     const listaProducts = localStorage.getItem('products')
@@ -34,9 +35,15 @@ export default function Header() {
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
             <li><NavLink to="/men" activeClassName="active">Men</NavLink></li>
-            <li><NavLink to="/women" activeClassName="active">Women</NavLink></li>
-            <li><NavLink to="/jewelery" activeClassName="active">Jewelery</NavLink></li>
-            <li><NavLink to="/eletronics" activeClassName="active">Eletronics</NavLink></li>
+            <li onClick={() => setNavProducts(!navProducts)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
+              Products
+              <nav>
+                <li><NavLink to="/men" activeClassName="active">Men <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/women" activeClassName="active">Women <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/jewelery" activeClassName="active">Jewelery <FiChevronRight /></NavLink></li>
+                <li><NavLink to="/jewelery" activeClassName="active">Eletronics <FiChevronRight /></NavLink></li>
+              </nav>
+            </li>
             <li><NavLink to="/policy" activeClassName="active">Our policy</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>

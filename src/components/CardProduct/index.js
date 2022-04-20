@@ -8,8 +8,7 @@ import { FiMaximize2 } from 'react-icons/fi'
 import Stars from '../../components/Stars'
 
 export default function CardProduct({ id, title, price, description, category, image, rating }) {
-    const [rate, setRate] = useState('oi')
-    const rateConverted = parseInt(rating.rate)
+    const [rate, setRate] = useState('')
 
     useEffect(() => {
         if (rating.rate <= 1) {

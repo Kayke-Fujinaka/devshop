@@ -82,6 +82,8 @@ export default function Home() {
             </S.ButtonSeeAllProducts>)}
 
 
+
+
             <S.InstagramFooter>
                 <FaInstagram />
                 <S.InstagramText>
