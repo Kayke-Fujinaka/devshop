@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -15,6 +15,12 @@ const schema = yup
     .required();
 
 export default function Payment() {
+    const [productsOnCart, setProductsOnCart] = useState([])
+
+    useEffect(() => {
+        const listaProducts = localStorage.getItem('products')
+        setProductsOnCart(JSON.parse(listaProducts) || [])
+    }, [productsOnCart])
 
     const {
         register,
@@ -67,6 +73,24 @@ export default function Payment() {
                         <button>Continuar</button>
                     </S.DivButton>
                 </S.ContainerLeft>
+                <S.ContainerRight>
+                    {productsOnCart.map(item => (
+                        <S.Product>
+                            <img src={item.image} alt={item.title} />
+                            <p>{item.title} x {item.quantity}</p>
+                            <span>R${item.price}</span>
+                        </S.Product>
+                    ))}
+                    <S.Total>
+                        {productsOnCart.length === 0 ? (
+                            <p>Sem produtos no carrinho.</p>
+                        ) : (
+                            <>
+                                <span>Total:</span>
+                                <span>R$ 234,90</span> 
+                            </> )}
+                </S.Total>
+                </S.ContainerRight>
             </S.ContainerMain>
 
         </>)

@@ -25,19 +25,92 @@ export const Breadcrumb = styled.div`
 `
 
 export const ContainerMain = styled.div`
-    width: 80%;
+    width: 85%;
     margin: 1.5rem auto;
-    p {
-        margin-top: 20px;
-    }
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
     .p-margin {
         margin-left: 20px;
+    }
+
+    @media only screen and (max-width: 860px) {
+        flex-direction: column-reverse;
     }
 `
 
 export const ContainerLeft = styled.form`
-    width: 80%;
-    margin: 1.5rem auto;    
+    margin: 1.5rem 0;    
+    width: 50%;
+
+    @media only screen and (max-width: 1050px) {
+        width: 40%;
+    }
+    @media only screen and (max-width: 860px) {
+        width: 100%;
+    }
+`
+
+export const ContainerRight = styled.form`
+    width: 50%;
+    margin: 1.5rem 0 1.5rem 0rem;    
+    border-top: 1px solid rgb(0,0,0, 0.15);
+
+    @media only screen and (max-width: 1050px) {
+        width: 60%;
+    }
+    @media only screen and (max-width: 860px) {
+        width: 100%;
+    }
+`
+
+export const Product = styled.div`
+    display: flex;
+    height: 70px;
+    margin-top: 1rem;
+    padding-left: 10px;
+    align-items: center;
+    
+    img {
+        width: 15%;
+        height: 100%;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    span {
+        margin-left: auto;
+        font-weight: 500;
+    }
+`
+
+export const Total = styled.div`
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid rgb(0,0,0, 0.25);
+
+    display: flex;
+    justify-content: space-between;
+    
+    span {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #ffa724;
+        padding: 10px 10px 0 10px;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 1rem
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 0.7rem auto;
+    }
 `
 
 export const Form = styled.div`

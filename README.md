@@ -35,12 +35,10 @@ O site tem no total X páginas, sendo elas:
 :heavy_check_mark: Página de login e registro criadas;\
 :heavy_check_mark: Páginas Men, Women, Jewelery e Eletronics criadas;\
 :heavy_check_mark: Página Our policy concluída;\
-:x: Terminar o carrinho ;\
-:x: Fazer o 'active' da nav no Header;\
-:x: Página Profile;\
-:x: Privatização de rotas;|
-:heavy_check_mark: Deixar o Header responsivo, com menu Hamburguer;\
+:heavy_check_mark: Terminar o carrinho ;\
 :heavy_check_mark: Componetização do Card dos produtos;\
+:x: Página Profile;\
+:x: Privatização de rotas;\
 
 ## :rocket: Tecnologias ##
 
