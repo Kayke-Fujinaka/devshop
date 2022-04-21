@@ -14,7 +14,7 @@ const schema = yup
     })
     .required();
 
-export default function Payment() {
+export default function Delivery() {
     const [productsOnCart, setProductsOnCart] = useState([])
 
     useEffect(() => {
@@ -41,15 +41,13 @@ export default function Payment() {
                 <a href='/'>Home</a>
                 <span>/</span>
                 <p>Entrega</p>
-                <span>/</span>
-                <p>Pagamento</p>
             </S.Breadcrumb>
 
             <S.ContainerMain>
                 <S.ContainerLeft onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <S.Form>
-                            <h3>Cartão de Crédito</h3>
+                            <h3>DADOS DE CONTATO</h3>
                             <label>
                                 <input
                                     className='inputEmail'
@@ -63,7 +61,7 @@ export default function Payment() {
                             <label for='check' className='labelCheck'> Quero receber ofertas e novidades por email</label>
                         </S.Form>
                     </div>
-                    {/* <S.DivMid>
+                    <S.DivMid>
                         <h3>ENTREGA</h3>
                         <select disabled>
                             <option>Brasil</option>
@@ -73,7 +71,7 @@ export default function Payment() {
                     </S.DivMid>
                     <S.DivButton>
                         <button>Continuar</button>
-                    </S.DivButton> */}
+                    </S.DivButton>
                 </S.ContainerLeft>
                 <S.ContainerRight>
                     {productsOnCart.map(item => (
@@ -89,9 +87,9 @@ export default function Payment() {
                         ) : (
                             <>
                                 <span>Total:</span>
-                                <span>R$ 234,90</span>
-                            </>)}
-                    </S.Total>
+                                <span>R$ 234,90</span> 
+                            </> )}
+                </S.Total>
                 </S.ContainerRight>
             </S.ContainerMain>
 
