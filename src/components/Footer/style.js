@@ -145,6 +145,16 @@ font-size: 0.9rem;
 font-weight: ${theme.fonts.weight.boldest};
 text-transform: uppercase;
 margin-bottom: 5px;
+> svg {
+    background: black;
+    color: ${theme.white};
+    width: 30px;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 `
 export const BottomFooter = styled.div`
     display: flex;

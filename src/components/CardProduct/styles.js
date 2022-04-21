@@ -3,7 +3,6 @@ import theme from "../../styles/theme"
 
 export const CardProduct = styled.div`
 li {
-            margin-left: 50px;
             width: 200px;
             height: 340px;
             position: relative;

@@ -13,7 +13,7 @@ import joiasBack from '../../assets/joiasBack.jfif'
 import CardProduct from '../../components/CardProduct'
 import Loading from '../../components/Loading'
 
-import { FaInstagram } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import "react-multi-carousel/lib/styles.css";
 
@@ -27,15 +27,15 @@ export default function Home() {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            items: 1
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 4
+            items: 1
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2
+            items: 1
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -43,14 +43,8 @@ export default function Home() {
         }
     };
 
-    const style = {
-        carousel: {
-            padding: "0 5%",
-        }
-    }
-
     return (
-        <>
+        <S.Container>
             <S.SeeProductsCards>
                 <S.ProductCard>
                     <img src={backMen} alt="Imagem roupa masculina" />
@@ -86,6 +80,23 @@ export default function Home() {
                 </S.ProductCard>
             </S.SeeProductsCards>
 
+            <div className="CarouselBanner">
+                <Carousel responsive={responsive}>
+                    <div>
+                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/69750176-5ccc-4273-98c9-af2c00944577___28f1285c9c50ba578f3103af1719edc0.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/ef5c9169-21b4-47dc-8fb9-4075f8425b4f___de6ef233726209f366aeac951188dd80.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/9f3392f0-612a-4013-a238-3ee6a6075340___dd879e1c01966e85add16dee3b57b0c6.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/bb8053e4-d3e6-43b7-b139-82622e855698___f95f198db32e898cc6ee8a101e31cad7.jpg" alt="" />
+                    </div>
+                </Carousel>
+            </div>
+
             <S.TitleProducts>
                 <h1>Conheça nossos principais produtos</h1>
                 <p>Em breve... Novo estoque!</p>
@@ -110,16 +121,52 @@ export default function Home() {
                     <Link to="/products">Ver todos produtos</Link>
                 </S.ButtonSeeAllProducts>)}
 
-            <div style={style.carousel}>
-                <Carousel responsive={responsive}>
+            <S.Hashtag>
+                <h1>#LoremIpsund</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis ullamcorper leo, ac laoreet erat eleifend in. Maecenas a dictum erat. Etiam sagittis nunc quis nunc semper tempus. Mauris hendrerit, augue non lobortis feugiat, justo nisi imperdiet mi, eu sagittis nulla erat eget lectus. Aliquam congue sit amet nulla et ornare.</p>
+            </S.Hashtag>
 
-                    {allProducts.map((item) => (
-                        <>
-                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
-                        </>
-                    ))}
+
+            <div className="CarouselBanner">
+                <Carousel responsive={responsive}>
+                    <div>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_APPDAY_PREOGRESSIVO_GERAL_DESKv2.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_MODA_JEANS_MASCULINO_DESK.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_APPDAY_PREOGRESSIVO_GERAL_DESKv2.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_MODA_JEANS_MASCULINO_DESK.jpg" alt="" />
+                    </div>
                 </Carousel>
             </div>
+
+            <S.Patrocinadores>
+                <S.BoxPatrocinador>
+                <a href=""><img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@caiocabral</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                    <a href=""><img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@caiocabral</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                <a href=""><img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@caiocabral</p>
+                </S.BoxPatrocinador>
+            </S.Patrocinadores>
 
 
             <S.InstagramFooter>
@@ -129,6 +176,6 @@ export default function Home() {
                     <span>@DEVSHOPPERFEITO</span>
                 </S.InstagramText>
             </S.InstagramFooter>
-        </>
+        </S.Container>
     )
 }
