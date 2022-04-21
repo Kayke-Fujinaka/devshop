@@ -31,7 +31,7 @@ export default function Home() {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 4
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -45,7 +45,7 @@ export default function Home() {
 
     const style = {
         carousel: {
-            padding: "0 15%"
+            padding: "0 5%",
         }
     }
 
