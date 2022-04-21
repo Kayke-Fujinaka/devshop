@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import Carousel from "react-multi-carousel";
 import * as S from "./styles";
 import { Link } from 'react-router-dom'
@@ -15,11 +15,39 @@ import Loading from '../../components/Loading'
 
 import { FaInstagram } from 'react-icons/fa'
 
+import "react-multi-carousel/lib/styles.css";
+
+
 export default function Home() {
     const { allProducts, loading } = useContext(ApiContext)
     const [products, setProducts] = useState([])
 
     let productsHome = allProducts.slice(0, 8)
+
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
+    const style = {
+        carousel: {
+            padding: "0 10%"
+        }
+    }
 
     return (
         <>
@@ -81,6 +109,17 @@ export default function Home() {
                 <S.ButtonSeeAllProducts>
                     <Link to="/products">Ver todos produtos</Link>
                 </S.ButtonSeeAllProducts>)}
+
+            <div style={style.carousel}>
+                <Carousel responsive={responsive}>
+
+                    {allProducts.map((item) => (
+                        <>
+                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                        </>
+                    ))}
+                </Carousel>
+            </div>
 
 
             <S.InstagramFooter>

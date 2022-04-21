@@ -1,4 +1,4 @@
-# Nome do E-commerce
+# Nome do E-commerce (AINDA NÃO FOI FINALIZADO)
 
 <img src="LINK DO GIF" alt="Um gif apresentando o projeto">
 

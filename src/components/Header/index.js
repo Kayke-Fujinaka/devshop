@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useHistory } from 'react';
 import * as S from "./styles"
-import { FiShoppingCart, FiSearch, FiMenu, FiChevronRight } from 'react-icons/fi'
+import { FiShoppingCart, FiSearch, FiMenu } from 'react-icons/fi'
 
 import { Link, NavLink } from 'react-router-dom'
 import ShopCart from '../ShopCart';
@@ -34,24 +34,18 @@ export default function Header() {
         <S.ContainerLeft>
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
-            <li><NavLink to="/men" activeStyle={
-              {
+            <li 
+            onMouseEnter={() => setNavProducts(true)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
+            <NavLink to="/products" 
+            activeStyle={{
               paddingBottom: "6px",
               borderBottom: "2px solid #ffa724",
-              }
-              }>Men</NavLink></li>
-            <li onMouseOver={() => setNavProducts(!navProducts)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
-            <NavLink to="/products" activeStyle={
-              {
-              paddingBottom: "6px",
-              borderBottom: "2px solid #ffa724",
-              }
-              }>Products
-              <nav>
-                <li><NavLink to="/men">Men <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/women">Women <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/jewelery">Jewelery <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/jewelery">Eletronics <FiChevronRight /></NavLink></li>
+              }}>Products
+              <nav onMouseLeave={() => setNavProducts(false)}>
+                <li><NavLink to="/men">Men</NavLink></li>
+                <li><NavLink to="/women">Women</NavLink></li>
+                <li><NavLink to="/jewelery">Jewelery</NavLink></li>
+                <li><NavLink to="/eletronics">Eletronics</NavLink></li>
               </nav>
               </NavLink>
             </li>
@@ -99,11 +93,11 @@ export default function Header() {
                   <span>/</span>
                   <p><Link to="/login">Login</Link></p>
                 </S.DivAccount>
-                <li><Link to="/men">Men <FiChevronRight /></Link></li>
-                <li><Link to="/women">Women <FiChevronRight /></Link></li>
-                <li><Link to="/jewelery">Jewelery <FiChevronRight /></Link></li>
-                <li><Link to="/eletronics">Eletronics <FiChevronRight /></Link></li>
-                <li><Link to="/policy">Our policy <FiChevronRight /></Link></li>
+                <li><Link to="/men">Men</Link></li>
+                <li><Link to="/women">Women</Link></li>
+                <li><Link to="/jewelery">Jewelery</Link></li>
+                <li><Link to="/eletronics">Eletronics</Link></li>
+                <li><Link to="/policy">Our policy</Link></li>
               </nav>)}
         </S.MenuHamburguer>
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from "./styles";
 import api from '../../services/api'
 import { FaLaptopHouse } from 'react-icons/fa';
@@ -18,11 +18,9 @@ export default function Search({ match }) {
         setProductsFilter([])
         let array = []
         value.forEach((item) => {
-            console.log(item.title)
-            if (String(item.title).includes(campoBusca) || String(item.description).includes(campoBusca)) {
+            if (String(item.title).toLowerCase().includes(campoBusca.toLowerCase()) || String(item.description).toLowerCase().includes(campoBusca.toLowerCase())) {
                 array.push(item)
                 setProductsFilter(array)
-                console.log('aqui')
                 return
             }
         })
@@ -40,7 +38,6 @@ export default function Search({ match }) {
             })
             .catch((err) => {
                 console.log(err)
-                alert('Deu erro')
                 setLoading(false)
             })
     }, [campoBusca])

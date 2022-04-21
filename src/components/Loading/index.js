@@ -1,11 +1,11 @@
-import React, {} from 'react';
+import React from 'react';
 // import * as S from "./styles";
 import LinearProgress from '@mui/material/LinearProgress';
-import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 
 export default function Loading() {
         return(
-        <Box sx={{ width: '100%' }} >
-            <LinearProgress />
-        </Box>)
+        <Stack sx={{ width: '100%', color: "#ff7d1b" }} >
+            <LinearProgress color='inherit'/>
+        </Stack>)
 }

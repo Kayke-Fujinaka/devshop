@@ -66,7 +66,7 @@ export const Nav = styled.ul`
 
     nav {
         position: absolute;
-        top: 4rem;
+        top: 2rem;
         width: 200px;
         height: 10rem;
         background: #fff;
