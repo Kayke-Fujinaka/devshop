@@ -116,7 +116,7 @@ export const ButtonSeeAllProducts = styled.div`
         width: 350px;
         height: 40px;
         background: #FF7D1B;
-        margin: 1rem auto 10rem auto;
+        margin: 1rem auto 4rem auto;
         &:hover {
                 filter: brightness(1.1);
         }
