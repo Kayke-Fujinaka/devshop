@@ -5,14 +5,13 @@ export const Container = styled.div`
     .CarouselBanner {
         width: 100vw;
         margin-bottom: 30px; 
-        z-index: 1!important;
-
         img {
             width: 100%;
             height: 100%;
         }
     }
 `
+
 export const SeeProductsCards = styled.div`
     max-width: 95vw;
 
@@ -157,12 +156,21 @@ export const Hashtag = styled.div`
 `
 
 export const Patrocinadores = styled.div`
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    gap: 1rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
+    padding: 0 200px;
+    @media only screen and (max-width: 510px) {
+        padding: 0 50px;
+        }
+    .title {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 `
 
 export const BoxPatrocinador = styled.div`
@@ -186,6 +194,7 @@ export const BoxPatrocinador = styled.div`
     }
 
     img {
+        width: 200px;
         background: #000;
         border-radius: 50%;
         transition: 0.3s;

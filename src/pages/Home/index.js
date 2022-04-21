@@ -16,6 +16,7 @@ import Loading from '../../components/Loading'
 import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import "react-multi-carousel/lib/styles.css";
+import zIndex from '@mui/material/styles/zIndex';
 
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
             breakpoint: { max: 464, min: 0 },
             items: 1
         }
-    };
+    }; 
 
     return (
         <S.Container>
@@ -144,30 +145,69 @@ export default function Home() {
                 </Carousel>
             </div>
 
+            <Carousel responsive={responsive}>
             <S.Patrocinadores>
+                <div className='title'>
+                <h1>Parceiros</h1>
+                </div>
                 <S.BoxPatrocinador>
-                <a href=""><img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" /></a>
+                <a href="https://www.linkedin.com/in/jguilhermesl/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQFv8Nrh37K9gg/profile-displayphoto-shrink_200_200/0/1647100224699?e=1655942400&v=beta&t=guAXFfGBK40TvnyX6sUFZN5U9qXDsVd4lzxgWDgpySk" alt="" /></a>
                     <div className="icon">
                         <FaLinkedin />
                     </div>
-                    <p>@caiocabral</p>
+                    <p>@jguilhermesl</p>
                 </S.BoxPatrocinador>
                 <S.BoxPatrocinador>
-                    <a href=""><img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" /></a>
+                    <a href="https://www.linkedin.com/in/kayke-fujinaka/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/D5603AQHZRwNxIEt07g/profile-displayphoto-shrink_200_200/0/1644408037987?e=1655942400&v=beta&t=nBHJgxTtq0PwAbrvLQ-EriE1ukd0Y3KY96GfTIYuWdA" alt="" /></a>
                     <div className="icon">
                         <FaLinkedin />
                     </div>
-                    <p>@caiocabral</p>
+                    <p>@kaykeaf</p>
                 </S.BoxPatrocinador>
                 <S.BoxPatrocinador>
-                <a href=""><img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" /></a>
+                <a href="https://www.linkedin.com/in/pedroh-dev/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQF6Oc5IxnB-EQ/profile-displayphoto-shrink_200_200/0/1638735694508?e=1655942400&v=beta&t=xhGFYYr_yw-URzBFcM_UEoAv8xH84jtGwWjw4BHlZBE" alt="" /></a>
                     <div className="icon">
                         <FaLinkedin />
                     </div>
-                    <p>@caiocabral</p>
+                    <p>@p3dro_dev</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                <a href="https://www.linkedin.com/in/rafael-yokoyama/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQF3Ki4LdWembQ/profile-displayphoto-shrink_200_200/0/1646167052353?e=1655942400&v=beta&t=PFcr5kqqdoLGJBvWk05_CNGXJwUuvTPLPF_xNvcR1Tc" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@rafael.yokoyama99</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                <a href="https://www.linkedin.com/in/marcusviniciusbeghelisantos/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFrRUGC6s_pdQ/profile-displayphoto-shrink_200_200/0/1647262353026?e=1655942400&v=beta&t=3ha-Sl9UiAFbxtYEpgPd-FdhxxJyYpzHgNpEDTdtbN4" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@marcusbegh</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                <a href="https://www.linkedin.com/in/matheus-santos-souza/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQEGz_yvLqWVRw/profile-displayphoto-shrink_200_200/0/1643823957757?e=1655942400&v=beta&t=d6poUg0_U07xe7TaBin17Ko2ujlAeqLhnXhmx2WFctA" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@mattheus_santos42</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                <a href="https://www.linkedin.com/in/ismael-gomes-da-silva-a5a38b149/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQGuub2ulJbSSA/profile-displayphoto-shrink_200_200/0/1645912679551?e=1655942400&v=beta&t=Se5KViz6UGP9rKFazYbFYUM4CYYTroBWlNvKNYUCYyM" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@projeta.leam</p>
+                </S.BoxPatrocinador>
+                <S.BoxPatrocinador>
+                <a href="https://www.linkedin.com/in/enzocosta07/" target="blank"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQEENKZVzlz3Tg/profile-displayphoto-shrink_200_200/0/1648254462084?e=1655942400&v=beta&t=MplfZJ5K8mxgUW5CisIRFKt-5GAloYGc2K1VhnpCN2k" alt="" /></a>
+                    <div className="icon">
+                        <FaLinkedin />
+                    </div>
+                    <p>@enzocosta07</p>
                 </S.BoxPatrocinador>
             </S.Patrocinadores>
-
+            </Carousel>
 
             <S.InstagramFooter>
                 <FaInstagram />
