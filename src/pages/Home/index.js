@@ -45,7 +45,7 @@ export default function Home() {
 
     const style = {
         carousel: {
-            padding: "0 10%"
+            padding: "0 15%"
         }
     }
 
