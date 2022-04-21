@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './style';
-import { FaInstagram, FaCreditCard, FaTruck, FaWhatsapp, FaPaperPlane, FaConnectdevelop } from 'react-icons/fa'
+import { FaInstagram, FaCreditCard, FaTruck, FaWhatsapp, FaLinkedinIn, FaPaperPlane, FaConnectdevelop } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -37,8 +37,8 @@ export default function Footer() {
           <S.MFBox>
             <S.TitleMainFooter>Navegação</S.TitleMainFooter>
             <ul>
-              <li><a target="blank" href="https://www.linkedin.com/in/jguilhermesl/">Linkedin do João Guilherme</a></li>
-              <li><a target="blank" href="https://www.linkedin.com/in/kayke-fujinaka/">Linkedin do Kayke</a></li>
+              <li><a target="blank" href="https://www.linkedin.com/in/jguilhermesl/"><FaLinkedinIn /> João Guilherme</a></li>
+              <li><a target="blank" href="https://www.linkedin.com/in/kayke-fujinaka/"><FaLinkedinIn /> Kayke</a></li>
             </ul>
           </S.MFBox>
           <S.MFBox>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         <S.BottomFooter>
           <div className="createdBy">
-            <span><FaConnectdevelop /> Desenvolvido por <strong>DevsClub</strong></span>
+            <span><FaConnectdevelop /> Desenvolvido por <strong>Kayke e João</strong></span>
           </div>
           <p>COPYRIGHT © DevShop - 2022. Todos os direitos reservados. </p>
         </S.BottomFooter>

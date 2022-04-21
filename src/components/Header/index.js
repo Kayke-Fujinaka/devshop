@@ -34,40 +34,39 @@ export default function Header() {
         <S.ContainerLeft>
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
-            <li 
-            onMouseEnter={() => setNavProducts(true)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
-            <NavLink to="/products" 
-            activeStyle={{
-              paddingBottom: "6px",
-              borderBottom: "2px solid #ffa724",
-              }}>Products
-              <nav onMouseLeave={() => setNavProducts(false)}>
-                <li><NavLink to="/men">Men</NavLink></li>
-                <li><NavLink to="/women">Women</NavLink></li>
-                <li><NavLink to="/jewelery">Jewelery</NavLink></li>
-                <li><NavLink to="/eletronics">Eletronics</NavLink></li>
-              </nav>
+            <li
+              onMouseEnter={() => setNavProducts(true)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
+              <NavLink to="/products"
+                activeStyle={{
+                  paddingBottom: "6px",
+                  borderBottom: "2px solid #ffa724",
+                }}>Products
+                <nav onMouseLeave={() => setNavProducts(false)}>
+                  <li><NavLink to="/men">Men</NavLink></li>
+                  <li><NavLink to="/women">Women</NavLink></li>
+                  <li><NavLink to="/jewelery">Jewelery</NavLink></li>
+                  <li><NavLink to="/eletronics">Eletronics</NavLink></li>
+                </nav>
               </NavLink>
             </li>
             <li><NavLink to="/policy" activeStyle={
               {
-              paddingBottom: "6px",
-              borderBottom: "2px solid #ffa724",
+                paddingBottom: "6px",
+                borderBottom: "2px solid #ffa724",
               }
-              }>Our Policy</NavLink></li>
+            }>Our Policy</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>
 
-        <S.ContainerSearch>
-          <div className="inputEmailFooter">
-            <input placeholder="Buscar produtos" type="text" value={searchProducts} onChange={e => setSearchProducts(e.target.value)} />
-            <Link className="iconInputEmailFooter" to={`/search/${encodeURIComponent(searchProducts)}`} >
-              <FiSearch />
-            </Link>
-          </div>
-        </S.ContainerSearch>
-
         <S.ContainerRight>
+          <S.ContainerSearch>
+            <div className="inputEmailFooter">
+              <input placeholder="Buscar produtos" type="text" value={searchProducts} onChange={e => setSearchProducts(e.target.value)} />
+              <Link className="iconInputEmailFooter" to={`/search/${encodeURIComponent(searchProducts)}`} >
+                <FiSearch />
+              </Link>
+            </div>
+          </S.ContainerSearch>
           <S.DivAccount>
             <p><Link to="/register">Register</Link></p>
             <span>/</span>

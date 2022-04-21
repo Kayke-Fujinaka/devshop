@@ -1,13 +1,25 @@
 import styled from 'styled-components'
 import theme from "../../styles/theme"
 
+export const Container = styled.div`
+    .CarouselBanner {
+        width: 100vw;
+        margin-bottom: 30px; 
+        z-index: 1!important;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+`
 export const SeeProductsCards = styled.div`
     max-width: 95vw;
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 2rem auto 0 auto;
+    margin: 2rem auto 2rem auto;
     gap: 1rem;
 
 `
@@ -121,6 +133,79 @@ export const ButtonSeeAllProducts = styled.div`
                 filter: brightness(1.1);
         }
 }
+`
+
+export const Hashtag = styled.div`
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+
+    h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    p {
+        width: 80%;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+`
+
+export const Patrocinadores = styled.div`
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1rem;
+    flex-wrap: wrap;
+`
+
+export const BoxPatrocinador = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    &:hover { 
+        img {
+            opacity: 0.5;
+            transition: 0.5s;
+        }
+
+        .icon {
+            opacity: 1;
+            transition: 0.5s;
+        }
+    }
+
+    img {
+        background: #000;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .icon {
+        position: absolute;
+        margin: 0 auto 1rem auto;
+        opacity: 0;
+        transition: 0.3s;
+
+        svg {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        margin-top: 5px;
+        background: #fff;
+    }
 `
 
 export const InstagramFooter = styled.div`

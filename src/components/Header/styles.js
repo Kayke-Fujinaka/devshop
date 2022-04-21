@@ -111,6 +111,8 @@ export const Nav = styled.ul`
 `
 
 export const ContainerSearch = styled.div`
+    margin-right: 2rem;
+
 .inputEmailFooter {
         width: 220px;
         height: 30px;
@@ -122,6 +124,7 @@ export const ContainerSearch = styled.div`
             border-right: 0;
             padding-left: 10px;
             font-size: 0.8rem;
+            outline: none;
         } 
 
         .iconInputEmailFooter {
@@ -166,11 +169,11 @@ export const ContainerRight = styled.div`
 `
 
 export const DivAccount = styled.div`
-    display: none;
+    display: flex;
     gap: 10px;
     margin-right: 15px;
 
-    @media screen and (max-width: 1880px) {
+    @media screen and (max-width: 1180px) {
         display: none;
     }
 
