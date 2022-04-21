@@ -116,11 +116,69 @@ export const ButtonSeeAllProducts = styled.div`
         width: 350px;
         height: 40px;
         background: #FF7D1B;
-        margin: 1rem auto 10rem auto;
+        margin: 1rem auto 2rem auto;
         &:hover {
                 filter: brightness(1.1);
         }
 }
+`
+
+export const CollaboratorsDev = styled.div`
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .listCollaborators {
+        display: flex;
+        gap: 30px;
+    }
+
+    h1 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+`
+
+export const Collaborator = styled.div`
+    position: relative;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #000;
+
+    img {
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        opacity: 0;
+        position: absolute;
+        bottom: 50px;
+        left: 60px;
+        transition: 0.5s;
+
+        svg {
+            font-size: 2.5rem;
+            color: #FF7D1B;
+        }
+    }
+
+    &:hover {
+        img {
+            opacity: 0.5;
+        }
+        a {
+        opacity: 1;
+        svg {
+        }
+    } }
 `
 
 export const InstagramFooter = styled.div`

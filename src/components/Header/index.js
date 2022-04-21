@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useHistory } from 'react';
 import * as S from "./styles"
-import { FiShoppingCart, FiSearch, FiMenu, FiChevronRight } from 'react-icons/fi'
+import { FiShoppingCart, FiSearch, FiMenu, FiChevronRight, FiLinkedin } from 'react-icons/fi'
 
 import { Link, NavLink } from 'react-router-dom'
 import ShopCart from '../ShopCart';
@@ -34,33 +34,37 @@ export default function Header() {
         <S.ContainerLeft>
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
-            <li><NavLink to="/men" activeStyle={
-              {
-              paddingBottom: "6px",
-              borderBottom: "2px solid #ffa724",
-              }
-              }>Men</NavLink></li>
-            <li onMouseOver={() => setNavProducts(!navProducts)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
-            <NavLink to="/products" activeStyle={
-              {
-              paddingBottom: "6px",
-              borderBottom: "2px solid #ffa724",
-              }
-              }>Products
-              <nav>
-                <li><NavLink to="/men">Men <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/women">Women <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/jewelery">Jewelery <FiChevronRight /></NavLink></li>
-                <li><NavLink to="/jewelery">Eletronics <FiChevronRight /></NavLink></li>
-              </nav>
+            <li onClick={() => setNavProducts(!navProducts)} onMouseOver={() => setNavProducts(true)} className={navProducts ? 'navProducts' : 'navProductsOff'} onMouseOut={() => setNavProducts(false)}>
+              <NavLink to="/products" activeStyle={
+                {
+                  paddingBottom: "6px",
+                  borderBottom: "2px solid #ffa724",
+                }
+              } className="navLink">Products
+                <nav>
+                  <li><NavLink to="/men">Men <FiChevronRight /></NavLink></li>
+                  <li><NavLink to="/women">Women <FiChevronRight /></NavLink></li>
+                  <li><NavLink to="/jewelery">Jewelery <FiChevronRight /></NavLink></li>
+                  <li><NavLink to="/jewelery">Eletronics <FiChevronRight /></NavLink></li>
+                </nav>
               </NavLink>
             </li>
+
+            <li><NavLink to="/profile" activeStyle={
+              {
+                paddingBottom: "6px",
+                borderBottom: "2px solid #ffa724",
+              }
+            }>Profile</NavLink>
+            </li>
+
+
             <li><NavLink to="/policy" activeStyle={
               {
-              paddingBottom: "6px",
-              borderBottom: "2px solid #ffa724",
+                paddingBottom: "6px",
+                borderBottom: "2px solid #ffa724",
               }
-              }>Our Policy</NavLink></li>
+            }>Our Policy</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>
 

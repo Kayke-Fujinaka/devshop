@@ -13,7 +13,7 @@ import joiasBack from '../../assets/joiasBack.jfif'
 import CardProduct from '../../components/CardProduct'
 import Loading from '../../components/Loading'
 
-import { FaInstagram } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 export default function Home() {
     const { allProducts, loading } = useContext(ApiContext)
@@ -81,6 +81,33 @@ export default function Home() {
                 <S.ButtonSeeAllProducts>
                     <Link to="/products">Ver todos produtos</Link>
                 </S.ButtonSeeAllProducts>)}
+
+            <S.CollaboratorsDev>
+                <h1>FAVORITOS DO DEVSHOP</h1>
+                <div className="listCollaborators">
+                    <S.Collaborator>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" />
+                        <a href="http://"><FaLinkedin /></a>
+                    </S.Collaborator>
+                    <S.Collaborator>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" />
+                        <a href="http://"><FaLinkedin /></a>
+                    </S.Collaborator>
+                    <S.Collaborator>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" />
+                        <a href="http://"><FaLinkedin /></a>
+                    </S.Collaborator>
+                    <S.Collaborator>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" />
+                        <a href="http://"><FaLinkedin /></a>
+                    </S.Collaborator>
+                    <S.Collaborator>
+                        <img src="https://img.lojasrenner.com.br/banner/01-home/20211228_STORIES_INFLUS_CAIOCABRAL.jpg" alt="" />
+                        <a href="http://"><FaLinkedin /></a>
+                    </S.Collaborator>
+                    
+                </div>
+            </S.CollaboratorsDev>
 
 
             <S.InstagramFooter>

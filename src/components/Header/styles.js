@@ -66,9 +66,8 @@ export const Nav = styled.ul`
 
     nav {
         position: absolute;
-        top: 4rem;
+        top: 1.7rem;
         width: 200px;
-        height: 10rem;
         background: #fff;
         font-size: 1.2rem;
 
@@ -77,16 +76,19 @@ export const Nav = styled.ul`
             justify-content: space-between;
             align-items: center;
             padding: 10px;
+            height: 40px;
         }
     }
 
     .navProductsOff {
         nav {
             background: transparent;
-            z-index: -1;
+            z-index: -10;
+            display: none;
             
             li {
                 display: none;
+                cursor: normal;
             }
         }
     }
