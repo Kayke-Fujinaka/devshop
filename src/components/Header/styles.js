@@ -292,3 +292,12 @@ export const MenuHamburguer = styled.div`
     }
     }
 `
+
+export const ProfileHeader = styled.button`
+  color: #1D164D;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+` 

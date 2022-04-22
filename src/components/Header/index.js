@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useCallback, useHistory } from 'react';
-import * as S from "./styles"
-import { FiShoppingCart, FiSearch, FiMenu } from 'react-icons/fi'
-
+import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom'
+
+import { FiShoppingCart, FiSearch, FiMenu } from 'react-icons/fi'
 import ShopCart from '../ShopCart';
 
+import * as S from "./styles"
+
 export default function Header() {
+
   const [showSidebar, setShowSidebar] = useState(false);
   const [productsOnCart, setProductsOnCart] = useState([]);
   const [qtdItems, setQtdItems] = useState(0);

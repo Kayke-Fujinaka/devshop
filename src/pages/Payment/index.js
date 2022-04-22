@@ -49,31 +49,33 @@ export default function Payment() {
                 <S.ContainerLeft onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <S.Form>
-                            <h3>Cartão de Crédito</h3>
-                            <label>
-                                <input
-                                    className='inputEmail'
-                                    type="email"
-                                    placeholder="Email"
-                                    {...register("name", { required: true })}
-                                />
-                                {errors.email && <span>{errors.email?.message}</span>}
-                            </label>
-                            <input id='check' type="checkbox" />
-                            <label for='check' className='labelCheck'> Quero receber ofertas e novidades por email</label>
+                            <h3>Pagamento apenas com PayPal</h3>
+                            <div>
+                                <img src='https://www.larissamuller.com.br/wp-content/uploads/2020/06/paypal.png' />
+                            </div>
+                            <S.DivInputCard>
+                                <div className='card'>
+                                <input maxlength="12" placeholder='Número do cartão'/>
+                                <input maxlength="3" className='securityCode' type="password" placeholder='Security Code'/>
+                                </div>
+                                <select>
+                                    <option>Visa</option>
+                                    <option>MasterCard</option>
+                                    <option>Elo</option>
+                                </select>
+                                <input type="month" placeholder='Data de Vencimento'/>
+                                
+                            </S.DivInputCard>
+                            <input id='checkInfo' type="checkbox" />
+                            <label for='checkInfo' className='labelCheck'>Eu quero receber informações importantes, ofertas especiais e descontos do PayPal.</label>
+                            <br />
+                            <input id='checkSave' type="checkbox" />
+                            <label for='checkSave' className='labelCheck'>Salve o número do meu cartão de crédito para a próxima compra.</label>
                         </S.Form>
                     </div>
-                    {/* <S.DivMid>
-                        <h3>ENTREGA</h3>
-                        <select disabled>
-                            <option>Brasil</option>
-                        </select>
-                        <input type="text" placeholder="CEP" />
-                        <a target="blank" href='https://buscacepinter.correios.com.br/app/endereco/index.php'><span>Não sei meu CEP</span></a>
-                    </S.DivMid>
                     <S.DivButton>
                         <button>Continuar</button>
-                    </S.DivButton> */}
+                    </S.DivButton>
                 </S.ContainerLeft>
                 <S.ContainerRight>
                     {productsOnCart.map(item => (

@@ -162,7 +162,7 @@ export const Patrocinadores = styled.div`
     margin: 0 auto;
     gap: 2.5rem;
     flex-wrap: wrap;
-    padding: 0 200px;
+    padding: 0 50px;
     @media only screen and (max-width: 510px) {
         padding: 0 50px;
         }
@@ -180,6 +180,11 @@ export const BoxPatrocinador = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    .bossName {
+        color: #FF7D1B;
+        font-weight: ${theme.fonts.weight.boldest};
+    }
     
     &:hover { 
         img {
@@ -194,7 +199,7 @@ export const BoxPatrocinador = styled.div`
     }
 
     img {
-        width: 200px;
+        width: 170px;
         background: #000;
         border-radius: 50%;
         transition: 0.3s;

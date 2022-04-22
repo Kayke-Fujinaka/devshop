@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
 
 import * as S from "./styles";
-
-const schema = yup
-    .object({
-        email: yup
-            .string()
-            .email("Digite um email válido")
-            .required("O email é obrigatório"),
-    })
-    .required();
 
 export default function Delivery() {
     const [productsOnCart, setProductsOnCart] = useState([])
@@ -21,19 +10,6 @@ export default function Delivery() {
         const listaProducts = localStorage.getItem('products')
         setProductsOnCart(JSON.parse(listaProducts) || [])
     }, [productsOnCart])
-
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm({
-        resolver: yupResolver(schema),
-    });
-
-    function onSubmit(userData) {
-        console.log(userData);
-    }
 
     return (
         <>
@@ -44,7 +20,7 @@ export default function Delivery() {
             </S.Breadcrumb>
 
             <S.ContainerMain>
-                <S.ContainerLeft onSubmit={handleSubmit(onSubmit)}>
+                <S.ContainerLeft>
                     <div>
                         <S.Form>
                             <h3>DADOS DE CONTATO</h3>
@@ -53,9 +29,8 @@ export default function Delivery() {
                                     className='inputEmail'
                                     type="email"
                                     placeholder="Email"
-                                    {...register("name", { required: true })}
                                 />
-                                {errors.email && <span>{errors.email?.message}</span>}
+                               
                             </label>
                             <input id='check' type="checkbox" />
                             <label for='check' className='labelCheck'> Quero receber ofertas e novidades por email</label>

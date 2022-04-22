@@ -1,40 +1,32 @@
-import React from 'react';
-import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
+import React, { useRef } from 'react';
+import { useHistory } from "react-router-dom";
+
+import { toast } from "react-toastify";
+import firebase from "../../services/firebase";
 
 import * as S from "./styles";
 
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-
-const schema = yup
-    .object({
-        email: yup
-            .string()
-            .email("Digite um email válido")
-            .required("O email é obrigatório"),
-        password: yup
-            .string()
-            .required("A senha é obrigatória"),
-    })
-    .required();
-
 export default function Login() {
 
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm({
-        resolver: yupResolver(schema),
-    });
+    const history = useHistory();
+    const inputEmail = useRef();
+    const inputPassword = useRef();
 
-    console.log(watch("name"));
-
-    function onSubmit(userData) {
-        console.log(userData);
+    async function login() {
+        const email = inputEmail.current.value;
+        const password = inputPassword.current.value;
+    
+        try {
+          const user = await firebase.auth().signInWithEmailAndPassword( email, password);
+          localStorage.setItem("user", JSON.stringify(email))
+          history.push("/");
+          return;
+        } catch {
+          toast.error("Email ou senha inválida!", {
+            autoClose: 1000,
+            pauseOnHover: false,
+          });
+        }
     }
 
     return (
@@ -51,36 +43,37 @@ export default function Login() {
                 </S.Breadcrumb>
 
                 <S.ContainerForm>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <div>
                         <div className='divLabelInput'>
                             <label>
                                 Email Adress
                                 <input
+                                    ref={inputEmail}
                                     type="email"
                                     placeholder='youremail@email.com'
-                                    {...register("name", { required: true })}
+                                    required
                                 />
-                                {errors.email && <span>{errors.email?.message}</span>}
                             </label>
                         </div>
                         <div className='divLabelInput'>
                             <label>
                                 Password
                                 <input
+                                    ref={inputPassword}
                                     type="password"
-                                    {...register("email", { required: true })}
+                                    required
                                 />
-                                {errors.password && <span>{errors.password?.message}</span>}
+                                {" "}
                             </label>
                         </div>
                         <S.ForgotPassword>
                             <a href='/reset'>Forgot password?</a>
                         </S.ForgotPassword>
                         <S.DivButton>
-                            <button type="submit">Sing in</button>
+                            <button onClick={login}>Sing in</button>
                         </S.DivButton>
                         <p>Don't have an account? <a href='/register'>Register</a></p>
-                    </form>
+                    </div>
                 </S.ContainerForm>
 
             </S.ContainerMain>

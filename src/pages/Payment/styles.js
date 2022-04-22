@@ -54,8 +54,7 @@ export const ContainerLeft = styled.form`
 
 export const ContainerRight = styled.form`
     width: 50%;
-    margin: 1.5rem 0 1.5rem 0rem;    
-    border-top: 1px solid rgb(0,0,0, 0.15);
+    align-self: center;
 
     @media only screen and (max-width: 1050px) {
         width: 60%;
@@ -115,20 +114,10 @@ export const Total = styled.div`
 
 export const Form = styled.div`
     display: block;
-    .inputEmail {
-        display: block;
-        margin-top: 10px;
-        padding: 10px;
-        width: 100%;
-        border: 1px solid #000;
+    img {
+        max-width: 300px;
     }
-    span {
-        color: red;
-        font-size: 13px;
-        display: block;
-        margin-top: 5px;
-    }
-    #check {
+    #checkSave {
         margin-top: 10px;
     }
     .labelCheck {
@@ -137,30 +126,35 @@ export const Form = styled.div`
 
 `
 
-export const DivMid = styled.div`
-    margin: 1.5rem auto; 
-    select {
+export const DivInputCard = styled.div`
+    display: block;
+    .card {
         display: block;
-        width: 100%;
-        margin: 10px 0;
-        padding: 10px;
-        appearance: none;
+        .securityCode {
+            padding: 5px 10px;
+            max-width: 115px;
+            font-size: 20px;
+            &::placeholder {
+                font-size: 13.5px;
+            }
+        }
     }
     input {
+        display: block;
+        margin: 15px 0;
         padding: 10px;
         width: 100%;
         border: 1px solid #000;
-    }  
-    span {
-        font-size: 14px;
-        font-weight: ${theme.fonts.weight.bold};
-        color: #ffa724;
-    } 
+    }
+    select {
+        padding: 5px;
+    }
 `
 
 export const DivButton = styled.div`
     display: flex;
     justify-content: flex-end;
+    margin-top: 25px;
     button {
         padding: 10px 20px;
         background-color: #ffa724;

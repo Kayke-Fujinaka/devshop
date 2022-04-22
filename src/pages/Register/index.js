@@ -1,8 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useHistory } from "react-router-dom";
+
+import Swal from "sweetalert2";
+import firebase from "../../services/firebase"
+
 import * as yup from "yup";
-// import firebase from "../../services/firebase"
+
 
 import * as S from "./styles";
 
@@ -26,6 +31,8 @@ const schema = yup
 
 export default function Register() {
 
+    const history = useHistory();
+
     const {
         register,
         handleSubmit,
@@ -40,6 +47,51 @@ export default function Register() {
     function onSubmit(userData) {
         console.log(userData);
     }
+
+    async function onSubmit(userData) {
+        const { email, password, name } = userData;
+        try {
+          const user = await firebase
+            .auth()
+            .createUserWithEmailAndPassword(email, password).then(async (value)=>{
+              await firebase.firestore().collection('users').doc(email)
+              .set({
+                email: email,
+                nome: name,
+              })
+            })
+          Swal.fire({
+            icon: "success",
+            title: "OK!",
+            text: "Sua conta foi criada com sucesso!",
+          });
+
+          history.push("/login");
+
+          return;
+    
+        } catch(error){
+          console.log(error)
+            if (error.code === 'auth/email-already-in-use'){
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Email já existe!",
+              });
+    
+              return
+            }
+            else{
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Algo deu errado tente novamente!",
+              });
+    
+              return
+            }
+        }
+      }
 
     return (
         <>
@@ -61,6 +113,7 @@ export default function Register() {
                             <label>
                                 Name Complete
                                 <input
+                                    className={`input ${errors.name ? "error" : ""}`}
                                     type="text"
                                     placeholder='Your Name'
                                     {...register("name", { required: true })}
@@ -74,6 +127,7 @@ export default function Register() {
                             <label>
                                 Email Adress
                                 <input
+                                    className={`input ${errors.email ? "error" : ""}`}
                                     type="email"
                                     placeholder='youremail@email.com'
                                     {...register("email", { required: true })}
@@ -87,6 +141,7 @@ export default function Register() {
                             <label>
                                 Password
                                 <input
+                                    className={`input ${errors.password  ? "error" : ""}`}
                                     type="password"
                                     {...register("password", { required: true })}
                                 />
@@ -99,6 +154,7 @@ export default function Register() {
                             <label>
                                 Confirm Password
                                 <input
+                                    className={`input ${errors.confirmPassword  ? "error" : ""}`}
                                     type="password"
                                     {...register("confirmPassword", { required: true })}
                                 />
