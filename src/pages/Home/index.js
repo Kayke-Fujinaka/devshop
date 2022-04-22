@@ -18,6 +18,16 @@ import pedro from '../../assets/pedro.png'
 import matheus from '../../assets/matheus.png'
 import marcus from '../../assets/marcus.png'
 import rafael from '../../assets/rafael.png'
+import biggest from '../../assets/biggest.png'
+import joias from '../../assets/joias.png'
+import discount from '../../assets/discount.png'
+import post1 from '../../assets/post1.png'
+import msg1 from '../../assets/msg1.png'
+import msg2 from '../../assets/msg2.png'
+import msg3 from '../../assets/msg3.png'
+import msg4 from '../../assets/msg4.png'
+import msg5 from '../../assets/msg5.png'
+
 
 import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import Carousel from "react-multi-carousel";
@@ -88,16 +98,16 @@ export default function Home() {
             <div className="CarouselBanner">
                 <Carousel responsive={responsive}>
                     <div>
-                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/69750176-5ccc-4273-98c9-af2c00944577___28f1285c9c50ba578f3103af1719edc0.jpg" alt="" />
+                        <img src={biggest} alt="Banner 1" />
                     </div>
                     <div>
-                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/ef5c9169-21b4-47dc-8fb9-4075f8425b4f___de6ef233726209f366aeac951188dd80.jpg" alt="" />
+                        <img src={joias} alt="Banner 2" />
                     </div>
                     <div>
-                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/9f3392f0-612a-4013-a238-3ee6a6075340___dd879e1c01966e85add16dee3b57b0c6.jpg" alt="" />
+                        <img src={post1} alt="Banner 3" />
                     </div>
                     <div>
-                        <img src="https://cea.vtexassets.com/assets/vtex.file-manager-graphql/images/bb8053e4-d3e6-43b7-b139-82622e855698___f95f198db32e898cc6ee8a101e31cad7.jpg" alt="" />
+                        <img src={discount} alt="Banner 4" />
                     </div>
                 </Carousel>
             </div>
@@ -135,16 +145,19 @@ export default function Home() {
             <div className="CarouselBanner">
                 <Carousel responsive={responsive}>
                     <div>
-                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_APPDAY_PREOGRESSIVO_GERAL_DESKv2.jpg" alt="" />
+                        <img src={msg1} alt="uma" />
                     </div>
                     <div>
-                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_MODA_JEANS_MASCULINO_DESK.jpg" alt="" />
+                        <img src={msg3} alt="forma" />
                     </div>
                     <div>
-                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_APPDAY_PREOGRESSIVO_GERAL_DESKv2.jpg" alt="" />
+                        <img src={msg2} alt="nova" />
                     </div>
                     <div>
-                        <img src="https://img.lojasrenner.com.br/banner/01-home/20220421_HOME_CARROSSEL_MODA_JEANS_MASCULINO_DESK.jpg" alt="" />
+                        <img src={msg4} alt="de" />
+                    </div>
+                    <div>
+                        <img src={msg5} alt="ecommerce" />
                     </div>
                 </Carousel>
             </div>
