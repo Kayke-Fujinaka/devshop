@@ -1,4 +1,4 @@
-# DevShop
+# DEVSHOP • E-COMMERCE
 
 <img src="LINK DO GIF" alt="Um gif apresentando o projeto">
 
