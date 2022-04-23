@@ -1,4 +1,4 @@
-# Nome do E-commerce (AINDA NÃO FOI FINALIZADO)
+# DevShop
 
 <img src="LINK DO GIF" alt="Um gif apresentando o projeto">
 
@@ -12,20 +12,22 @@ COLOCAR EXPLICAÇÃO
 
 ## 📁 Páginas
 
-O site tem no total X páginas, sendo elas:
+O site tem no total 14 páginas, sendo elas:
 
-- **Login:** xxxxxxxxxxxxxx.
-- **Register:** xxxxxxxxxxxxxx.
-- **Forgot Password:** xxxxxxxxxxxxxx.
-- **Profile:**
-- **Home:** xxxxxxxxxxxxxx.
-- **Men:**
-- **Women:**
-- **Jewelery:**
-- **Eletronics:**
-- **Our policy:**
-- **Inspect:** xxxxxxxxxxxxxx.
-- **Error 404:** xxxxxxxxxxxxxx.
+- **Home:** Página principal da loja que aprensenta diversos produtos.
+- **Login:** Página para logar o usuário no site.
+- **Register:** Página para registrar o usuário no site.
+- **Forgot Password:** Página para redefinir a senha.
+- **Profile:** Página que mostra o perfil da pessoa com as seguintes informações que ela criou.
+- **Men:** A página mostra os produtos masculinos.
+- **Women:** A página mostra os produtos femininos.
+- **Jewelery:** A página mostra os produtos de joalheria.
+- **Eletronics:** A página mostra os produtos eletrônicos.
+- **Our policy:** Apresenta as políticas (fictícias) da loja.
+- **Inspect:** Ela mostra um item em específico para avaliar ou comprar.
+- **Delivery:** Página para informar em que local vai ser enviado o produto comprado.
+- **Payment:** Página para efetuar a compra.
+- **Error 404:** A página de Error 404 que acontece ao acessar uma rota inexistente.
 ## :dart: Etapas ##
 
 :heavy_check_mark: Criação da rotas;\
@@ -44,16 +46,17 @@ O site tem no total X páginas, sendo elas:
 
 No projeto foram utilizadas as seguintes tecnologias:
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
-- [React](https://pt-br.reactjs.org/)
+- [ReactJs](https://pt-br.reactjs.org/)
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+- [Styled-Components](https://styled-components.com/docs)
+- [React Hook Form](https://react-hook-form.com)
+- [Yup](https://react-hook-form.com/get-started#SchemaValidation)
+- [Axios](https://axios-http.com/docs/intro)
 - [React icons](https://react-icons.github.io/react-icons/)
-- [React router dom]()
-- [Axios]()
-- [Firebase]()
-- [React hook form]()
-- [Styled Components](https://styled-components.com/docs)
+- [React-Multi-Carousel](https://www.npmjs.com/package/react-multi-carousel)
+- [SweetAlert2](https://sweetalert2.github.io)
+- [Toastify](https://fkhadra.github.io/react-toastify/introduction/)
+- [Firebase](https://firebase.google.com/docs)
 
 ## :closed_book: Requisitos ##
 
@@ -94,15 +97,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
           <b>João Guilherme</b>
         </sub>
       </a>
-    </td>
-        <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/60978293?v=4" width="160px;" alt="Foto do Rafael Yokoyama"/><br>
-        <sub>
-          <b>Rafael Yokoyama</b>
-        </sub>
-      </a>
-    </td>
   </tr>
 </table>
 
