@@ -28,7 +28,7 @@ export const Breadcrumb = styled.div`
     }
 `
 
-export const ContainerForm = styled.div`
+export const ContainerForm = styled.form`
     display: flex;
     width: 100%;
     justify-content: center;

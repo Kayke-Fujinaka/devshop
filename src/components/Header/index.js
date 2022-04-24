@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom'
+
+import { AuthContext } from '../../contexts/auth'
 
 import { FiShoppingCart, FiSearch, FiMenu } from 'react-icons/fi'
 import ShopCart from '../ShopCart';
@@ -7,6 +9,8 @@ import ShopCart from '../ShopCart';
 import * as S from "./styles"
 
 export default function Header() {
+
+  const { storageUser, user } = useContext(AuthContext)
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [productsOnCart, setProductsOnCart] = useState([]);
@@ -28,6 +32,10 @@ export default function Header() {
     })
     setQtdItems(qtd)
   }, [[], productsOnCart, qtdItems])
+
+  console.log(storageUser)
+  console.log( '////////////////')
+  console.log(user)
 
 
   return (
@@ -69,11 +77,21 @@ export default function Header() {
               </Link>
             </div>
           </S.ContainerSearch>
+
           <S.DivAccount>
-            <p><Link to="/register">Register</Link></p>
-            <span>/</span>
-            <p><Link to="/login">Login</Link></p>
+            {user ? (
+              <Link to="/profile">
+              Olá, {user.name}
+              </Link>
+            ) : (
+              <>
+                <p><Link to="/register">Register</Link></p>
+                <span>/</span>
+                <p><Link to="/login">Login</Link></p>
+              </>
+            )}
           </S.DivAccount>
+
           <FiShoppingCart onClick={() => setShowSidebar(!showSidebar)} />
           <S.Bar>{qtdItems}</S.Bar>
         </S.ContainerRight>

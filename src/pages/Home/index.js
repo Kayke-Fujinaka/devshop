@@ -35,6 +35,7 @@ import "react-multi-carousel/lib/styles.css";
 
 export default function Home() {
     const { allProducts, loading } = useContext(ApiContext)
+    
     const [products, setProducts] = useState([])
 
     let productsHome = allProducts.slice(0, 8)
