@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useHistory } from "react-router-dom";
+
+import { AuthContext } from '../../contexts/auth'
 
 import Swal from "sweetalert2";
 import firebase from "../../services/firebase"
@@ -31,6 +33,21 @@ const schema = yup
 
 export default function Register() {
 
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const { signUp, loadingAuth } = useContext(AuthContext)
+
+    function formSubmit(e) {
+        e.preventDefault();
+
+        if (name !== '' && email !== ''  && password !== '') {
+            signUp(email, name, password)
+            history.push('/')
+        }
+    }
+
     const history = useHistory();
 
     const {
@@ -41,57 +58,6 @@ export default function Register() {
     } = useForm({
         resolver: yupResolver(schema),
     });
-
-    console.log(watch("name"));
-
-    function onSubmit(userData) {
-        console.log(userData);
-    }
-
-    async function onSubmit(userData) {
-        const { email, password, name } = userData;
-        try {
-          const user = await firebase
-            .auth()
-            .createUserWithEmailAndPassword(email, password).then(async (value)=>{
-              await firebase.firestore().collection('users').doc(email)
-              .set({
-                email: email,
-                nome: name,
-              })
-            })
-          Swal.fire({
-            icon: "success",
-            title: "OK!",
-            text: "Sua conta foi criada com sucesso!",
-          });
-
-          history.push("/login");
-
-          return;
-    
-        } catch(error){
-          console.log(error)
-            if (error.code === 'auth/email-already-in-use'){
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Email já existe!",
-              });
-    
-              return
-            }
-            else{
-              Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Algo deu errado tente novamente!",
-              });
-    
-              return
-            }
-        }
-      }
 
     return (
         <>
@@ -107,7 +73,7 @@ export default function Register() {
                 </S.Breadcrumb>
 
                 <S.ContainerForm>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form onSubmit={formSubmit}>
                         <div className='divLabelInput'>
 
                             <label>
@@ -117,6 +83,8 @@ export default function Register() {
                                     type="text"
                                     placeholder='Your Name'
                                     {...register("name", { required: true })}
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                 />
                                 {errors.name && <span>{errors.name?.message}</span>}
                             </label>
@@ -131,6 +99,8 @@ export default function Register() {
                                     type="email"
                                     placeholder='youremail@email.com'
                                     {...register("email", { required: true })}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                                 {errors.email && <span>{errors.email?.message}</span>}
                             </label>
@@ -144,6 +114,8 @@ export default function Register() {
                                     className={`input ${errors.password  ? "error" : ""}`}
                                     type="password"
                                     {...register("password", { required: true })}
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                 />
                                 {errors.password && <span>{errors.password?.message}</span>}
                             </label>

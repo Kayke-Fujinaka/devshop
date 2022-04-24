@@ -1,31 +1,28 @@
-import React, { useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from "react-router-dom";
 
 import { toast } from "react-toastify";
 import firebase from "../../services/firebase";
 
+import { AuthContext } from '../../contexts/auth'
+
 import * as S from "./styles";
 
 export default function Login() {
 
-    const history = useHistory();
-    const inputEmail = useRef();
-    const inputPassword = useRef();
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    async function login() {
-        const email = inputEmail.current.value;
-        const password = inputPassword.current.value;
-    
-        try {
-          const user = await firebase.auth().signInWithEmailAndPassword( email, password);
-          localStorage.setItem("user", JSON.stringify(email))
-          history.push("/");
-          return;
-        } catch {
-          toast.error("Email ou senha inválida!", {
-            autoClose: 1000,
-            pauseOnHover: false,
-          });
+    const { logIn, loadingAuth } = useContext(AuthContext)
+
+    const history = useHistory();
+
+    function formSubmit(e) {
+        e.preventDefault();
+
+        if(email !== '' && password !== '') {
+            logIn(email, password)
+            history.push('/')
         }
     }
 
@@ -42,15 +39,16 @@ export default function Login() {
                     <p>Login</p>
                 </S.Breadcrumb>
 
-                <S.ContainerForm>
+                <S.ContainerForm onSubmit={formSubmit}>
                     <div>
                         <div className='divLabelInput'>
                             <label>
                                 Email Adress
                                 <input
-                                    ref={inputEmail}
                                     type="email"
                                     placeholder='youremail@email.com'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
                             </label>
@@ -59,8 +57,9 @@ export default function Login() {
                             <label>
                                 Password
                                 <input
-                                    ref={inputPassword}
                                     type="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     required
                                 />
                                 {" "}
@@ -70,7 +69,7 @@ export default function Login() {
                             <a href='/reset'>Forgot password?</a>
                         </S.ForgotPassword>
                         <S.DivButton>
-                            <button onClick={login}>Sing in</button>
+                            <button type="submit">Sign in</button>
                         </S.DivButton>
                         <p>Don't have an account? <a href='/register'>Register</a></p>
                     </div>
