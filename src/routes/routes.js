@@ -15,7 +15,8 @@ import Search from '../pages/Search'
 import NotFound from '../pages/NotFound'
 import Delivery from '../pages/Delivery'
 import Payment from '../pages/Payment'
-import Profile from '../pages/Profile';
+import Profile from '../pages/Profile'
+import Donate from '../pages/Donate';
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -42,6 +43,7 @@ export default function MainRoutes() {
                     <Route exact path="/delivery" component={Delivery} />
                     <Route exact path="/payment" component={Payment} />
                     <Route exact path="/profile" component={Profile} />
+                    <Route exact path="/donate" component={Donate} />
                     <Route path="*" component={NotFound} />
                 </Switch>
             </div>

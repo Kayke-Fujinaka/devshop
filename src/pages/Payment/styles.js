@@ -72,8 +72,8 @@ export const Product = styled.div`
     align-items: center;
     
     img {
-        width: 15%;
-        height: 100%;
+        width: 13%;
+        height: 90%;
     }
 
     p {

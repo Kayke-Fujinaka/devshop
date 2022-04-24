@@ -32,17 +32,34 @@ O site tem no total 16 páginas, sendo elas:
 - **Error 404:** A página de Error 404 que acontece ao acessar uma rota inexistente.
 ## :dart: Etapas ##
 
-:heavy_check_mark: Criação da rotas;\
-:heavy_check_mark: Aplicação dos estilos globais;\
-:heavy_check_mark: Componente Header;\
-:heavy_check_mark: Componente Footer;\
-:heavy_check_mark: Página de login e registro criadas;\
-:heavy_check_mark: Páginas Men, Women, Jewelery e Eletronics criadas;\
-:heavy_check_mark: Página Our policy concluída;\
-:heavy_check_mark: Terminar o carrinho ;\
-:heavy_check_mark: Componetização do Card dos produtos;\
-:x: Página Profile;\
-:x: Privatização de rotas;\
+:heavy_check_mark: Criação da Rotas;\
+:heavy_check_mark: Aplicação dos Estilos Globais;\
+:heavy_check_mark: Componente Header e Footer;\
+:heavy_check_mark: Consumo da API e Contexto da API;\
+:heavy_check_mark: Página de Login e Registro;\
+:heavy_check_mark: Página de Redefinição de Senha;\
+:heavy_check_mark: Responsividade no Login, Registro e Redefinição;\
+:heavy_check_mark: Aplicando os Produtos na Página Home;\
+:heavy_check_mark: Páginas Men, Women, Jewelery e Eletronics;\
+:heavy_check_mark: Consumindo API pela categoria;\
+:heavy_check_mark: Página de Inspect e Our Policy;\
+:heavy_check_mark: Carrinho de Compra no Header;\
+:heavy_check_mark: Responsivo Footer;\
+:heavy_check_mark: Página Search e Error 404;\
+:heavy_check_mark: Validação dos Input com Yup;\
+:heavy_check_mark: Header Fixo;\
+:heavy_check_mark: Adicionando as avaliações nos produtos;\
+:heavy_check_mark: Produtos adicionados no carrinho;\
+:heavy_check_mark: Opções de loja no carrinho;\
+:heavy_check_mark: Página de Entrega;\
+:heavy_check_mark: Página de Pagamento;\
+:heavy_check_mark: Carousel dos produtos na Home;\
+:heavy_check_mark: Arrumando Erro do Carrinho quando estava vazio;\
+:heavy_check_mark: Carousel com Banners na Home;\
+:heavy_check_mark: Seção de parceiros na HOme;\
+:heavy_check_mark: Autenticação com Firebase;\
+:x: Página de Donate;\
+:x: Finalizado;
 
 ## :rocket: Tecnologias ##
 

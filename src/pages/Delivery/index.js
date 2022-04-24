@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 
+import { Link } from 'react-router-dom'
+
 import * as S from "./styles";
 
 export default function Delivery() {
     const [productsOnCart, setProductsOnCart] = useState([])
+    const [total, setTotal] = useState(0)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
         setProductsOnCart(JSON.parse(listaProducts) || [])
     }, [productsOnCart])
+
+    useEffect(() => {
+        let totalPrice = 0;
+
+        productsOnCart.forEach((item, index) => {
+            totalPrice += item.price * item.quantity
+        })
+        setTotal(totalPrice.toFixed(2))
+    })
 
     return (
         <>
@@ -45,7 +57,7 @@ export default function Delivery() {
                         <a target="blank" href='https://buscacepinter.correios.com.br/app/endereco/index.php'><span>Não sei meu CEP</span></a>
                     </S.DivMid>
                     <S.DivButton>
-                        <button>Continuar</button>
+                        <Link to="/payment"><button>Continuar</button></Link>
                     </S.DivButton>
                 </S.ContainerLeft>
                 <S.ContainerRight>
@@ -62,7 +74,7 @@ export default function Delivery() {
                         ) : (
                             <>
                                 <span>Total:</span>
-                                <span>R$ 234,90</span> 
+                                <span>R$ {total}</span> 
                             </> )}
                 </S.Total>
                 </S.ContainerRight>

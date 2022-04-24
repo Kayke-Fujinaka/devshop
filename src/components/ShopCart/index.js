@@ -136,8 +136,8 @@ export default function ShopCart({ sidebar }) {
                                     </div>
                                 </S.Total>
                                 <S.FinishBuy>
-                                    <Link to="/products" className="linkToProducts"><a>Ver mais produtos</a></Link>
-                                    <Link to="/payment" className="linkToPayment">Finalizar compra</Link>
+                                    <Link to="/products" className="linkToProducts" onClick={() => setShowCart(false)}><a>Ver mais produtos</a></Link>
+                                    <Link to="/delivery" className="linkToPayment" onClick={() => setShowCart(false)}>Finalizar compra</Link>
                                 </S.FinishBuy>
                             </S.BottomCart>) : (
                             <S.DontHasProduct>

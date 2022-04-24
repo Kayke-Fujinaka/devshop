@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+import { Link } from 'react-router-dom'
+
 import * as S from "./styles";
 
 const schema = yup
@@ -16,11 +18,21 @@ const schema = yup
 
 export default function Payment() {
     const [productsOnCart, setProductsOnCart] = useState([])
+    const [total, setTotal] = useState(0)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
         setProductsOnCart(JSON.parse(listaProducts) || [])
     }, [productsOnCart])
+
+    useEffect(() => {
+        let totalPrice = 0;
+
+        productsOnCart.forEach((item, index) => {
+            totalPrice += item.price * item.quantity
+        })
+        setTotal(totalPrice.toFixed(2))
+    })
 
     const {
         register,
@@ -74,7 +86,7 @@ export default function Payment() {
                         </S.Form>
                     </div>
                     <S.DivButton>
-                        <button>Continuar</button>
+                        <Link to="/donate"><button>Continuar</button></Link>
                     </S.DivButton>
                 </S.ContainerLeft>
                 <S.ContainerRight>
@@ -91,7 +103,7 @@ export default function Payment() {
                         ) : (
                             <>
                                 <span>Total:</span>
-                                <span>R$ 234,90</span>
+                                <span>R$ {total}</span>
                             </>)}
                     </S.Total>
                 </S.ContainerRight>
