@@ -12,13 +12,15 @@ COLOCAR EXPLICAÇÃO
 
 ## 📁 Páginas
 
-O site tem no total 14 páginas, sendo elas:
+O site tem no total 16 páginas, sendo elas:
 
 - **Home:** Página principal da loja que aprensenta diversos produtos.
 - **Login:** Página para logar o usuário no site.
 - **Register:** Página para registrar o usuário no site.
 - **Forgot Password:** Página para redefinir a senha.
 - **Profile:** Página que mostra o perfil da pessoa com as seguintes informações que ela criou.
+- **Products:** A página mostra todos os produtos.
+- **Search:** A página mostra os produtos de acordo com o campo digitado na barra de pesquisas.
 - **Men:** A página mostra os produtos masculinos.
 - **Women:** A página mostra os produtos femininos.
 - **Jewelery:** A página mostra os produtos de joalheria.
