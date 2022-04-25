@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useForm } from "react-hook-form";
-
 import { Link } from 'react-router-dom'
 
 import * as S from "./styles";
 
 export default function Delivery() {
+    
     const [productsOnCart, setProductsOnCart] = useState([])
     const [total, setTotal] = useState(0)
-    const [ qtdItems, setQtdItems] = useState(0)
+    const [qtdItems, setQtdItems] = useState(0)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
@@ -36,6 +35,7 @@ export default function Delivery() {
             </S.Breadcrumb>
 
             <S.ContainerMain>
+
                 <S.ContainerLeft>
                     <div>
                         <S.Form>
@@ -46,24 +46,39 @@ export default function Delivery() {
                                     type="email"
                                     placeholder="Email"
                                 />
-                               
+
                             </label>
-                            <input id='check' type="checkbox" />
-                            <label for='check' className='labelCheck'> Quero receber ofertas e novidades por email</label>
+                            <input
+                                id='check'
+                                type="checkbox"
+                            />
+                            <label for='check' className='labelCheck'>
+                                Quero receber ofertas e novidades por email
+                            </label>
                         </S.Form>
                     </div>
+
                     <S.DivMid>
                         <h3>ENTREGA</h3>
                         <select disabled>
                             <option>Brasil</option>
                         </select>
-                        <input type="text" placeholder="CEP" />
-                        <a target="blank" href='https://buscacepinter.correios.com.br/app/endereco/index.php'><span>Não sei meu CEP</span></a>
+                        <input
+                            type="text"
+                            placeholder="CEP"
+                        />
+                        <a target="blank" href='https://buscacepinter.correios.com.br/app/endereco/index.php'>
+                            <span>Não sei meu CEP</span>
+                        </a>
                     </S.DivMid>
+
                     <S.DivButton>
-                        <Link to="/payment"><button>Continuar</button></Link>
+                        <Link to="/payment">
+                            <button>Continuar</button>
+                        </Link>
                     </S.DivButton>
                 </S.ContainerLeft>
+
                 <S.ContainerRight>
                     {productsOnCart.map(item => (
                         <S.Product>
@@ -78,10 +93,11 @@ export default function Delivery() {
                         ) : (
                             <>
                                 <span>Total:</span>
-                                <span>R$ {total}</span> 
-                            </> )}
-                </S.Total>
+                                <span>R$ {total}</span>
+                            </>)}
+                    </S.Total>
                 </S.ContainerRight>
+
             </S.ContainerMain>
 
         </>)

@@ -1,16 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
-import * as S from "./styles";
-import error404Image from "../../assets/error.svg"
+import React from 'react';
 import { Link } from 'react-router-dom'
 
-import { ApiContext } from '../../contexts/apiContext'
+import error404Image from "../../assets/error.svg"
+
+import * as S from "./styles";
 
 export default function NotFound() {
-    const { allProducts } = useContext(ApiContext)
-    const [products, setProducts] = useState([])
-
-    let productsHome = allProducts.slice(0, 8)
-
     return (
         <>
             <S.ContainerMain>

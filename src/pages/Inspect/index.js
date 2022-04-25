@@ -1,18 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
-import * as S from "./styles";
-
 import { Link, useHistory } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
-import api from '../../services/api'
 
 import { ApiContext } from '../../contexts/apiContext'
+import api from '../../services/api'
+
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 import { FiShoppingCart } from 'react-icons/fi'
 
 import Loading from '../../components/Loading'
 
+import * as S from "./styles";
+
 export default function Inspect(props) {
+    
     const history = useHistory();
     const { allProducts } = useContext(ApiContext);
 
@@ -53,12 +55,8 @@ export default function Inspect(props) {
 
     function addItemOnCart() {
 
-        console.log(product)
-
         const myList = localStorage.getItem('products');
-
         let savedProducts = JSON.parse(myList) || [];
-        // Se tiver algum produto salvo com esse mesmo id precisa ignorar
         const hasProduct = savedProducts.some((savedProduct) => savedProduct.id === product.id)
 
         if (hasProduct) {
@@ -72,7 +70,6 @@ export default function Inspect(props) {
                 progress: undefined,
                 });
             return
-            //Execução do código finaliza aqui.
         }
 
         savedProducts.push(product)
@@ -120,6 +117,7 @@ export default function Inspect(props) {
                     <S.BoxLeft>
                         <img src={product.image} />
                     </S.BoxLeft>
+                    
                     <S.BoxRight>
                         <S.TitleCompany>Dev Company</S.TitleCompany>
                         <h1>{product.title}</h1>

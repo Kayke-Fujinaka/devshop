@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import * as S from "./styles";
 
 import { ApiContext } from '../../contexts/apiContext'
 
 import CardProduct from '../../components/CardProduct'
 
-import { Link } from 'react-router-dom'
+import * as S from "./styles";
 
 export default function Men() {
     const { menProducts } = useContext(ApiContext)
@@ -22,7 +21,14 @@ export default function Men() {
                 <ul>
                     {menProducts.map((item) => (
                         <>
-                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                            <CardProduct
+                                id={item.id}
+                                title={item.title}
+                                price={item.price}
+                                category={item.category}
+                                image={item.image}
+                                rating={item.rating}
+                            />
                         </>
                     ))}
                 </ul>

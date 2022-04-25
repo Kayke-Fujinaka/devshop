@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { ApiContext } from '../../contexts/apiContext'
 import { Link } from 'react-router-dom'
-import firebase from "../../services/firebase";
 
-import * as S from "./styles";
+import { ApiContext } from '../../contexts/apiContext'
+
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import CardProduct from '../../components/CardProduct'
 import Loading from '../../components/Loading'
@@ -28,14 +30,12 @@ import msg3 from '../../assets/msg3.png'
 import msg4 from '../../assets/msg4.png'
 import msg5 from '../../assets/msg5.png'
 
-
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import * as S from "./styles";
 
 export default function Home() {
-    const { allProducts, loading } = useContext(ApiContext)
     
+    const { allProducts, loading } = useContext(ApiContext)
+
     const [products, setProducts] = useState([])
 
     let productsHome = allProducts.slice(0, 8)
@@ -57,7 +57,7 @@ export default function Home() {
             breakpoint: { max: 464, min: 0 },
             items: 1
         }
-    }; 
+    };
 
     return (
         <S.Container>
@@ -70,6 +70,7 @@ export default function Home() {
                         <Link to="/men">Ver produtos</Link>
                     </S.ContentProductCard>
                 </S.ProductCard>
+
                 <S.ProductCard>
                     <img src={backWomen} alt="Imagem roupa feminina" />
                     <S.ContentProductCard>
@@ -78,6 +79,7 @@ export default function Home() {
                         <Link to="/women">Ver produtos</Link>
                     </S.ContentProductCard>
                 </S.ProductCard>
+
                 <S.ProductCard>
                     <img src={eletronics} alt="Imagem eletrônicos" />
                     <S.ContentProductCard>
@@ -86,6 +88,7 @@ export default function Home() {
                         <Link to="/eletronics">Ver produtos</Link>
                     </S.ContentProductCard>
                 </S.ProductCard>
+
                 <S.ProductCard>
                     <img src={joiasBack} alt="Imagem joias" />
                     <S.ContentProductCard>
@@ -126,7 +129,14 @@ export default function Home() {
                     <ul>
                         {productsHome.map((item) => (
                             <>
-                                <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                                <CardProduct
+                                    id={item.id}
+                                    title={item.title}
+                                    price={item.price}
+                                    category={item.category}
+                                    image={item.image}
+                                    rating={item.rating}
+                                />
                             </>
                         ))}
                     </ul>
@@ -164,53 +174,66 @@ export default function Home() {
             </div>
 
             <Carousel responsive={responsive}>
-            <S.Patrocinadores>
-                <div className='title'>
-                <h1>Parceiros</h1>
-                </div>
-                <S.BoxPatrocinador>
-                    <a href="https://www.linkedin.com/in/kayke-fujinaka/" target="blank"><img src={kayke} alt="" /></a>
-                    <div className="icon">
-                        <FaLinkedin />
+                <S.Patrocinadores>
+                    <div className='title'>
+                        <h1>Parceiros</h1>
                     </div>
-                    <p className='bossName'>@kaykeaf</p>
-                </S.BoxPatrocinador>
-                <S.BoxPatrocinador>
-                <a href="https://www.linkedin.com/in/jguilhermesl/" target="blank"><img src={joao} alt="" /></a>
-                    <div className="icon">
-                        <FaLinkedin />
-                    </div>
-                    <p className='bossName'>@jguilhermesl</p>
-                </S.BoxPatrocinador>
-                <S.BoxPatrocinador>
-                <a href="https://www.linkedin.com/in/rafael-yokoyama/" target="blank"><img src={rafael} alt="" /></a>
-                    <div className="icon">
-                        <FaLinkedin />
-                    </div>
-                    <p>@rafael.yokoyama99</p>
-                </S.BoxPatrocinador>
-                <S.BoxPatrocinador>
-                <a href="https://www.linkedin.com/in/pedroh-dev/" target="blank"><img src={pedro} alt="" /></a>
-                    <div className="icon">
-                        <FaLinkedin />
-                    </div>
-                    <p>@p3dro_dev</p>
-                </S.BoxPatrocinador>
-                <S.BoxPatrocinador>
-                <a href="https://www.linkedin.com/in/marcusviniciusbeghelisantos/" target="blank"><img src={marcus} alt="" /></a>
-                    <div className="icon">
-                        <FaLinkedin />
-                    </div>
-                    <p>@marcusbegh</p>
-                </S.BoxPatrocinador>
-                <S.BoxPatrocinador>
-                <a href="https://www.linkedin.com/in/matheus-santos-souza/" target="blank"><img src={matheus} alt="" /></a>
-                    <div className="icon">
-                        <FaLinkedin />
-                    </div>
-                    <p>@mattheus_santos42</p>
-                </S.BoxPatrocinador>
-            </S.Patrocinadores>
+                    <S.BoxPatrocinador>
+                        <a
+                            href="https://www.linkedin.com/in/kayke-fujinaka/" target="blank">
+                            <img src={kayke} alt="Foto do Kayke" />
+                        </a>
+                        <div className="icon">
+                            <FaLinkedin />
+                        </div>
+                        <p className='bossName'>@kaykeaf</p>
+                    </S.BoxPatrocinador>
+                    <S.BoxPatrocinador>
+                        <a href="https://www.linkedin.com/in/jguilhermesl/" target="blank">
+                            <img src={joao} alt="Foto do João" />
+                        </a>
+                        <div className="icon">
+                            <FaLinkedin />
+                        </div>
+                        <p className='bossName'>@jguilhermesl</p>
+                    </S.BoxPatrocinador>
+                    <S.BoxPatrocinador>
+                        <a href="https://www.linkedin.com/in/rafael-yokoyama/" target="blank">
+                            <img src={rafael} alt="Foto do Rafael" />
+                        </a>
+                        <div className="icon">
+                            <FaLinkedin />
+                        </div>
+                        <p>@rafael.yokoyama99</p>
+                    </S.BoxPatrocinador>
+                    <S.BoxPatrocinador>
+                        <a href="https://www.linkedin.com/in/pedroh-dev/" target="blank">
+                            <img src={pedro} alt="Foto do Pedro" />
+                        </a>
+                        <div className="icon">
+                            <FaLinkedin />
+                        </div>
+                        <p>@p3dro_dev</p>
+                    </S.BoxPatrocinador>
+                    <S.BoxPatrocinador>
+                        <a href="https://www.linkedin.com/in/marcusviniciusbeghelisantos/" target="blank">
+                            <img src={marcus} alt="Foto do Marcus" />
+                        </a>
+                        <div className="icon">
+                            <FaLinkedin />
+                        </div>
+                        <p>@marcusbegh</p>
+                    </S.BoxPatrocinador>
+                    <S.BoxPatrocinador>
+                        <a href="https://www.linkedin.com/in/matheus-santos-souza/" target="blank">
+                            <img src={matheus} alt="Foto do Matheus" />
+                        </a>
+                        <div className="icon">
+                            <FaLinkedin />
+                        </div>
+                        <p>@mattheus_santos42</p>
+                    </S.BoxPatrocinador>
+                </S.Patrocinadores>
             </Carousel>
 
             <S.InstagramFooter>

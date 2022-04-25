@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useHistory } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from "./styles"
 
-import { Link, NavLink } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 import { FiMaximize2 } from 'react-icons/fi'
 

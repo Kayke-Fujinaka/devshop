@@ -33,11 +33,6 @@ export default function Header() {
     setQtdItems(qtd)
   }, [[], productsOnCart, qtdItems])
 
-  console.log(storageUser)
-  console.log( '////////////////')
-  console.log(user)
-
-
   return (
     <>
       <S.MainContainer>

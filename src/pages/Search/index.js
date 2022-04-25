@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import * as S from "./styles";
 import api from '../../services/api'
-import { FaLaptopHouse } from 'react-icons/fa';
 
 import CardProduct from '../../components/CardProduct'
 import Loading from '../../components/Loading'
 
 export default function Search({ match }) {
+    
     const campoBusca = match.params.busca
 
     const [allProducts, setAllProducts] = useState([])
@@ -14,11 +14,19 @@ export default function Search({ match }) {
     const [loading, setLoading] = useState(false)
 
     function returnSearch(value) {
-        // const filterRepo = value.filter( (item) => item.title == campoBusca)
         setProductsFilter([])
         let array = []
         value.forEach((item) => {
-            if (String(item.title).toLowerCase().includes(campoBusca.toLowerCase()) || String(item.description).toLowerCase().includes(campoBusca.toLowerCase())) {
+            if (
+                String(item.title)
+                    .toLowerCase()
+                    .includes(campoBusca.toLowerCase())
+                ||
+                String(item.description)
+                    .toLowerCase()
+                    .includes(campoBusca
+                    .toLowerCase())
+            ) {
                 array.push(item)
                 setProductsFilter(array)
                 return
@@ -44,7 +52,6 @@ export default function Search({ match }) {
 
     return (
         <>
-
             <S.ContainerMain>
 
                 <S.Breadcrumb>
@@ -62,7 +69,14 @@ export default function Search({ match }) {
                 <S.Results>
                     {productsFilter.map(item => (
                         <>
-                            <CardProduct id={item.id} title={item.title} price={item.price} category={item.category} image={item.image} rating={item.rating} />
+                            <CardProduct
+                                id={item.id}
+                                title={item.title}
+                                price={item.price}
+                                category={item.category}
+                                image={item.image}
+                                rating={item.rating}
+                            />
                         </>
                     ))}
                 </S.Results>

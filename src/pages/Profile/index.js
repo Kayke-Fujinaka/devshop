@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
-
-import * as S from "./styles";
+import React, { useContext } from 'react';
 
 import { AuthContext } from '../../contexts/auth'
+
+import * as S from "./styles";
 
 export default function Profile() {
     const { signOut, loadingAuth } = useContext(AuthContext)

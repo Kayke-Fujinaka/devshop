@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import { useForm } from "react-hook-form";
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-
-import { Link } from 'react-router-dom'
 
 import * as S from "./styles";
 
@@ -19,7 +19,7 @@ const schema = yup
 export default function Payment() {
     const [productsOnCart, setProductsOnCart] = useState([])
     const [total, setTotal] = useState(0)
-    const [ qtdItems, setQtdItems] = useState(0)
+    const [qtdItems, setQtdItems] = useState(0)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
@@ -39,10 +39,7 @@ export default function Payment() {
     })
 
     const {
-        register,
         handleSubmit,
-        watch,
-        formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
     });
@@ -69,30 +66,54 @@ export default function Payment() {
                             <div>
                                 <img src='https://www.larissamuller.com.br/wp-content/uploads/2020/06/paypal.png' />
                             </div>
+
                             <S.DivInputCard>
                                 <div className='card'>
-                                <input maxlength="12" placeholder='Número do cartão'/>
-                                <input maxlength="3" className='securityCode' type="password" placeholder='Security Code'/>
+                                    <input
+                                        maxlength="12"
+                                        placeholder='Número do cartão'
+                                    />
+                                    <input
+                                        maxlength="3"
+                                        className='securityCode'
+                                        type="password"
+                                        placeholder='Security Code'
+                                    />
                                 </div>
                                 <select>
                                     <option>Visa</option>
                                     <option>MasterCard</option>
                                     <option>Elo</option>
                                 </select>
-                                <input type="month" placeholder='Data de Vencimento'/>
-                                
+                                <input
+                                    type="month"
+                                    placeholder='Data de Vencimento'
+                                />
                             </S.DivInputCard>
-                            <input id='checkInfo' type="checkbox" />
-                            <label for='checkInfo' className='labelCheck'>Eu quero receber informações importantes, ofertas especiais e descontos do PayPal.</label>
+
+                            <input
+                                id='checkInfo'
+                                type="checkbox"
+                            />
+                            <label for='checkInfo' className='labelCheck'>
+                                Eu quero receber informações importantes, ofertas especiais e descontos do PayPal.
+                            </label>
                             <br />
-                            <input id='checkSave' type="checkbox" />
-                            <label for='checkSave' className='labelCheck'>Salve o número do meu cartão de crédito para a próxima compra.</label>
+                            <input
+                                id='checkSave'
+                                type="checkbox"
+                            />
+                            <label for='checkSave' className='labelCheck'>
+                                Salve o número do meu cartão de crédito para a próxima compra.
+                            </label>
                         </S.Form>
                     </div>
+
                     <S.DivButton>
                         <Link to="/donate"><button>Continuar</button></Link>
                     </S.DivButton>
                 </S.ContainerLeft>
+
                 <S.ContainerRight>
                     {productsOnCart.map(item => (
                         <S.Product>

@@ -1,13 +1,10 @@
 import React from 'react';
-
 import { useForm } from "react-hook-form";
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
 import * as S from "./styles";
-
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 
 const schema = yup
     .object({
@@ -23,13 +20,10 @@ export default function Forgot() {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
     });
-
-    console.log(watch("name"));
 
     function onSubmit(userData) {
         console.log(userData);
@@ -39,7 +33,6 @@ export default function Forgot() {
         <>
 
             <S.ContainerMain>
-
                 <S.Breadcrumb>
                     <a href='/'>Home</a>
                     <span>/</span>
@@ -71,7 +64,6 @@ export default function Forgot() {
                         <p>Back to <a href='/login'>Login</a></p>
                     </div>
                 </S.ContainerForm>
-
             </S.ContainerMain>
 
         </>

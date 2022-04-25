@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useForm } from "react-hook-form";
-
-import { Link } from 'react-router-dom'
+import React from 'react';
 import { PayPalButtons } from '@paypal/react-paypal-js'
 
 import Swal from 'sweetalert2'
@@ -23,8 +20,10 @@ export default function Donate() {
             <S.ContainerMain>
                 <img src={donateSvg} />
                 <div>
-                    <h1>O DevShop não possui fins lucrativos, o projeto  foi desenvolvido apenas para estudo e futuras aplicações.</h1>
-                    <p>No entanto você pode apoiar o projeto, contribua com <span>R$ 1,00</span>. </p>
+                    <h1>
+                        O DevShop não possui fins lucrativos, o projeto  foi desenvolvido apenas para estudo e futuras aplicações.
+                    </h1>
+                    <p>No entanto você pode apoiar o projeto, contribua com <span>R$ 1,00</span>.</p>
                     <PayPalButtons createOrder={ (data, actions) => {
                         return actions.order.create({
                             purchase_units: [{ 

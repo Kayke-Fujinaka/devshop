@@ -1,21 +1,19 @@
 import React, { useContext, useState } from 'react';
-import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
 import { useHistory } from "react-router-dom";
 
 import { AuthContext } from '../../contexts/auth'
 
-import Swal from "sweetalert2";
-import firebase from "../../services/firebase"
-
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-
 
 import * as S from "./styles";
 
 const schema = yup
     .object({
-        name: yup.string().required("O nome é obrigatório"),
+        name: yup
+            .string()
+            .required("O nome é obrigatório"),
         email: yup
             .string()
             .email("Digite um email válido")
@@ -42,7 +40,7 @@ export default function Register() {
     function formSubmit(e) {
         e.preventDefault();
 
-        if (name !== '' && email !== ''  && password !== '') {
+        if (name !== '' && email !== '' && password !== '') {
             signUp(email, name, password)
             history.push('/')
         }
@@ -52,8 +50,6 @@ export default function Register() {
 
     const {
         register,
-        handleSubmit,
-        watch,
         formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
@@ -111,7 +107,7 @@ export default function Register() {
                             <label>
                                 Password
                                 <input
-                                    className={`input ${errors.password  ? "error" : ""}`}
+                                    className={`input ${errors.password ? "error" : ""}`}
                                     type="password"
                                     {...register("password", { required: true })}
                                     value={password}
@@ -126,7 +122,7 @@ export default function Register() {
                             <label>
                                 Confirm Password
                                 <input
-                                    className={`input ${errors.confirmPassword  ? "error" : ""}`}
+                                    className={`input ${errors.confirmPassword ? "error" : ""}`}
                                     type="password"
                                     {...register("confirmPassword", { required: true })}
                                 />
