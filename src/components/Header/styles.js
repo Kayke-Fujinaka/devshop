@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
     background: #fff;
     top: 0rem;
     left: 0rem;
-    z-index: 10;
+    z-index: 15;
     width: 100vw;
     box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.37);
 
@@ -184,6 +184,24 @@ export const DivAccount = styled.div`
             color: ${theme.black};
             text-decoration: underline;
         }
+    }
+`
+
+export const SignOutButton = styled.div`
+    background: red;
+    padding: 3px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 900;
     }
 `
 

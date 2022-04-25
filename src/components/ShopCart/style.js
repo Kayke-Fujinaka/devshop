@@ -2,103 +2,102 @@ import styled from 'styled-components'
 import theme from "../../styles/theme"
 
 export const Modal = styled.div`
+    display: flex;
+    align-items: right;
+    justify-content: right;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     background: rgba(0,0,0,0.5);
-    z-index: 99;
-    display: flex;
-    align-items: right;
-    justify-content: right;
 `
 
 export const ShopCart = styled.div`
+    width: 500px;
+    height: 100%;
     position: relative;
     top: 0rem;
     right: 0rem;
-    width: 500px;
-    height: 100%;
     z-index: 100;
-    background: #fff;
+    background: ${theme.white};
 
-    @media only screen and (max-width: 550px) {
-            width: 400px;
-        }
+    @media (max-width: 550px) {
+        width: 400px;
+    }
 
-    @media only screen and (max-width: 450px) {
-            width: 300px;
-        }
+    @media (max-width: 450px) {
+        width: 300px;
+    }
 `
 
 export const TitleShopCart = styled.div`
     display: flex;
+    height: 60px;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    height: 60px;
-    
-
 
     h1 {
-        text-transform: uppercase;
+        margin-left: 10px;
+        font-size: 0.85rem;
         font-weight: ${theme.fonts.weight.boldest}}
         color: ${theme.gray};
-        font-size: 0.85rem;
-        margin-left: 10px;
+        text-transform: uppercase;
 
-        @media only screen and (max-width: 700px) {
+        @media (max-width: 700px) {
             font-size: 0.67rem;
         }
     }
 
     svg {
-        font-size: 2rem;
-        margin-top: 2px;
-        cursor: pointer;
-        transition: 0.5s;
+    margin-top: 2px;
+    font-size: 2rem;
+    transition: 0.5s;
+    cursor: pointer;
 
-        &:hover {
-            color: #ff7d1b;
-        }
+    &:hover {
+        color: #ff7d1b;
+    }
 `
 
 export const TitleProducts = styled.div`
-        height: 50px;
-        display: flex;
-        width:  100%;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgb(0,0,0, 0.35);
-        border-top: 1px solid rgb(0,0,0, 0.35);
+    display: flex;
+    height: 50px;
+    width:  100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(0,0,0, 0.35);
+    border-top: 1px solid rgb(0,0,0, 0.35);
         
-        h1 {
-            margin-left: 10px;
-            font-size: 1.1rem;
-            font-weight: 400;
-        }
+    h1 {
+        margin-left: 10px;
+        font-size: 1.1rem;
+        font-weight: ${theme.fonts.weight.medium};
+    }
 
-        h1:nth-child(1) {
+    h1:nth-child(1) {
             margin-left: 2rem;
-        }
-        h1:nth-child(2) {
-            margin-right: 2rem;
-        }
+    }
+
+    h1:nth-child(2) {
+        margin-right: 2rem;
+    }
 `
 export const ListProducts = styled.div`
     display: flex;
-    flex-direction: column;
     height: 365px;
+    flex-direction: column;
     overflow-y: scroll;
 
     li {
         display: flex;
-        margin: 10px 0;
-        border-top: 1px solid rgb(0,0,0, 0.15);
-        padding-top: 10px;
         position: relative;
+        margin: 10px 0;
+        padding-top: 10px;
+        border-top: 1px solid rgb(0,0,0, 0.15);
 
         &:nth-child(1) { 
             border-top: 0;
@@ -106,77 +105,76 @@ export const ListProducts = styled.div`
 
         .boxInfoCart {
             display: flex;
-            flex-direction: column;
             width: 270px;
+            flex-direction: column;
 
-            @media only screen and (max-width: 550px) {
+            @media (max-width: 550px) {
                 font-size: 0.8rem;
             }
 
             .quantity {
             display: flex;
-            justify-content: space-between;
-            max-width: 100px;
-            border: 1px solid ${theme.gray2};
-            margin: 10px 0 0 20px;
             height: 30px;
+            max-width: 100px;
+            justify-content: space-between;
+            margin: 10px 0 0 20px;
+            border: 1px solid ${theme.gray2};
 
             input {
                 display: flex;
+                width: 34%;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
                 width: 34%;
-                outline: none;
                 border: 1px solid ${theme.gray2};
-                font-weight: ${theme.fonts.weight.boldest};
+                outline: none;
             }
             button {
-                font-size: 30px;
-                color: ${theme.gray};
-                width: 33%;
-                border: 1px solid ${theme.gray2};
                 display: flex;
+                width: 33%;
                 align-items: center;
                 justify-content: center;
-            }}
+                font-size: 30px;
+                color: ${theme.gray};
+                border: 1px solid ${theme.gray2};
+            }   
+        }
+    }     
+}
+
+    h1 {
+        margin-left: 20px;
+        margin-right: 5px;
+        font-size: 1rem;
+        font-weight: ${theme.fonts.weight.medium};
+
+        @media (max-width: 550px) {
+            font-size: 0.8rem;
+        }
     }
-            
+
+    img {
+        width: 80px;
+        height: 80px;
+        margin-left: 10px;
+    }
+
+    svg {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: ${theme.gray}
         }
 
-        h1 {
-            font-size: 1rem;
-            margin-left: 20px;
-            margin-right: 5px;
-            font-weight: ${theme.fonts.weight.medium};
+    }
 
-            @media only screen and (max-width: 550px) {
-                font-size: 0.8rem;
-        }
-
-        }
-
-        img {
-            width: 80px;
-            height: 80px;
-            margin-left: 10px;
-        }
-
-        svg {
-            position: absolute;
-            right: 10px;
-            cursor: pointer;
-
-            &:hover {
-                color: ${theme.gray}
-            }
-
-        }
-
-        span {
-                margin-left: 35px;
-                font-weight: ${theme.fonts.weight.boldest}
-            }
+    span {
+        margin-left: 35px;
+        font-weight: ${theme.fonts.weight.boldest}
+    }
 `
 
 export const BottomCart = styled.div`
@@ -187,27 +185,27 @@ export const BottomCart = styled.div`
 `
 
 export const OurShops = styled.div`
-    font-weight: 600;
+
     display: flex;
-    flex-direction: column;
     width: 100%;
-    border-top: 1px solid rgb(0,0,0, 0.35);
+    flex-direction: column;
     padding: 10px 10px;
-    background: #fff;
+    background: ${theme.white};
+    font-weight: ${theme.fonts.weight.bolder};
+    border-top: 1px solid rgb(0,0,0, 0.35);
     z-index: 10;
 
     span {
-        color: #FF7D1B;
         display: flex;
         align-items: center;
-        gap: 5px;
         margin-left: 10px;
+        gap: 5px;
+        color: #FF7D1B;
         text-decoration: underline;
         cursor: pointer;
     }
 
     .containerInputsOff {
-
         .inputOptions {
             height: 0px;
             width: 0px;
@@ -217,21 +215,21 @@ export const OurShops = styled.div`
     }
 
     .containerInputs {
-        height: 100%;
-        transition: 1s;
         display: flex;
+        height: 100%;
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
+        transition: 1s;
 
         .inputOptions {
-            padding-left: 10px;
-            height: 40px;
-            border: 1px solid rgb(0,0,0, 0.15);
             display: flex;
+            height: 40px;
             justify-content: left;
             align-items: center;
-            font-weight: 400;
+            padding-left: 10px;
+            font-weight: ${theme.fonts.weight.medium};
+            border: 1px solid rgb(0,0,0, 0.15);
             transition: height 0.4s;
 
             input {
@@ -239,23 +237,23 @@ export const OurShops = styled.div`
             }
 
             p {
-                font-weight: 700;
                 margin-left: auto;
                 margin-right: 10px;
+                font-weight: ${theme.fonts.weight.boldest};
             }
         }
     }
 `
 
 export const Total = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
     color: #FF7D1B;
     font-weight: 800;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     border-top: 1px solid rgb(0,0,0, 0.35);
-    padding: 10px 0;
-    background: #fff;
+    background: ${theme.white};
     z-index: 10;
 
     h2 {
@@ -267,7 +265,7 @@ export const Total = styled.div`
         flex-direction: column;
         text-align: right;
 
-        p{
+        p {
             margin-top: 4px;
         }
     }
@@ -275,34 +273,34 @@ export const Total = styled.div`
 
 export const FinishBuy = styled.div`
     display: flex;
-    margin: 0 0;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 
     .linkToProducts {
-        text-decoration: underline;
-        color: #FF7D1B;
-        text-transform: uppercase;
         margin-left: 10px;
+        color: #FF7D1B;
+        text-decoration: underline;
+        text-transform: uppercase;
     }
 
     .linkToPayment {
+        display: flex;
         width: 200px;
         height: 35px;
-        background: #FF7D1B;
-        display: flex;
         align-items: center;
         justify-content: center;
-        color: #fff;
+        background: #FF7D1B;
+        color: ${theme.white};
         text-transform: uppercase;
     }
 `
 
 export const DontHasProduct = styled.div`
     display: flex;
+    height: 50px;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    height: 50px;
     color: #FF7D1B;
 `

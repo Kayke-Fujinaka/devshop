@@ -36,7 +36,7 @@ export default function Delivery() {
 
             <S.ContainerMain>
 
-                <S.ContainerLeft>
+                <S.ContainerData>
                     <div>
                         <S.Form>
                             <h3>DADOS DE CONTATO</h3>
@@ -72,14 +72,14 @@ export default function Delivery() {
                         </a>
                     </S.DivMid>
 
-                    <S.DivButton>
+                    <S.ButtonContinue>
                         <Link to="/payment">
                             <button>Continuar</button>
                         </Link>
-                    </S.DivButton>
-                </S.ContainerLeft>
+                    </S.ButtonContinue>
+                </S.ContainerData>
 
-                <S.ContainerRight>
+                <S.ContainerTotal>
                     {productsOnCart.map(item => (
                         <S.Product>
                             <img src={item.image} alt={item.title} />
@@ -96,7 +96,7 @@ export default function Delivery() {
                                 <span>R$ {total}</span>
                             </>)}
                     </S.Total>
-                </S.ContainerRight>
+                </S.ContainerTotal>
 
             </S.ContainerMain>
 

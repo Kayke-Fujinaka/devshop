@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import * as S from './style';
+import { Link } from 'react-router-dom'
+
 import { FaTimes, FaTrash, FaStore, FaAngleDown } from 'react-icons/fa'
+
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-import { Link } from 'react-router-dom'
+import * as S from './style';
 
 
 export default function ShopCart({ sidebar }) {
+
     const [showCart, setShowCart] = useState(sidebar)
 
     const [productsOnCart, setProductsOnCart] = useState([])
@@ -29,7 +32,6 @@ export default function ShopCart({ sidebar }) {
 
 
     function deleteProduct(productId) {
-        // Vai chegar o Id do produto e se esse Id tiver no array products do local storage, ele será filtrado e excluido
         let filtroProducts = productsOnCart.filter((item) => {
             return (item.id != productId)
         })
@@ -121,9 +123,18 @@ export default function ShopCart({ sidebar }) {
                                     <article>
                                         <span onClick={() => setOptionsCart(!optionsCart)}>VER OPÇÕES <FaAngleDown /></span>
                                         <div className={optionsCart ? 'containerInputs' : 'containerInputsOff'}>
-                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - Recife <p>R$12,90</p> </div>
-                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - São Paulo <p>R$22,90</p></div>
-                                            <div className="inputOptions"> <input type="radio" name="option" /> DEVSHOP - Minas Gerais <p>R$32,90</p></div>
+                                            <div className="inputOptions">
+                                                <input type="radio" name="option" />
+                                                DEVSHOP - Recife <p>R$12,90</p>
+                                            </div>
+                                            <div className="inputOptions">
+                                                <input type="radio" name="option" />
+                                                DEVSHOP - São Paulo <p>R$22,90</p>
+                                            </div>
+                                            <div className="inputOptions">
+                                                <input type="radio" name="option" />
+                                                DEVSHOP - Minas Gerais <p>R$32,90</p>
+                                            </div>
                                         </div>
                                     </article>
 
@@ -136,8 +147,18 @@ export default function ShopCart({ sidebar }) {
                                     </div>
                                 </S.Total>
                                 <S.FinishBuy>
-                                    <Link to="/products" className="linkToProducts" onClick={() => setShowCart(false)}><a>Ver mais produtos</a></Link>
-                                    <Link to="/delivery" className="linkToPayment" onClick={() => setShowCart(false)}>Finalizar compra</Link>
+                                    <Link
+                                        to="/products"
+                                        className="linkToProducts"
+                                        onClick={() => setShowCart(false)}>
+                                        <a>Ver mais produtos</a>
+                                    </Link>
+                                    <Link
+                                        to="/delivery"
+                                        className="linkToPayment"
+                                        onClick={() => setShowCart(false)}>
+                                        Finalizar compra
+                                    </Link>
                                 </S.FinishBuy>
                             </S.BottomCart>) : (
                             <S.DontHasProduct>

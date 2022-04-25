@@ -7,6 +7,7 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
@@ -14,9 +15,11 @@ export const Breadcrumb = styled.div`
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -25,42 +28,44 @@ export const Breadcrumb = styled.div`
 `
 
 export const ContainerMain = styled.div`
+    display: flex;
     width: 85%;
     margin: 1.5rem auto;
-    display: flex;
-    flex-direction: row;
     gap: 2rem;
+    flex-direction: row;
 
     .p-margin {
         margin-left: 20px;
     }
 
-    @media only screen and (max-width: 860px) {
+    @media (max-width: 860px) {
         flex-direction: column-reverse;
     }
 `
 
-export const ContainerLeft = styled.form`
-    margin: 1.5rem 0;    
+export const ContainerData = styled.form`
     width: 50%;
+    margin: 1.5rem 0;
 
-    @media only screen and (max-width: 1050px) {
+    @media (max-width: 1050px) {
         width: 40%;
     }
-    @media only screen and (max-width: 860px) {
+    
+    @media (max-width: 860px) {
         width: 100%;
     }
 `
 
-export const ContainerRight = styled.form`
+export const ContainerTotal = styled.form`
     width: 50%;
     margin: 1.5rem 0 1.5rem 0rem;    
     border-top: 1px solid rgb(0,0,0, 0.15);
 
-    @media only screen and (max-width: 1050px) {
+    @media (max-width: 1050px) {
         width: 60%;
     }
-    @media only screen and (max-width: 860px) {
+    
+    @media (max-width: 860px) {
         width: 100%;
     }
 `
@@ -84,25 +89,24 @@ export const Product = styled.div`
 
     span {
         margin-left: auto;
-        font-weight: 500;
+        font-weight: ${theme.fonts.weight.bold};
     }
 `
 
 export const Total = styled.div`
+    display: flex;
     width: 100%;
+    justify-content: space-between;
     margin-top: 1rem;
     border-top: 1px solid rgb(0,0,0, 0.25);
-
-    display: flex;
-    justify-content: space-between;
     
     span {
+        padding: 10px 10px 0 10px;
         font-size: 1.8rem;
         font-weight: 800;
         color: #ffa724;
-        padding: 10px 10px 0 10px;
 
-        @media only screen and (max-width: 600px) {
+        @media (max-width: 600px) {
             font-size: 1rem
         }
     }
@@ -115,22 +119,26 @@ export const Total = styled.div`
 
 export const Form = styled.div`
     display: block;
+
     .inputEmail {
         display: block;
+        width: 100%;
         margin-top: 10px;
         padding: 10px;
-        width: 100%;
-        border: 1px solid #000;
+        border: 1px solid ${theme.black};
     }
+
     span {
-        color: red;
-        font-size: 13px;
         display: block;
         margin-top: 5px;
+        font-size: 13px;
+        color: #ff0000;
     }
+
     #check {
         margin-top: 10px;
     }
+
     .labelCheck {
         margin-left: 5px;
     }
@@ -139,6 +147,7 @@ export const Form = styled.div`
 
 export const DivMid = styled.div`
     margin: 1.5rem auto; 
+
     select {
         display: block;
         width: 100%;
@@ -146,11 +155,13 @@ export const DivMid = styled.div`
         padding: 10px;
         appearance: none;
     }
+
     input {
-        padding: 10px;
         width: 100%;
-        border: 1px solid #000;
+        padding: 10px;
+        border: 1px solid ${theme.black};
     }  
+    
     span {
         font-size: 14px;
         font-weight: ${theme.fonts.weight.bold};
@@ -158,17 +169,20 @@ export const DivMid = styled.div`
     } 
 `
 
-export const DivButton = styled.div`
+export const ButtonContinue = styled.div`
     display: flex;
     justify-content: flex-end;
+
     button {
         padding: 10px 20px;
         background-color: #ffa724;
         border-radius: 4px;
-        color: #fff;
+        color: ${theme.white};
+
         &:hover{
             filter: brightness(1);
         }
+        
         &:active{
             filter: brightness(0.9);
         }

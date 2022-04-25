@@ -7,16 +7,20 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
+
         &:hover {
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -26,12 +30,11 @@ export const Breadcrumb = styled.div`
 
 export const ContainerMain = styled.div`
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 0 auto;
     width: 90vw;
+    align-items: center;
     text-align: center;
     justify-content: center;
+    margin: 0 auto;
     gap: 3rem;
 
     img {
@@ -40,15 +43,15 @@ export const ContainerMain = styled.div`
     
     div {
         display: flex;
+        width: 50%;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        width: 50%;
         z-index: 0;
 
         h1 {
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: ${theme.fonts.weight.bolder};
         }
     
         p {
@@ -61,7 +64,7 @@ export const ContainerMain = styled.div`
         font-weight: 800;
     }
 
-    @media only screen and (max-width: 890px) {
+    @media (max-width: 890px) {
         flex-direction: column;
 
         img {

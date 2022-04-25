@@ -10,7 +10,8 @@ export const Breadcrumb = styled.div`
     width: 80%;
     margin: 1.5rem auto;
     gap: 5px;
-    font-size: 15px;
+    font-size: 1rem;
+
     a {
         color: ${theme.black};
         cursor: pointer;
@@ -18,24 +19,24 @@ export const Breadcrumb = styled.div`
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 `
 
 export const Results = styled.div`
     display: flex;
-    list-style: none;
     width: 85vw;
-    margin: 0 auto;
     flex-wrap: wrap;
-
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    margin: 0 auto;
+    list-style: none;
 `

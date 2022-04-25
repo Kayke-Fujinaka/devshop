@@ -11,6 +11,7 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
@@ -18,9 +19,11 @@ export const Breadcrumb = styled.div`
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -32,12 +35,14 @@ export const ContainerForm = styled.form`
     display: flex;
     width: 100%;
     justify-content: center;
+
     .divLabelInput {
         margin-top: 15px;
         @media (max-width: 510px){
             margin-top: 0;
         }
     }
+
     label {
         font-family: ${theme.fonts.primary};
         font-size: 16px;
@@ -47,6 +52,7 @@ export const ContainerForm = styled.form`
             margin: 0 5px;
         }
     }
+
     input {
         display: block;
         height: 35px;
@@ -62,11 +68,13 @@ export const ContainerForm = styled.form`
             font-size: 11px;
         }
     }
+
     span {
-        color: red;
+        color: #ff0000;
         font-size: 13px;
         position: absolute;
     }
+
     p {
         text-align: center;
         margin: 15px 0 100px;
@@ -98,15 +106,17 @@ export const ForgotPassword = styled.div`
             text-decoration: underline;
         }
     }
+
     @media (max-width: 510px){
-            font-size: 14px;
-            margin: 0 100px 25px;
+        font-size: 14px;
+        margin: 0 100px 25px;
     }
 `
 
-export const DivButton = styled.div`
+export const ButtonLogin = styled.div`
     display: flex;
     justify-content: center;
+    
     button {
         height: 35px;
         width: 500px;

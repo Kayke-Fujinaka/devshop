@@ -11,6 +11,7 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
@@ -18,9 +19,11 @@ export const Breadcrumb = styled.div`
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -38,6 +41,7 @@ export const ContainerForm = styled.div`
             margin-top: 0;
         }
     }
+
     label {
         font-family: ${theme.fonts.primary};
         font-size: 16px;
@@ -47,13 +51,14 @@ export const ContainerForm = styled.div`
             margin: 0 5px;
         }
     }
+
     input {
+        font-family: ${theme.fonts.secondary};
         display: block;
         height: 35px;
         width: 500px;
         margin: 2px auto 0;
         padding: 5px 15px;
-        font-family: ${theme.fonts.secondary};
         border: 1px solid ${theme.gray4};
         outline: none;
         @media (max-width: 510px){
@@ -62,11 +67,13 @@ export const ContainerForm = styled.div`
             font-size: 11px;
         }
     }
+
     span {
-        color: red;
-        font-size: 13px;
         position: absolute;
+        font-size: 13px;
+        color: #FF0000;
     }
+
     p {
         text-align: center;
         margin: 15px 0 100px;
@@ -85,10 +92,11 @@ export const ContainerForm = styled.div`
     }
 `
 
-export const DivButton = styled.div`
+export const ButtonRegister = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    
     button {
         height: 35px;
         width: 500px;

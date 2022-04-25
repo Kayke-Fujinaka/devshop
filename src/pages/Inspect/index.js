@@ -114,11 +114,11 @@ export default function Inspect(props) {
 
             {loading === false && (
                 <S.InspectItem>
-                    <S.BoxLeft>
+                    <S.ImageProduct>
                         <img src={product.image} />
-                    </S.BoxLeft>
+                    </S.ImageProduct>
                     
-                    <S.BoxRight>
+                    <S.InfoProduct>
                         <S.TitleCompany>Dev Company</S.TitleCompany>
                         <h1>{product.title}</h1>
                         <p>{product.description}</p>
@@ -131,7 +131,7 @@ export default function Inspect(props) {
                             </div>
                             <button className="buttonPurchase" onClick={addItemOnCart}><FiShoppingCart /> Add to cart</button>
                         </S.Purchase>
-                    </S.BoxRight>
+                    </S.InfoProduct>
                 </S.InspectItem>)}
         </>
     )

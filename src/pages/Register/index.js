@@ -130,9 +130,9 @@ export default function Register() {
                             </label>
 
                         </div>
-                        <S.DivButton>
+                        <S.ButtonRegister>
                             <button type="submit">Register</button>
-                        </S.DivButton>
+                        </S.ButtonRegister>
                         <p>Already have an account? <a href='/login'>Sing in</a></p>
                     </form>
 

@@ -2,38 +2,42 @@ import styled from 'styled-components'
 import theme from '../../styles/theme'
 
 export const Container = styled.div`
-    width: 100vw;
     display: flex;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     font-family: ${theme.fonts.primary};
 `
 
 export const ServicesFooter = styled.div`
-    width: 90%;
-    margin: 2rem auto;
     display: flex;
+    width: 90%;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 2rem auto;
     color: ${theme.gray3};
+
     @media (max-width: 1280px){
         gap: 10px;
     }
 `
 
 export const Service = styled.div`
-    width: 350px;
     display: flex;
+    width: 350px;
     align-items: center;
-    @media (max-width: 1280px){
-        width: 341px;
-    }
-    @media (max-width: 510px){
-        width: 300px;
-    }
+
     svg {
         font-size: 2rem;
         margin-right: 10px;
+    }
+
+    @media (max-width: 1280px){
+        width: 341px;
+    }
+
+    @media (max-width: 510px){
+        width: 300px;
     }
 
     &:nth-child(1) {
@@ -52,9 +56,7 @@ export const Service = styled.div`
 
 export const TextService = styled.div`
     font-size: 0.6rem;
-    @media (max-width: 768px){
-            font-size: 0.5rem;
-    }
+
     h1 {
         text-transform: uppercase;
     }
@@ -62,20 +64,25 @@ export const TextService = styled.div`
     p {
         font-size: 1rem;
     }
-    
+
+    @media (max-width: 768px){
+        font-size: 0.5rem;
+    }
 `
 
 export const MainFooter = styled.div`
-    padding: 2rem 0;
-    background: ${theme.white2};
     display: flex;
-    justify-content: center;
-    gap: 6rem;
     width: 100vw;
+    justify-content: center;
     margin-top: 2rem;
+    padding: 2rem 0;
+    gap: 6rem;
+    background: ${theme.white2};
+
     @media (max-width: 1280px){
         gap: 1rem;
     }
+
     @media (max-width: 768px){
         flex-direction: column;
     }
@@ -95,18 +102,17 @@ export const MFBox = styled.div`
     }
 
     .iconInstaFooter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 30px;
         height: 30px;
         background: ${theme.black};
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         
         svg {
             color: ${theme.white}
         }
-        
     }
 
     .inputEmailFooter {
@@ -117,70 +123,73 @@ export const MFBox = styled.div`
         input {
             width: 190px;
             height: 100%;
-            border: 1px solid ${theme.black};
             padding-left: 10px;
+            border: 1px solid ${theme.black};
             font-size: 0.8rem;
         } 
 
         .iconInputEmailFooter {
-            background: black;
-                color: ${theme.white};
-                width: 30px;
-                height: 100%;
-                float: right;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            width: 30px;
+            height: 100%;
+            background: ${theme.black};
+            color: ${theme.white};
             
             svg {
                 font-size: 1rem;
             }
         }
-
     }
 `
 
 export const TitleMainFooter = styled.div`
+margin-bottom: 5px;
 font-size: 0.9rem;
 font-weight: ${theme.fonts.weight.boldest};
 text-transform: uppercase;
-margin-bottom: 5px;
-> svg {
-    background: black;
-    color: ${theme.white};
-    width: 30px;
-    height: 100%;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+    > svg {
+        display: flex;
+        width: 30px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        background: ${theme.black};
+        color: ${theme.white};
+    }
 `
 export const BottomFooter = styled.div`
     display: flex;
     width: 90%;
     justify-content: space-between;
     align-items: center;
-    margin: 10px auto 10px auto;
-    @media (max-width: 768px){
-        flex-direction: column;
-    }
-    .createdBy {
-        display: flex;
-        font-size: 1rem;
-        
-        strong {
-            font-weight: ${theme.fonts.weight.boldest};
-        }
-    }
+    margin: 10px auto;
 
-    p {
-        font-size: 0.8rem;
-        font-weight: ${theme.fonts.weight.medium};
-        text-transform: uppercase;
+        .createdBy {
+            display: flex;
+            font-size: 1rem;
+        
+            strong {
+                font-weight: ${theme.fonts.weight.boldest};
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: ${theme.fonts.weight.medium};
+            text-transform: uppercase;
+            
+            @media (max-width: 768px){
+            text-align: center;
+        }
+
         @media (max-width: 768px){
-        text-align: center;
-    }
+            flex-direction: column;
+        }
     }
 `
 

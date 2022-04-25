@@ -1,5 +1,5 @@
 import React from 'react';
-// import * as S from "./styles";
+
 import LinearProgress from '@mui/material/LinearProgress';
 import Stack from '@mui/material/Stack';
 

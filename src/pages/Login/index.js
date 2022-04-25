@@ -69,9 +69,9 @@ export default function Login() {
                             <a href='/reset'>Forgot password?</a>
                         </S.ForgotPassword>
 
-                        <S.DivButton>
+                        <S.ButtonLogin>
                             <button type="submit">Sign in</button>
-                        </S.DivButton>
+                        </S.ButtonLogin>
                         <p>Don't have an account? <a href='/register'>Register</a></p>
                         
                     </div>

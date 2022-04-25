@@ -7,16 +7,20 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
+
         &:hover {
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -26,19 +30,19 @@ export const Breadcrumb = styled.div`
 
 export const SomeProducts = styled.div`
     display: flex;
+    height: 100%;
     width: 80vw;
     margin: 3rem auto 0 auto;
-    height: 100%;
 
     a {
-        color: #000;
+        color: ${theme.black};
     }
 
     ul {
         display: flex;
         width: 100%;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 5rem;
     }
 `

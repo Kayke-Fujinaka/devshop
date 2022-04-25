@@ -1,4 +1,3 @@
-
  const colors = {
     black: "#191919",
     black2: "#232323",

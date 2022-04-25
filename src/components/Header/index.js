@@ -3,14 +3,14 @@ import { Link, NavLink } from 'react-router-dom'
 
 import { AuthContext } from '../../contexts/auth'
 
-import { FiShoppingCart, FiSearch, FiMenu } from 'react-icons/fi'
+import { FiShoppingCart, FiSearch, FiMenu, FiLogOut } from 'react-icons/fi'
 import ShopCart from '../ShopCart';
 
 import * as S from "./styles"
 
 export default function Header() {
 
-  const { storageUser, user } = useContext(AuthContext)
+  const { storageUser, user, signOut } = useContext(AuthContext)
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [productsOnCart, setProductsOnCart] = useState([]);
@@ -40,17 +40,18 @@ export default function Header() {
           <Link to="/"><h1>devshop</h1></Link>
           <S.Nav>
             <li
-              onMouseEnter={() => setNavProducts(true)} className={navProducts ? 'navProducts' : 'navProductsOff'} >
+              onMouseEnter={() => setNavProducts(true)} className={navProducts ? 'navProducts' : 'navProductsOff'}  >
               <NavLink to="/products"
                 activeStyle={{
                   paddingBottom: "6px",
                   borderBottom: "2px solid #ffa724",
-                }}>Products
+                }}
+                >Products
                 <nav onMouseLeave={() => setNavProducts(false)}>
-                  <li><NavLink to="/men">Men</NavLink></li>
-                  <li><NavLink to="/women">Women</NavLink></li>
-                  <li><NavLink to="/jewelery">Jewelery</NavLink></li>
-                  <li><NavLink to="/eletronics">Eletronics</NavLink></li>
+                  <li><NavLink to="/men">Masculino</NavLink></li>
+                  <li><NavLink to="/women">Feminino</NavLink></li>
+                  <li><NavLink to="/jewelery">Joalheria</NavLink></li>
+                  <li><NavLink to="/eletronics">Eletrônicos</NavLink></li>
                 </nav>
               </NavLink>
             </li>
@@ -65,7 +66,7 @@ export default function Header() {
                 paddingBottom: "6px",
                 borderBottom: "2px solid #ffa724",
               }
-            }>Contribute us</NavLink></li>
+            }>Apoie-nos</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>
 
@@ -93,6 +94,10 @@ export default function Header() {
             )}
           </S.DivAccount>
 
+          <S.SignOutButton>
+            <button type="button" onClick={signOut}><FiLogOut /></button>
+          </S.SignOutButton>
+
           <FiShoppingCart onClick={() => setShowSidebar(!showSidebar)} />
           <S.Bar>{qtdItems}</S.Bar>
         </S.ContainerRight>
@@ -113,12 +118,12 @@ export default function Header() {
                   <span>/</span>
                   <p><Link to="/login">Login</Link></p>
                 </S.DivAccount>
-                <li><Link to="/men">Men</Link></li>
-                <li><Link to="/women">Women</Link></li>
-                <li><Link to="/jewelery">Jewelery</Link></li>
-                <li><Link to="/eletronics">Eletronics</Link></li>
-                <li><Link to="/policy">Our policy</Link></li>
-                <li><Link to="/donate">Contribute us</Link></li>
+                <li><Link to="/men">Masculino</Link></li>
+                <li><Link to="/women">Feminino</Link></li>
+                <li><Link to="/jewelery">Joalheria</Link></li>
+                <li><Link to="/eletronics">Eletrônicos</Link></li>
+                <li><Link to="/policy">Nossa política</Link></li>
+                <li><Link to="/donate">Apoie-nos</Link></li>
               </nav>)}
         </S.MenuHamburguer>
 

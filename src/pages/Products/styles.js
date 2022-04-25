@@ -22,8 +22,8 @@ export const Breadcrumb = styled.div`
 export const AllProducts = styled.div`
     display: flex;
     width: 80vw;
-    margin: 3rem auto 0 auto;
     height: 100%;
+    margin: 3rem auto 0 auto;
 
     ul {
         display: flex;
@@ -33,7 +33,7 @@ export const AllProducts = styled.div`
         gap: 5rem;
 
         a {
-            color: #000;
+            color: ${theme.black};
         }
     }
 `

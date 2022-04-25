@@ -7,6 +7,7 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
@@ -14,9 +15,11 @@ export const Breadcrumb = styled.div`
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -36,7 +39,7 @@ export const InspectItem = styled.div`
     }
 `
 
-export const BoxLeft = styled.div`
+export const ImageProduct = styled.div`
     width: 50%;
     height: 100%;
 
@@ -50,33 +53,39 @@ export const BoxLeft = styled.div`
         width: 70%;
         margin: 0 auto;
     }
+
     @media (max-width: 510px){
         width: 80%;
         height: 80%;
     }
 `
 
-export const BoxRight = styled.div`
+export const InfoProduct = styled.div`
     width: 50%;
+
     .titleCompany {
         color: #FF7D1B;
     }
+
     h1 {
         margin-top: 10px;
         @media (max-width: 600px){
-        font-size: 24px;
+            font-size: 24px;
+        }
     }
-    }
+
     p {
         margin: 25px 0;
         text-align: justify;
         @media (max-width: 510px){
-        font-size: 18px;
+            font-size: 18px;
+        }
     }
-    }
+
     span {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 1024px){
         width: 70%;
         margin: 0 auto;
@@ -90,20 +99,23 @@ export const TitleCompany = styled.div`
 
 export const Purchase = styled.div`
     display: flex;
-    gap: 20px;
     margin-top: 20px;
+    gap: 20px;
+
     .quantity {
         display: flex;
-        justify-content: space-between;
         max-width: 100px;
+        justify-content: space-between;
+        padding: 0 5px;
         background-color: #F7F8FD;
         border: 1px solid ${theme.white3};
         border-radius: 8px;
-        padding: 0 5px;
+
         input {
             width: 20%;
             margin-left: 6px;
         }
+
         button {
             font-size: 30px;
             color: #FF7D1B;
@@ -114,13 +126,13 @@ export const Purchase = styled.div`
     }
 
     .buttonPurchase {
-        background-color: #FF7D1B;
-        color: ${theme.white};
         padding: 10px 30px;
+        color: ${theme.white};
+        background-color: #FF7D1B;
         border-radius: 10px;
         box-shadow: 0px 3px 21px -2px rgba(255,125,27,0.56);
         &:hover {
-                filter: brightness(1.1);
+            filter: brightness(1.1);
         }
     }
 `

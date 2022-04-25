@@ -7,6 +7,7 @@ export const Breadcrumb = styled.div`
     margin: 1.5rem auto;
     gap: 5px;
     font-size: 15px;
+
     a {
         color: ${theme.black};
         cursor: pointer;
@@ -14,9 +15,11 @@ export const Breadcrumb = styled.div`
             text-decoration: underline;
         }
     }
+
     p {
         font-weight: ${theme.fonts.weight.bolder};
     }
+
     @media (max-width: 510px){
         width: 100%;
         margin: 1.5rem 10px;
@@ -27,8 +30,8 @@ export const Breadcrumb = styled.div`
 export const SomeProducts = styled.div`
     display: flex;
     width: 80vw;
-    margin: 3rem auto 0 auto;
     height: 100%;
+    margin: 3rem auto 0 auto;
 
     ul {
         display: flex;
@@ -38,7 +41,7 @@ export const SomeProducts = styled.div`
         gap: 5rem;
 
         a {
-            color: #000;
+            color: ${theme.black};
         }
     }
 `
