@@ -19,6 +19,7 @@ const schema = yup
 export default function Payment() {
     const [productsOnCart, setProductsOnCart] = useState([])
     const [total, setTotal] = useState(0)
+    const [ qtdItems, setQtdItems] = useState(0)
 
     useEffect(() => {
         const listaProducts = localStorage.getItem('products')
@@ -27,11 +28,14 @@ export default function Payment() {
 
     useEffect(() => {
         let totalPrice = 0;
+        let qtd = 0;
 
         productsOnCart.forEach((item, index) => {
             totalPrice += item.price * item.quantity
+            qtd += item.quantity
         })
         setTotal(totalPrice.toFixed(2))
+        setQtdItems(qtd)
     })
 
     const {
@@ -93,8 +97,8 @@ export default function Payment() {
                     {productsOnCart.map(item => (
                         <S.Product>
                             <img src={item.image} alt={item.title} />
-                            <p>{item.title} x {item.quantity}</p>
-                            <span>R${item.price}</span>
+                            <p><span>{item.quantity}</span> x {item.title}</p>
+                            <span>R${item.price * item.quantity}</span>
                         </S.Product>
                     ))}
                     <S.Total>

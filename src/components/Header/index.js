@@ -65,6 +65,12 @@ export default function Header() {
                 borderBottom: "2px solid #ffa724",
               }
             }>Our Policy</NavLink></li>
+            <li><NavLink to="/donate" activeStyle={
+              {
+                paddingBottom: "6px",
+                borderBottom: "2px solid #ffa724",
+              }
+            }>Contribute us</NavLink></li>
           </S.Nav>
         </S.ContainerLeft>
 
@@ -117,6 +123,7 @@ export default function Header() {
                 <li><Link to="/jewelery">Jewelery</Link></li>
                 <li><Link to="/eletronics">Eletronics</Link></li>
                 <li><Link to="/policy">Our policy</Link></li>
+                <li><Link to="/donate">Contribute us</Link></li>
               </nav>)}
         </S.MenuHamburguer>
 
