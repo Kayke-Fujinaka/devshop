@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 
+import Swal from 'sweetalert2'
+
 import donateSvg from '../../assets/creditcard.svg'
 
 import * as S from "./styles";
@@ -20,9 +22,29 @@ export default function Donate() {
 
             <S.ContainerMain>
                 <img src={donateSvg} />
-                <h1>O DevShop não possui fins lucrativos, o projeto  foi desenvolvidoapenas ppara estudo e futuras aplicações.</h1>
-                <PayPalButtons />
+                <div>
+                    <h1>O DevShop não possui fins lucrativos, o projeto  foi desenvolvido apenas para estudo e futuras aplicações.</h1>
+                    <p>No entanto você pode apoiar o projeto, contribua com <span>R$ 1,00</span>. </p>
+                    <PayPalButtons createOrder={ (data, actions) => {
+                        return actions.order.create({
+                            purchase_units: [{ 
+                                amount:{
+                                    value: '1'
+                                }
+                            }]
+                        })
+                    }} 
+                    onApprove={(data, actions) => {
+                        return actions.order.capture().then( details => {
+                            Swal.fire(
+                                'Você apoiou o nosso projeto.',
+                                'Agradecemos pelo apoio!',
+                                'success'
+                              )
+                        })
+                    }} />
+                </div>
             </S.ContainerMain>
-        </> 
+        </>
     )
 }
