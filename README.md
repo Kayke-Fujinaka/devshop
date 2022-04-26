@@ -13,7 +13,7 @@ O projeto é um E-Commerce chamado DevShop que simula um site de vendas a qual p
 A &nbsp;[API](https://fakestoreapi.com/docs) utilizada é a Fake Store API que é facilmente encontrada no Google através de uma pesquisa ou no&nbsp;[GitHub](https://github.com/keikaavousi/fake-store-api) do criador que está devidamente explicado. Ela possui algumas opções:
 
 - Produtos: São 20 produtos disponíveis. Ela dá a disponibilidade de visualizar todos os produtos, visualizar um produto em específico, limitar resultado dos produtos, classificar os resultados conforme o que escolher, adicionar novos produtos, atualizar valores dos produtos e deletar algum produto.
-<br>
+
 - Categorias: Sâo 4 categorias no total, sendo elas: men's clothing, women's clothing, electronics e jewelery. Ela dá a disponibilidade de filtrar uma categoria em específico ou visualizar todas.
 
 O visitante do site vai ser direcionado inicialmente para a página Inicial possui algumas seções, sendo elas: blocos com todas as categorias, banners em um Carousel, 8 produtos com a opção de ver todos e a seção parceiros que foram algumas pessoas que acompanharam todo o projeto do site.
@@ -29,13 +29,13 @@ Ao enviar um produto no carrinho (Fica na parte superior direita do Header) voc�
 O Header possui alguns menus para navegação, sendo: Produtos (Masculinos, Femininos, Joalheria e Eletrônicos), Nossa Política e Apoie-nos. Além de um campo de busca, opção de registro/login e o carrinho para armazenar os produtos que serão comprados.
 
 - Produtos: Aparece um menu dropdown que tem as 4 categorias com a opção de clicar em uma delas e ser direcionado para que foi desejada.
-<br>
+
 - Nossa Política: É uma página que apresenta algumas políticas da loja, porém só os assuntos de cada política foram colocado e os parágrafos estão com o Lorem.
-<br>
+
 - Apoie-nos: É uma página que o visitante pode apoiar o projeto com R$ 1,00. O nosso projeto ou a página de pagamento é fictícia e não tem a mínima intenção de fins lucrativos. 
-<br>
+
 - Campo de Busca: A pessoa pode pesquisar algum dos produtos nesse campo.
-<br>
+
 - Registro/Login: O visitante tem como criar uma conta no site a qual será armazenada no [Firebase](https://firebase.google.com/docs) e terá a opção de logar depois. A conta é criada com o nome, email, senha e confirmação de senha que possui um sistema de validação dos campos utilizado o [Yup](https://react-hook-form.com/get-started#SchemaValidation), ou seja, necessita colocar um email válido, colocar um nome que não possua números, senha de no mínimo 6 dígitos e a confirmação de senha deve ser igual em ambos campos.
 <br>
 
@@ -49,14 +49,14 @@ O carrinho de compras armazena os itens que serão comprados. Para armazenar pre
 
 O WhatsApp é apenas ilustrativo. Porém, caso queria entrar em contato com algum de nós:
 
-Kayke Alves Fujinaka: [LinkedIn](https://www.linkedin.com/in/kayke-fujinaka/), [GitHub](https://github.com/Kayke-Fujinaka), +55 11 96187-7936 
+Kayke Alves Fujinaka: [LinkedIn](https://www.linkedin.com/in/kayke-fujinaka/), [GitHub](https://github.com/Kayke-Fujinaka), +55 11 96187-7936 <br> 
 João Guilherme Lima: [LinkedIn](https://www.linkedin.com/in/jguilhermesl/), [GitHub](https://github.com/jguilhermesl), +55 81 9169-3706
 
 O Footer tem 3 seções. 
 - A primeira mostra algumas características da loja, como, por exemplo: serviço de entrega em todo país, os meios de pagamento e uma opção de compra por WhatsApp;
-<br>
+
 - A segunda oferece alguns meios de contato com os criadores do projeto, sendo as opções: LinkedIn, Email e Instagram. O Input que possui um placeholder escrito "Email" é apenas ilustrativo;
-<br>
+
 - A última apresenta os direitos reservados aos criadores [Kayke Fujinaka](https://www.linkedin.com/in/kayke-fujinaka/) e [João Guilherme](https://www.linkedin.com/in/jguilhermesl/).
 
 ## 📁 Páginas
