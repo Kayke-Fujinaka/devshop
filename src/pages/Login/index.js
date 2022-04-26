@@ -29,9 +29,9 @@ export default function Login() {
             <S.ContainerMain>
 
                 <S.Breadcrumb>
-                    <a href='/'>Home</a>
+                    <a href='/'>Início</a>
                     <span>/</span>
-                    <a href='#'>My account</a>
+                    <a href='#'>Minha conta</a>
                     <span>/</span>
                     <p>Login</p>
                 </S.Breadcrumb>
@@ -41,7 +41,7 @@ export default function Login() {
 
                         <div className='divLabelInput'>
                             <label>
-                                Email Adress
+                                Endereço de Email
                                 <input
                                     type="email"
                                     placeholder='youremail@email.com'
@@ -54,7 +54,7 @@ export default function Login() {
 
                         <div className='divLabelInput'>
                             <label>
-                                Password
+                                Senha
                                 <input
                                     type="password"
                                     value={password}
@@ -66,13 +66,13 @@ export default function Login() {
                         </div>
 
                         <S.ForgotPassword>
-                            <a href='/reset'>Forgot password?</a>
+                            <a href='/reset'>Esqueceu a senha?</a>
                         </S.ForgotPassword>
 
                         <S.ButtonLogin>
-                            <button type="submit">Sign in</button>
+                            <button type="submit">Entrar</button>
                         </S.ButtonLogin>
-                        <p>Don't have an account? <a href='/register'>Register</a></p>
+                        <p>Não possui uma conta? <a href='/register'>Registre-se</a></p>
                         
                     </div>
                 </S.ContainerForm>

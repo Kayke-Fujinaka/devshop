@@ -6,9 +6,9 @@ export default function Policy() {
     return (
         <>
             <S.Breadcrumb>
-                <a href='/'>Home</a>
+                <a href='/'>Início</a>
                 <span>/</span>
-                <p>Our policy</p>
+                <p>Nossa política</p>
             </S.Breadcrumb>
 
             <S.ContainerMain>

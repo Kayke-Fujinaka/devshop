@@ -148,8 +148,8 @@ export default function Home() {
                 </S.ButtonSeeAllProducts>)}
 
             <S.Hashtag>
-                <h1>#LoremIpsund</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis ullamcorper leo, ac laoreet erat eleifend in. Maecenas a dictum erat. Etiam sagittis nunc quis nunc semper tempus. Mauris hendrerit, augue non lobortis feugiat, justo nisi imperdiet mi, eu sagittis nulla erat eget lectus. Aliquam congue sit amet nulla et ornare.</p>
+                <h1>Tá online. Tá na Dev.</h1>
+                <p>Se não for para comprar umas roupinhas eu nem vou!</p>
             </S.Hashtag>
 
 

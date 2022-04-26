@@ -12,9 +12,9 @@ export default function Donate() {
     return (
         <>
             <S.Breadcrumb>
-                <a href='/'>Home</a>
+                <a href='/'>Início</a>
                 <span>/</span>
-                <p>Donate</p>
+                <p>Doação</p>
             </S.Breadcrumb>
 
             <S.ContainerMain>

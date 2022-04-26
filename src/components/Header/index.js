@@ -46,7 +46,7 @@ export default function Header() {
                   paddingBottom: "6px",
                   borderBottom: "2px solid #ffa724",
                 }}
-                >Products
+                >Produtos
                 <nav onMouseLeave={() => setNavProducts(false)}>
                   <li><NavLink to="/men">Masculino</NavLink></li>
                   <li><NavLink to="/women">Feminino</NavLink></li>
@@ -60,7 +60,7 @@ export default function Header() {
                 paddingBottom: "6px",
                 borderBottom: "2px solid #ffa724",
               }
-            }>Our Policy</NavLink></li>
+            }>Nossa Política</NavLink></li>
             <li><NavLink to="/donate" activeStyle={
               {
                 paddingBottom: "6px",
@@ -87,7 +87,7 @@ export default function Header() {
               </Link>
             ) : (
               <>
-                <p><Link to="/register">Register</Link></p>
+                <p><Link to="/register">Registro</Link></p>
                 <span>/</span>
                 <p><Link to="/login">Login</Link></p>
               </>

@@ -188,18 +188,17 @@ export const DivAccount = styled.div`
 `
 
 export const SignOutButton = styled.div`
-    background: red;
-    padding: 3px;
+    padding: 2px;
     color: #fff;
     border-radius: 5px;
-    margin-right: 10px;
+    margin: 5px 10px 0 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     svg {
-        color: #fff;
+        color: ${theme.black};
         font-size: 1rem;
         font-weight: 900;
     }

@@ -20,7 +20,7 @@ export default function NotFound() {
             </S.TitleProducts>
 
             <S.ButtonSeeAllProducts>
-                <Link to="/">ACESSE A HOME</Link>
+                <Link to="/">ACESSE O INÍCIO</Link>
             </S.ButtonSeeAllProducts>
         </>
     )

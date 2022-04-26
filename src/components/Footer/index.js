@@ -20,7 +20,7 @@ export default function Footer() {
             <FaCreditCard />
             <S.TextService>
               <h1>Pagamento  facilitado</h1>
-              <p>Cartões de crédito ou PIX.</p>
+              <p>Paypal ou Cartão de Crédito.</p>
             </S.TextService>
           </S.Service>
 

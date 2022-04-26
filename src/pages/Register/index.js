@@ -61,9 +61,9 @@ export default function Register() {
             <S.ContainerMain>
 
                 <S.Breadcrumb>
-                    <a href='/'>Home</a>
+                    <a href='/'>Início</a>
                     <span>/</span>
-                    <a href='#'>My account</a>
+                    <a href='#'>Minha conta</a>
                     <span>/</span>
                     <p>Register</p>
                 </S.Breadcrumb>
@@ -73,7 +73,7 @@ export default function Register() {
                         <div className='divLabelInput'>
 
                             <label>
-                                Name Complete
+                                Nome completo
                                 <input
                                     className={`input ${errors.name ? "error" : ""}`}
                                     type="text"
@@ -89,7 +89,7 @@ export default function Register() {
                         <div className='divLabelInput'>
 
                             <label>
-                                Email Adress
+                                Endereço de Email
                                 <input
                                     className={`input ${errors.email ? "error" : ""}`}
                                     type="email"
@@ -105,7 +105,7 @@ export default function Register() {
                         <div className='divLabelInput'>
 
                             <label>
-                                Password
+                                Senha
                                 <input
                                     className={`input ${errors.password ? "error" : ""}`}
                                     type="password"
@@ -120,7 +120,7 @@ export default function Register() {
                         <div className='divLabelInput'>
 
                             <label>
-                                Confirm Password
+                                Confirmação de senha
                                 <input
                                     className={`input ${errors.confirmPassword ? "error" : ""}`}
                                     type="password"
@@ -131,9 +131,9 @@ export default function Register() {
 
                         </div>
                         <S.ButtonRegister>
-                            <button type="submit">Register</button>
+                            <button type="submit">Registrar</button>
                         </S.ButtonRegister>
-                        <p>Already have an account? <a href='/login'>Sing in</a></p>
+                        <p>Você já possui uma conta? <a href='/login'>Entrar</a></p>
                     </form>
 
                 </S.ContainerForm>

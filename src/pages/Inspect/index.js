@@ -101,9 +101,9 @@ export default function Inspect(props) {
     return (
         <>
             <S.Breadcrumb>
-                <Link to='/'>Home</Link>
+                <Link to='/'>Início</Link>
                 <span>/</span>
-                <Link to="/products">Products</Link>
+                <Link to="/products">Produtos</Link>
                 <span>/</span>
                 <p>{product.title}</p>
             </S.Breadcrumb>
@@ -129,7 +129,7 @@ export default function Inspect(props) {
                                 <input type="text" value={quantity} />
                                 <button type="button" onClick={addQuantity} >+</button>
                             </div>
-                            <button className="buttonPurchase" onClick={addItemOnCart}><FiShoppingCart /> Add to cart</button>
+                            <button className="buttonPurchase" onClick={addItemOnCart}><FiShoppingCart /> Adicionar no carrinho</button>
                         </S.Purchase>
                     </S.InfoProduct>
                 </S.InspectItem>)}
