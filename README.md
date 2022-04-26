@@ -37,7 +37,6 @@ O Header possui alguns menus para navegação, sendo: Produtos (Masculinos, Femi
 - Campo de Busca: A pessoa pode pesquisar algum dos produtos nesse campo.
 
 - Registro/Login: O visitante tem como criar uma conta no site a qual será armazenada no [Firebase](https://firebase.google.com/docs) e terá a opção de logar depois. A conta é criada com o nome, email, senha e confirmação de senha que possui um sistema de validação dos campos utilizado o [Yup](https://react-hook-form.com/get-started#SchemaValidation), ou seja, necessita colocar um email válido, colocar um nome que não possua números, senha de no mínimo 6 dígitos e a confirmação de senha deve ser igual em ambos campos.
-<br>
 
 O Loading foi criado para deixar mais fluído o tempo de espera do consumo da &nbsp;[API](https://fakestoreapi.com/docs) para localizar um item em específico e apresentar na página de Inspecionar.
 
