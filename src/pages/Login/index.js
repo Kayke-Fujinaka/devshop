@@ -1,25 +1,25 @@
 import React, { useState, useContext } from 'react';
-import { useHistory } from "react-router-dom";
 
 import { AuthContext } from '../../contexts/auth'
+import { useHistory } from 'react-router-dom'
 
 import * as S from "./styles";
 
 export default function Login() {
+    
+    const history = useHistory();
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const { logIn, loadingAuth } = useContext(AuthContext)
-
-    const history = useHistory();
+    const { logIn, loadingAuth, user } = useContext(AuthContext)
 
     function formSubmit(e) {
         e.preventDefault();
 
         if(email !== '' && password !== '') {
             logIn(email, password)
-            history.push('/')
+                history.push('/')
         }
     }
 

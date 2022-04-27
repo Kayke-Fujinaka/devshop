@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { useHistory } from "react-router-dom";
 
 import { AuthContext } from '../../contexts/auth'
+
+import { useHistory } from 'react-router-dom'
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -30,6 +31,7 @@ const schema = yup
     .required();
 
 export default function Register() {
+    const history = useHistory();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -41,12 +43,14 @@ export default function Register() {
         e.preventDefault();
 
         if (name !== '' && email !== '' && password !== '') {
-            signUp(email, name, password)
-            history.push('/')
+            signUp(email, name, password).then( () => {
+                setName('')
+                setEmail('')
+                setPassword('')
+                history.push('/')
+            }) 
         }
     }
-
-    const history = useHistory();
 
     const {
         register,

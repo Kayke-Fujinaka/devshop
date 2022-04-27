@@ -12,6 +12,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
     "firebase": "^9.6.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

@@ -80,6 +80,8 @@ O site tem no total 16 páginas, sendo elas:
 - **Error 404:** A página de Error 404 que acontece ao acessar uma rota inexistente.
 ## :dart: Etapas ##
 
+Versão 1.0: :heavy_check_mark:
+
 :heavy_check_mark: Criação da Rotas;\
 :heavy_check_mark: Aplicação dos Estilos Globais;\
 :heavy_check_mark: Componente Header e Footer;\
@@ -107,8 +109,10 @@ O site tem no total 16 páginas, sendo elas:
 :heavy_check_mark: Seção de parceiros na HOme;\
 :heavy_check_mark: Autenticação com Firebase;\
 :heavy_check_mark: Página de Donate;\
-:x: Vídeo do projeto;\
-:x: Finalizado;
+:heavy_check_mark: Vídeo do projeto;\
+:heavy_check_mark: Finalizado 1.0;
+
+Versão 2.0: Em breve...
 
 ## :rocket: Tecnologias ##
 
@@ -147,27 +151,27 @@ $ yarn start or npm start
 Caso clone o projeto, você vai precisar criar o seu próprio projeto no firebase. Depois disso no arquivo .env irá colocar seu token do Firebase. Vou deixar um exemplo abaixo:
 
 ```bash
-  API_KEY: "AIzah63dg9emUtIKmMCvrkSJLw-GZIl0a8qmEs",
-  AUTH_DOMAIN: "example-8a13f.firebaseapp.com",
-  PROJECT_ID: "example-8a13f",
-  STORAGE_BUCKET: "example-88a13f.appspot.com",
-  MESSASING_SENDER_ID: "65936679370",
-  APP_ID: "1:659905779370:web:16c3ac97ef413h13ga2d3",
-  MEASUREMENT_ID: "G-BL1CGU42B6"
+  REACT_APP_API_KEY="AIzah63dg9emUtIKmMCvrkSJLw-GZIl0a8qmEs",
+  REACT_APP_AUTH_DOMAIN="example-8a13f.firebaseapp.com",
+  REACT_APP_PROJECT_ID="example-8a13f",
+  REACT_APP_STORAGE_BUCKET="example-88a13f.appspot.com",
+  REACT_APP_MESSASING_SENDER_ID="65936679370",
+  REACT_APP_APP_ID="1:659905779370:web:16c3ac97ef413h13ga2d3",
+  REACT_APP_MEASUREMENT_ID: "G-BL1CGU42B6"
 ```
 
 Depois disso passar para o arquivo que está o firebase. Por exemplo:
 
 ```bash
   const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSASING_SENDER_ID,
-  appId: process.env.APP_ID,
-  measurementId: process.env.MEASUREMENT_ID
-};
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+}
 ```
 
 ## 🤝 Colaboradores

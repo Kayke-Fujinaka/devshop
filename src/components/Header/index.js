@@ -82,9 +82,9 @@ export default function Header() {
 
           <S.DivAccount>
             {user ? (
-              <Link to="/profile">
+              <a>
               Olá, {user.name}
-              </Link>
+              </a>
             ) : (
               <>
                 <p><Link to="/register">Registro</Link></p>
@@ -94,9 +94,15 @@ export default function Header() {
             )}
           </S.DivAccount>
 
+          {user ? (
+            <>
           <S.SignOutButton>
             <button type="button" onClick={signOut}><FiLogOut /></button>
           </S.SignOutButton>
+            </>
+          ) : (
+            <></>
+          )}
 
           <FiShoppingCart onClick={() => setShowSidebar(!showSidebar)} />
           <S.Bar>{qtdItems}</S.Bar>
@@ -107,23 +113,21 @@ export default function Header() {
           {showNav &&
             (
               <nav className={`navHamburguer ${showNav ? 'navTrue' : 'navFalse'}`}>
+                {user ? <p>Olá, {user.name} <FiLogOut onClick={signOut} /> </p> : <></>}
                 <div className="inputEmailFooter">
                   <input placeholder="Buscar produtos" type="text" value={searchProducts} onChange={e => setSearchProducts(e.target.value)} />
                   <Link className="iconInputEmailFooter" to={`/search/${encodeURIComponent(searchProducts)}`} >
                     <FiSearch />
                   </Link>
                 </div>
-                <S.DivAccount>
-                  <p><Link to="/register">Register</Link></p>
-                  <span>/</span>
-                  <p><Link to="/login">Login</Link></p>
-                </S.DivAccount>
-                <li><Link to="/men">Masculino</Link></li>
-                <li><Link to="/women">Feminino</Link></li>
-                <li><Link to="/jewelery">Joalheria</Link></li>
-                <li><Link to="/eletronics">Eletrônicos</Link></li>
-                <li><Link to="/policy">Nossa política</Link></li>
-                <li><Link to="/donate">Apoie-nos</Link></li>
+                <li><Link to="/men" onClick={() => setShowNav(false)}>Masculino</Link></li>
+                <li><Link to="/women" onClick={() => setShowNav(false)}>Feminino</Link></li>
+                <li><Link to="/jewelery" onClick={() => setShowNav(false)}>Joalheria</Link></li>
+                <li><Link to="/eletronics" onClick={() => setShowNav(false)}>Eletrônicos</Link></li>
+                <li><Link to="/policy" onClick={() => setShowNav(false)}>Nossa política</Link></li>
+                <li><Link to="/donate" onClick={() => setShowNav(false)}>Apoie-nos</Link></li>
+                <li><Link to="/login" onClick={() => setShowNav(false)}>Login</Link></li>
+                <li><Link to="/register" onClick={() => setShowNav(false)}>Registro</Link></li>
               </nav>)}
         </S.MenuHamburguer>
 
