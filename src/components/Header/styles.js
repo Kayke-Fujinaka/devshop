@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
     background: #fff;
     top: 0rem;
     left: 0rem;
-    z-index: 15;
+    z-index: 10;
     width: 100vw;
     box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.37);
 
@@ -149,9 +149,9 @@ export const ContainerSearch = styled.div`
 
     }
 
-    @media only screen and (max-width: 720px) {
-        display: none;
-    }
+@media only screen and (max-width: 720px) {
+    display: none;
+}
 `
 
 export const ContainerRight = styled.div`
@@ -202,6 +202,10 @@ export const SignOutButton = styled.div`
         font-size: 1rem;
         font-weight: 900;
     }
+
+    @media only screen and (max-width: 1180px) {
+        display: none;
+    }
 `
 
 export const Bar = styled.span`
@@ -230,6 +234,7 @@ export const MenuHamburguer = styled.div`
         opacity: 0;
         margin-left: 1000px;
         transition:  1s;
+
     }
 
     .navTrue {
@@ -307,6 +312,37 @@ export const MenuHamburguer = styled.div`
         }
 
     }
+
+    p {
+        margin: 0 auto;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-left: 30px;
+            transition: 0.5s;
+            font-size: 1.5rem;
+
+            &:hover {
+                color: #ff7d1b;
+            }
+        }
+    }
+
+    .loginAndRegister {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border-top: 1px solid rgb(0,0,0, 0.15);
+
+
+    }
+
     }
 `
 

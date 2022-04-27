@@ -1,11 +1,16 @@
 import React, { useState, createContext, useEffect } from 'react';
 import firebase from '../services/firebase';
 
+import { useHistory } from "react-router-dom";
+
 import { toast } from 'react-toastify'
 
 export const AuthContext = createContext({})
 
 function AuthProvider ({ children }) {
+
+    const history = useHistory();
+
     const [user, setUser] = useState(null); 
     const [loadingAuth, setLoadingAuth] = useState(false)
 
@@ -46,14 +51,22 @@ function AuthProvider ({ children }) {
                 setUser(data);
                 storageUser(data);
                 toast.success('Cadastro efetuado com sucesso!')
-                setLoadingAuth(false)
+                setLoadingAuth(false);
+                history.push('/')
             } )
             .catch( error => {
-                console.log(error);
                 setLoadingAuth(false);
-                toast.error('Ops, algo deu errado.')
+
             })
         })
+        .catch( error => {
+            if(error.code ===  'auth/email-already-in-use') {
+                toast.error('Já foi criada uma conta com esse email.')
+                return
+            }
+            toast.error('Ops, algo deu errado.')
+        })
+
     }
 
     function storageUser(data){
@@ -86,7 +99,6 @@ function AuthProvider ({ children }) {
             setLoadingAuth(false)
         })
         .catch((error)=>{
-            alert('ERRO AO FAZER LOGIN' + error)
             setLoadingAuth(false)
             toast.error('Ops, algo deu errado!')
         })

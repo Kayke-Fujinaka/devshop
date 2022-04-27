@@ -39,4 +39,5 @@ export const Results = styled.div`
     align-items: center;
     margin: 0 auto;
     list-style: none;
+    gap: 3rem;
 `

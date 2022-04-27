@@ -183,12 +183,18 @@ export const BoxPatrocinador = styled.div`
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    font-size: 0.8rem;
+    width: 150px;
 
     img {
-        width: 170px;
+        width: 150px;
         background: #000;
         border-radius: 50%;
         transition: 0.3s;
+
+        @media screen and (max-width: 700px) {
+            width: 100px;
+        }
     }
 
     .bossName {
