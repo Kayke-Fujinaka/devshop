@@ -4,8 +4,8 @@
 
 >  O projeto é um E-Commerce chamado DevShop que simula um site de vendas a qual possui roupas masculinas, femininas, joalherias e eletrônicos.
 
-Confira a aplicação: https:// <br>
-O vídeo apresentando o projeto: https://
+Confira a aplicação: https://shopdev.netlify.app/ <br>
+
 ## :page_facing_up: Explicação
 
 O projeto é um E-Commerce chamado DevShop que simula um site de vendas a qual possui roupas masculinas, femininas, joalherias e eletrônicos. Nele foi consumido uma &nbsp;[API](https://fakestoreapi.com/docs) com &nbsp;[Axios](https://axios-http.com/docs/intro), a qual possui alguns produtos de cada categoria acima para representar uma loja verídica.
