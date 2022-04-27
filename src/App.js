@@ -9,7 +9,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 import 'react-toastify/dist/ReactToastify.min.css';
 
 const initialOptions = {
-  "client-id": "Ad_CAONMHdHu1dGJE8UgIGX2FgIq4BuMKl9XuDdqyrNBMYjGid4LRNpS45fqXBKVbUo50ZxSgKz5jAVi",
+  "client-id": "AQbHJbBidFnxX9hCsdz4TQP0FQ17DSXVl76d6SuTY12_0Rrw1lq9DDKEgD9jDWTod5a7PxgsavoKhXjH",
   currency: "BRL",
   intent: "capture"
 }
