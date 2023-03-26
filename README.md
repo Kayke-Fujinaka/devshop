@@ -83,34 +83,34 @@ The website has a total of 16 pages, which are:
 
 Version 1.0: :heavy_check_mark:
 
-:heavy_check_mark: Creation of Routes;
-:heavy_check_mark: Application of Global Styles;
-:heavy_check_mark: Header and Footer Components;
-:heavy_check_mark: API Consumption and API Context;
-:heavy_check_mark: Login and Registration Pages;
-:heavy_check_mark: Password Reset Page;
-:heavy_check_mark: Responsiveness on Login, Registration and Password Reset;
-:heavy_check_mark: Applying Products on Home Page;
-:heavy_check_mark: Men, Women, Jewelery and Eletronics Pages;
-:heavy_check_mark: Consuming API by Category;
-:heavy_check_mark: Inspect and Our Policy Pages;
-:heavy_check_mark: Shopping Cart on Header;
-:heavy_check_mark: Responsive Footer;
-:heavy_check_mark: Search and Error 404 Pages;
-:heavy_check_mark: Input Validation with Yup;
-:heavy_check_mark: Fixed Header;
-:heavy_check_mark: Adding Reviews to Products;
-:heavy_check_mark: Products Added to Cart;
-:heavy_check_mark: Shop Options on Cart;
-:heavy_check_mark: Delivery Page;
-:heavy_check_mark: Payment Page;
-:heavy_check_mark: Product Carousel on Home Page;
-:heavy_check_mark: Fixed Cart Error when Empty;
-:heavy_check_mark: Banner Carousel on Home Page;
-:heavy_check_mark: Partners Section on Home Page;
-:heavy_check_mark: Authentication with Firebase;
-:heavy_check_mark: Donate Page;
-:heavy_check_mark: Project Video;
+:heavy_check_mark: Creation of Routes;\
+:heavy_check_mark: Application of Global Styles;\
+:heavy_check_mark: Header and Footer Components;\
+:heavy_check_mark: API Consumption and API Context;\
+:heavy_check_mark: Login and Registration Pages;\
+:heavy_check_mark: Password Reset Page;\
+:heavy_check_mark: Responsiveness on Login, Registration and Password Reset;\
+:heavy_check_mark: Applying Products on Home Page;\
+:heavy_check_mark: Men, Women, Jewelery and Eletronics Pages;\
+:heavy_check_mark: Consuming API by Category;\
+:heavy_check_mark: Inspect and Our Policy Pages;\
+:heavy_check_mark: Shopping Cart on Header;\
+:heavy_check_mark: Responsive Footer;\
+:heavy_check_mark: Search and Error 404 Pages;\
+:heavy_check_mark: Input Validation with Yup;\
+:heavy_check_mark: Fixed Header;\
+:heavy_check_mark: Adding Reviews to Products;\
+:heavy_check_mark: Products Added to Cart;\
+:heavy_check_mark: Shop Options on Cart;\
+:heavy_check_mark: Delivery Page;\
+:heavy_check_mark: Payment Page;\
+:heavy_check_mark: Product Carousel on Home Page;\
+:heavy_check_mark: Fixed Cart Error when Empty;\
+:heavy_check_mark: Banner Carousel on Home Page;\
+:heavy_check_mark: Partners Section on Home Page;\
+:heavy_check_mark: Authentication with Firebase;\
+:heavy_check_mark: Donate Page;\
+:heavy_check_mark: Project Video;\
 :heavy_check_mark: Finished 1.0;
 
 Version 2.0: Coming soon...
